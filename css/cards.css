@@ -1,0 +1,197 @@
+/* Main container */
+.tags-container,
+.main-container {
+	margin: 0 auto;
+	width: 70%;
+}
+
+/* Technologies */
+.ctn-tag-buttons,
+.ctn-cards {
+	background-color: #202020;
+	display: grid;
+	gap: 2rem 4rem;
+	padding: 2rem 0;
+	place-content: center;
+	place-items: center;
+}
+
+.ctn-cards {
+	grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
+}
+
+.tags-container h2,
+.language h2 {
+	background-color: #000000;
+	font-family: 'Shadows Into Light', sans-serif;
+	color: #ffffff;
+	margin: 2.5rem auto 0;
+	text-align: center;
+	text-shadow: 0 0 5px #000000;
+}
+
+.language h2 {
+	width: 100%;
+}
+
+/* Cards */
+.card {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	max-width: 100%;
+}
+
+.card a {
+	display: block;
+}
+
+.card a h3:before,
+.card a h3:after {
+	background-color: #ffffff;
+	content: '';
+	display: block;
+	height: 2px;
+	position: absolute;
+	top: 100%;
+	transition: background-color 150ms ease-in-out,
+							transform 150ms 150ms ease-in-out,
+							width 150ms ease-in-out;
+	width: 0;
+}
+
+.card a h3:before {
+	left: 0;
+}
+
+.card a h3 {
+	color: #ffffff;
+	font: 700 1.25rem 'Poppins', sans-serif;
+	line-height: 1.5em;
+	outline: 0;
+	padding: 0.35rem 0.25rem;
+	position: relative;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-shadow: -1px 1px #000000,
+							 -2px 2px #000000,
+							 -3px 3px #404040,
+							 -4px 4px #404040,
+							 -5px 5px #404040,
+							 -6px 6px #404040,
+							 -7px 7px #404040,
+							 -8px 8px #404040,
+							 -9px 9px #404040,
+							 -10px 10px #000000;
+	text-wrap: balance;
+	transform: translate3d(0, -1rem, 0);
+	transition: text-shadow 150ms 300ms ease-in-out;
+	user-select: none;
+	width: 100%;
+}
+
+.card a:hover h3 {
+	text-shadow: -1px 1px #000000,
+							 -2px 2px #000000,
+							 -3px 3px #000000,
+							 -4px 4px #000000,
+							 -5px 5px #000000,
+							 -6px 6px #000000,
+							 -7px 7px #000000,
+							 -8px 8px #000000,
+							 -9px 9px #000000,
+							 -10px 10px #000000;
+}
+
+.card a h3:after {
+	right: 0;
+}
+
+.card a:hover h3:before,
+.card a:hover h3:after {
+	background-color: rgba(0, 0, 0, 0.1);
+	transform: translate3d(0, -1rem, 0);
+	transition: background-color 150ms 300ms ease-in-out,
+							transform 150ms ease-in-out,
+							width 150ms 150ms ease-in-out;
+	width: 100%;
+}
+
+.card a .ctn-img:before {
+	background-color: rgba(0, 0, 0, 0.5);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: background-color 450ms ease-in-out,
+							transform 450ms ease-in-out;
+	transform: scale(0.9);
+	width: 100%;
+	z-index: 1;
+}
+
+.card a:hover .ctn-img:before {
+	background-color: rgba(0, 0, 0, 0);
+	transform: scale(1);
+}
+
+.card a .ctn-img {
+	overflow: hidden;
+	position: relative;
+}
+
+.card img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	position: relative;
+	transition: transform 450ms ease-in-out;
+	transform: scale(0.9);
+	width: 100%;
+}
+
+.card a:hover img,
+.card a:active img {
+	transform: scale(1);
+}
+
+/* Tag cards */
+.card .ctn-tags:before {
+	background-color: #ffffff;
+	bottom: 0;
+	box-shadow: 0 -1px 5px 1px #000000;
+	content: '';
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.ctn-tags {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	padding: 1rem 0.5rem;
+	position: relative;
+	width: 100%;
+}
+
+.ctn-tags span {
+	box-shadow: 0 0 0 1px #ffffff,
+							0 0 3px 0 inset #000000;
+	border-radius: 16px;
+	font: 700 14px 'Poppins', sans-serif;
+	background-color: #000000;
+	color: #ffffff;
+	margin-right: 10px;
+	margin-bottom: 0.75rem;
+	padding: 5px 0.75rem;
+}
+
+.ctn-tags span:nth-child(odd) {
+	background-color: #ffffff;
+	color: #000000;
+}

@@ -1,0 +1,31 @@
+/* Tags */
+.ctn-tag-buttons {
+	grid-template-columns: repeat(auto-fill, minmax(7rem, 11rem));
+}
+
+.btn-tag {
+	background-color: #000000;
+	box-shadow: 0 0 0 1px #ffffff,
+							0 0 2px 0 inset #ffffff;
+	border-radius: 4px;
+	color: #ffffff;
+	font: bold 15px 'Poppins', sans-serif;
+	padding: 0.5rem 0;
+	transition: background-color 0.3s ease-in-out,
+							box-shadow 0.3s ease-in-out,
+							color 0.3s ease-in-out;
+	width: 100%;
+}
+
+.btn-tag.btn-highlight {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.btn-tag:hover,
+.btn-tag:active {
+	background-color: #303030;
+	box-shadow: 0 0 1px 1px #ffffff,
+							0 0 2px 0 inset #000000;
+	color: #ffffff;
+}
