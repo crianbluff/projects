@@ -1691,15 +1691,15 @@ const projectJavascript = [
 		title: 'HTML5 Drag & Drop',
 		tags: []
 	},
-		{
-			imgUrl: 'ZgXEPw-512.webp?version=1564788514',
-			date: '01-01-2022',
-			isFavorite: false,
-			technology: 'Javascript',
-			view: 500,
-			link: 'ZgXEPw',
-			title: 'Slide Image Comparison',
-			tags: ['slider']
+	{
+		imgUrl: 'ZgXEPw-512.webp?version=1564788514',
+		date: '01-01-2022',
+		isFavorite: false,
+		technology: 'Javascript',
+		view: 500,
+		link: 'ZgXEPw',
+		title: 'Slide Image Comparison',
+		tags: ['slider']
 	},
 	{
 		link: 'PMzgKj',
@@ -2251,19 +2251,25 @@ const tagsContainer = document.getElementById('ctn-tag-buttons');
 const mainContainer = document.getElementById('main-container');
 
 /* Functions */
-const createButtonsDOM = (buttons) => {
-	buttons.forEach(btn => {
-		const btnTag = document.createElement('button');
+const createButtonsDOM = (btn) => {
+	const btnTag = document.createElement('button');
+
+	// Add attributes
+	btnTag.textContent = btn['text'];
+	btnTag.id = btn['id'];
+	btnTag.className += btn['className'];
 	
-		// Add attributes
-		btnTag.textContent = btn['text'];
-		btnTag.id = btn['id'];
-		btnTag.className += btn['className'];
-		
-		// Add elements in DOM
-		tagsContainer.prepend(btnTag);
+	// Add elements in DOM
+	tagsContainer.prepend(btnTag);
+
+	// Roggle class active for button when it is clicked
+	btnTag.addEventListener('click', () => {
+		btnTag.classList.toggle('active');
 	});
+
+	return btnTag;
 }
+
 const addCardsIntoDOM = () => {
 	LANGUAGES.forEach(language => {
 		// Create containers for each language and its title
@@ -2338,10 +2344,14 @@ const addProjects = (projectObject, containerTags) => {
 document.addEventListener('DOMContentLoaded', () => {
 	
 	// Add sorting buttons into DOM
-	createButtonsDOM(SORTING_BUTTONS);
-
+	SORTING_BUTTONS.forEach(tagBtn => {
+		const btnSorting = createButtonsDOM(tagBtn);
+	});
+	
 	// Add tag buttons into DOM
-	createButtonsDOM(TAG_BUTTONS);
+	TAG_BUTTONS.forEach(tagBtn => {
+		const btnTag = createButtonsDOM(tagBtn);
+	});
 	
 	// Add cards into DOM
 	addCardsIntoDOM();
