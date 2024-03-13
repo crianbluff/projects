@@ -2,14 +2,14 @@ const URL_CODEPEN_PEN = 'https://codepen.io/crianbluff/full';
 const URL_CODEPEN_PREVIEW_IMG = 'https://shots.codepen.io/username/pen';
 
 /* Projects */
-const projectCss = [
+const projectsCss = [
 	{
 		link: 'YzyNPgm',
 		imgUrl: 'YzyNPgm-512.webp?version=1587651889',
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Hover Card',
 		tags: ['card', 'hover']
 	},
@@ -19,7 +19,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cards',
 		tags: ['card']
 	},
@@ -29,7 +29,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Menu',
 		tags: ['menu']
 	},
@@ -39,7 +39,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cards',
 		tags: ['card']
 	},
@@ -49,7 +49,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Glassmorphism Effect',
 		tags: ['animation']
 	},
@@ -59,7 +59,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Glass Effect',
 		tags: ['animation']
 	},
@@ -69,7 +69,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Neon Effect',
 		tags: ['animation']
 	},
@@ -79,7 +79,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Steaming Effect',
 		tags: ['animation']
 	},
@@ -89,7 +89,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Shadows Effec',
 		tags: []
 	},
@@ -99,7 +99,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Fire Effect',
 		tags: ['animation']
 	},
@@ -109,7 +109,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Audio Player',
 		tags: []
 	},
@@ -119,7 +119,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Ring Effect',
 		tags: ['animation']
 	},
@@ -129,7 +129,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Neumorphism Gradient Ring',
 		tags: []
 	},
@@ -139,7 +139,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Planets',
 		tags: ['animation']
 	},
@@ -149,7 +149,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Hover Line Fill',
 		tags: ['animation', 'hover']
 	},
@@ -159,7 +159,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Drop Shadow',
 		tags: ['animation']
 	},
@@ -169,7 +169,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Zigzag Border',
 		tags: ['animation', 'border']
 	},
@@ -179,7 +179,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Perpetual Animation',
 		tags: ['animation']
 	},
@@ -189,7 +189,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect 3d Book',
 		tags: ['animation']
 	},
@@ -199,7 +199,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Falling Leaves',
 		tags: ['animation']
 	},
@@ -209,7 +209,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect text typography portrait',
 		tags: ['animation']
 	},
@@ -219,7 +219,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect liquid loader',
 		tags: ['animation']
 	},
@@ -229,7 +229,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect loading',
 		tags: ['animation']
 	},
@@ -239,7 +239,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect 3d Isometric',
 		tags: ['animation']
 	},
@@ -249,7 +249,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Card Isometric',
 		tags: ['card', 'animation']
 	},
@@ -259,7 +259,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Parallax Scrolling',
 		tags: ['scroll', 'parallax', 'animation']
 	},
@@ -269,7 +269,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Scroll Rainbow',
 		tags: ['scroll', 'animation']
 	},
@@ -279,7 +279,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Reflection',
 		tags: ['animation']
 	},
@@ -289,7 +289,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Parallax Scrolling clip-mask ',
 		tags: ['scroll', 'parallax']
 	},
@@ -299,7 +299,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Form Card Credit',
 		tags: ['card', 'form']
 	},
@@ -309,7 +309,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Custom Scroll Bar',
 		tags: ['scroll']
 	},
@@ -319,7 +319,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect 3d Editable Text',
 		tags: ['table']
 	},
@@ -329,7 +329,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cards',
 		tags: ['card']
 	},
@@ -339,7 +339,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Glitch',
 		tags: ['animation']
 	},
@@ -349,7 +349,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Preloader',
 		tags: ['animation']
 	},
@@ -359,7 +359,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Page Scroll Progressbar',
 		tags: ['scroll']
 	},
@@ -369,7 +369,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Card',
 		tags: ['card']
 	},
@@ -379,7 +379,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Diagonal',
 		tags: []
 	},
@@ -389,7 +389,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Layout responsive',
 		tags: ['template']
 	},
@@ -399,7 +399,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Button Gradient',
 		tags: ['button']
 	},
@@ -409,7 +409,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Video Cube',
 		tags: []
 	},
@@ -419,7 +419,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Change Background On Hover',
 		tags: ['animation', 'hover']
 	},
@@ -429,7 +429,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Water Wave Button',
 		tags: ['button', 'animation']
 	},
@@ -439,7 +439,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Loading Svg',
 		tags: ['animation']
 	},
@@ -449,7 +449,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Liquid Loader',
 		tags: ['animation']
 	},
@@ -459,7 +459,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect loading text',
 		tags: ['animation']
 	},
@@ -469,7 +469,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect water wave',
 		tags: ['animation']
 	},
@@ -479,7 +479,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect List Item',
 		tags: ['animation']
 	},
@@ -489,7 +489,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Quick loading bar',
 		tags: []
 	},
@@ -499,7 +499,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Indian flag animation',
 		tags: ['animation']
 	},
@@ -509,7 +509,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Wrap text around circle',
 		tags: []
 	},
@@ -519,7 +519,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Card Direction Aware',
 		tags: ['card', 'animation']
 	},
@@ -529,7 +529,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect ghost text',
 		tags: ['animation']
 	},
@@ -539,7 +539,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Text Glowing',
 		tags: ['animation']
 	},
@@ -549,7 +549,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Tooltips',
 		tags: []
 	},
@@ -559,7 +559,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Isometric Glass',
 		tags: ['animation']
 	},
@@ -569,7 +569,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect 3d Rotation',
 		tags: ['animation']
 	},
@@ -579,7 +579,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect split text',
 		tags: ['animation']
 	},
@@ -589,7 +589,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Rainy Text',
 		tags: ['animation']
 	},
@@ -599,7 +599,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect magnifying Glass',
 		tags: ['animation']
 	},
@@ -609,7 +609,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Neon Button Ligth',
 		tags: ['button']
 	},
@@ -619,7 +619,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Colour Type Text',
 		tags: ['animation']
 	},
@@ -629,7 +629,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Parallax On Mouse move',
 		tags: ['parallax', 'animation']
 	},
@@ -639,7 +639,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Info Contact Reveal',
 		tags: ['animation']
 	},
@@ -649,7 +649,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Menu Item Hover Images',
 		tags: ['hover', 'menu']
 	},
@@ -659,7 +659,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Slideshow 3d Rotation',
 		tags: ['slider']
 	},
@@ -669,7 +669,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Thanos Snap Dispersion',
 		tags: ['animation']
 	},
@@ -679,7 +679,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Distortion Image',
 		tags: ['animation']
 	},
@@ -689,7 +689,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Text Animation Tik Tok',
 		tags: ['animation']
 	},
@@ -699,7 +699,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Flip Card 3D',
 		tags: ['card']
 	},
@@ -709,7 +709,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Hover In Card',
 		tags: ['hover', 'card']
 	},
@@ -719,7 +719,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Button Shiny Glass',
 		tags: ['button']
 	},
@@ -729,7 +729,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Hover Button',
 		tags: ['hover', 'button']
 	},
@@ -739,7 +739,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Text Shuffle',
 		tags: ['animation']
 	},
@@ -749,7 +749,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Loader Rings',
 		tags: []
 	},
@@ -759,7 +759,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect clip-path Hover',
 		tags: ['animation', 'hover']
 	},
@@ -769,7 +769,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Jumping Text',
 		tags: ['animation']
 	},
@@ -779,7 +779,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect  endless road',
 		tags: ['animation']
 	},
@@ -789,7 +789,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '3d number countdown',
 		tags: ['animation']
 	},
@@ -799,7 +799,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '3d Wavy Circle Loader',
 		tags: ['animation']
 	},
@@ -809,7 +809,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Checkbox Day Night Mode',
 		tags: []
 	},
@@ -819,7 +819,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Rain',
 		tags: ['animation']
 	},
@@ -829,7 +829,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '3d Split Flip Image Hover',
 		tags: ['hover', 'animation']
 	},
@@ -839,7 +839,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Email Signature',
 		tags: []
 	},
@@ -849,7 +849,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Background With Blind',
 		tags: []
 	},
@@ -859,7 +859,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Glowing Checkbox',
 		tags: []
 	},
@@ -869,7 +869,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Loader Ring',
 		tags: ['animation']
 	},
@@ -879,7 +879,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Calendar',
 		tags: []
 	},
@@ -889,7 +889,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Skew Text Typography',
 		tags: []
 	},
@@ -899,7 +899,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Split Image On Hover',
 		tags: ['hover', 'animation']
 	},
@@ -909,7 +909,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Infinite Dron Camera',
 		tags: ['animation']
 	},
@@ -919,7 +919,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Shine',
 		tags: ['animation']
 	},
@@ -929,7 +929,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Layer',
 		tags: ['animation']
 	},
@@ -939,7 +939,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Ripple',
 		tags: ['animation']
 	},
@@ -949,7 +949,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '3d Shape',
 		tags: []
 	},
@@ -959,7 +959,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '3d Background',
 		tags: []
 	},
@@ -969,7 +969,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Rhombus Loader',
 		tags: ['animation']
 	},
@@ -979,7 +979,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Merry Christmas!',
 		tags: ['animation']
 	},
@@ -989,7 +989,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Merry Christmas',
 		tags: ['animation']
 	},
@@ -999,7 +999,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Loading',
 		tags: ['animation']
 	},
@@ -1009,7 +1009,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'CSS Fireflies',
 		tags: ['animation']
 	},
@@ -1019,7 +1019,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Pure CSS Tooltips',
 		tags: []
 	},
@@ -1029,7 +1029,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Gallery Pictures Grid',
 		tags: ['grid']
 	},
@@ -1039,7 +1039,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Animation Logo Angular',
 		tags: ['animation']
 	},
@@ -1049,7 +1049,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Hover With clip-path',
 		tags: ['hover', 'animation']
 	},
@@ -1059,7 +1059,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Template Test',
 		tags: ['template']
 	},
@@ -1069,7 +1069,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Template Test',
 		tags: ['template']
 	},
@@ -1079,7 +1079,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Background Blurred',
 		tags: ['animation']
 	},
@@ -1089,7 +1089,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cube Family',
 		tags: ['animation']
 	},
@@ -1099,7 +1099,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cube Rotating On Its Own Axis',
 		tags: ['animation']
 	},
@@ -1109,7 +1109,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cube',
 		tags: ['animation']
 	},
@@ -1119,7 +1119,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Reloj Css',
 		tags: ['animation']
 	},
@@ -1129,7 +1129,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Reverse Layout Animation',
 		tags: ['animation', 'template']
 	},
@@ -1139,7 +1139,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Hearth Css',
 		tags: ['animation']
 	},
@@ -1149,7 +1149,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Animation Count Css',
 		tags: ['animation']
 	},
@@ -1159,7 +1159,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Mouse Move Parallax Effect',
 		tags: ['parallax']
 	},
@@ -1169,7 +1169,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Not selector',
 		tags: []
 	},
@@ -1179,7 +1179,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Table responsive',
 		tags: ['table']
 	},
@@ -1189,7 +1189,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Text 3d',
 		tags: []
 	},
@@ -1199,7 +1199,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Pseudoelements Before & After',
 		tags: []
 	},
@@ -1209,7 +1209,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Gallery Images',
 		tags: []
 	},
@@ -1219,7 +1219,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'List Homeworks',
 		tags: []
 	},
@@ -1229,7 +1229,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Background Image Transparent',
 		tags: []
 	},
@@ -1239,7 +1239,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cards 3d',
 		tags: ['card']
 	},
@@ -1249,7 +1249,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Layout Responsive Flexbox',
 		tags: ['template']
 	},
@@ -1259,7 +1259,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Layout Responsive Flexbox Grid',
 		tags: ['template', 'grid']
 	},
@@ -1269,7 +1269,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Customized Checkbox & Radio Buttons',
 		tags: ['button']
 	},
@@ -1279,7 +1279,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Social Media Sticky',
 		tags: []
 	},
@@ -1289,7 +1289,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cafam Domicilios',
 		tags: ['template']
 	},
@@ -1299,7 +1299,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Menu Animated Dropdown',
 		tags: ['menu']
 	},
@@ -1309,7 +1309,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Hover In Cols & Rows',
 		tags: ['hover']
 	},
@@ -1319,7 +1319,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Ying yang',
 		tags: ['animation']
 	},
@@ -1329,7 +1329,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Borders of colors',
 		tags: ['border']
 	},
@@ -1339,7 +1339,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Borders multiple',
 		tags: ['border']
 	},
@@ -1349,7 +1349,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Animation Turn Effect',
 		tags: ['animation']
 	},
@@ -1359,7 +1359,7 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'CSS Text Loading',
 		tags: ['animation']
 	},
@@ -1369,55 +1369,55 @@ const projectCss = [
 		date: '01-01-2022',
 		technology: 'Css',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Beatting Animation',
 		tags: ['animation'],
 	}
 ];
-const projectAngular = [
+const projectsAngular = [
 	{
 		link: '',
 		imgUrl: '',
 		date: '01-01-2022',
 		technology: 'Angular',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '',
 		tags: []
 	}
 ];
-const projectIonic = [
+const projectsIonic = [
 	{
 		link: '',
 		imgUrl: '',
 		date: '01-01-2022',
 		technology: 'Angular',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '',
 		tags: []
 	}
 ];
-const projectFirebase = [
+const projectsFirebase = [
 	{
 		link: '',
 		imgUrl: '',
 		date: '01-01-2022',
 		technology: 'Angular',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '',
 		tags: []
 	}
 ];
-const projectJavascript = [
+const projectsJavascript = [
 	{
 		link: 'EpqzBY',
 		imgUrl: 'EpqzBY-320.webp?version=1534702495',
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Menu Dropdown Responsive',
 		tags: ['menu']
 	},
@@ -1427,7 +1427,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 1000,
 		title: 'Menu',
 		tags: ['menu']
 	},
@@ -1437,7 +1437,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 2000,
 		title: 'Calculator',
 		tags: []
 	},
@@ -1447,7 +1447,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 3000,
 		title: 'Cards',
 		tags: ['card']
 	},
@@ -1457,7 +1457,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 100,
 		title: 'Slither Io',
 		tags: []
 	},
@@ -1467,7 +1467,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 50,
 		title: 'Odometer Number Counter',
 		tags: []
 	},
@@ -1477,7 +1477,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 5,
 		title: 'Effect Follow Mouse Cursor',
 		tags: []
 	},
@@ -1487,7 +1487,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 3,
 		title: 'Effect Slide Image Comparision',
 		tags: ['slider']
 	},
@@ -1497,7 +1497,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 20,
 		title: 'Effect floating button',
 		tags: ['button']
 	},
@@ -1507,7 +1507,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 10,
 		title: 'Youtube',
 		tags: ['template']
 	},
@@ -1517,7 +1517,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 10,
 		title: 'Digital clock',
 		tags: []
 	},
@@ -1527,7 +1527,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 10,
 		title: 'Effect Parallax Mousemove',
 		tags: ['parallax']
 	},
@@ -1537,7 +1537,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 10,
 		title: 'Template Bootstrap',
 		tags: ['template']
 	},
@@ -1546,8 +1546,8 @@ const projectJavascript = [
 		imgUrl: 'aPMEYq-512.webp?version=1547590609',
 		date: '01-01-2022',
 		technology: 'Javascript',
-		isFavorite: false,
-		view: 500,
+		isFavorite: true,
+		views: 20,
 		title: 'Jackpot Game',
 		tags: ['games']
 	},
@@ -1556,8 +1556,8 @@ const projectJavascript = [
 		imgUrl: 'dwaRNz-512.webp?version=1547505908',
 		date: '01-01-2022',
 		technology: 'Javascript',
-		isFavorite: false,
-		view: 500,
+		isFavorite: true,
+		views: 500,
 		title: 'Archery Game',
 		tags: []
 	},
@@ -1566,8 +1566,8 @@ const projectJavascript = [
 		imgUrl: 'yGRbzL-320.webp?version=1547170234',
 		date: '01-01-2022',
 		technology: 'Javascript',
-		isFavorite: false,
-		view: 500,
+		isFavorite: true,
+		views: 50,
 		title: 'Simon Game',
 		tags: ['games']
 	},
@@ -1577,7 +1577,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 20,
 		title: 'Bubble Floating',
 		tags: ['games']
 	},
@@ -1587,7 +1587,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 21,
 		title: 'Menu Amazon',
 		tags: ['menu']
 	},
@@ -1597,7 +1597,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 31,
 		title: 'Tooltip Js',
 		tags: []
 	},
@@ -1607,7 +1607,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 0,
 		title: 'Regresive Count Js',
 		tags: []
 	},
@@ -1617,7 +1617,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 20,
 		title: 'Modal Js',
 		tags: ['modal']
 	},
@@ -1627,7 +1627,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 400,
 		title: 'Modal Youtube Js Responsive',
 		tags: ['modal']
 	},
@@ -1637,7 +1637,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 300,
 		title: 'Modals Flexbox Js Responsive',
 		tags: ['modal']
 	},
@@ -1647,7 +1647,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 350,
 		title: 'Masonry Layout Js',
 		tags: ['template']
 	},
@@ -1657,7 +1657,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 250,
 		title: 'Tester Responsive Js',
 		tags: []
 	},
@@ -1667,7 +1667,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 150,
 		title: 'Reloj Js',
 		tags: []
 	},
@@ -1677,7 +1677,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 510,
 		title: 'Admin Park',
 		tags: []
 	},
@@ -1687,7 +1687,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 1000,
 		title: 'HTML5 Drag & Drop',
 		tags: []
 	},
@@ -1696,7 +1696,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		isFavorite: false,
 		technology: 'Javascript',
-		view: 500,
+		views: 2500,
 		link: 'ZgXEPw',
 		title: 'Slide Image Comparison',
 		tags: ['slider']
@@ -1707,7 +1707,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 5000,
 		title: 'Effect Brick Falling',
 		tags: []
 	},
@@ -1717,7 +1717,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 15000,
 		title: 'Lightbox Responsive',
 		tags: []
 	},
@@ -1727,7 +1727,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 150,
 		title: 'Efect Typewriter',
 		tags: []
 	},
@@ -1737,7 +1737,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 100,
 		title: 'Preloading Screen',
 		tags: []
 	},
@@ -1747,7 +1747,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 1000,
 		title: 'Social Media Expand',
 		tags: []
 	},
@@ -1757,7 +1757,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 10000,
 		title: 'Clipboard Minified',
 		tags: []
 	},
@@ -1767,7 +1767,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Table Responsive With Theme Dark',
 		tags: ['table']
 	},
@@ -1777,7 +1777,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Acordeon Responsive',
 		tags: []
 	},
@@ -1787,7 +1787,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Social Media Expand',
 		tags: []
 	},
@@ -1797,7 +1797,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Presentation Card Responsive',
 		tags: ['card']
 	},
@@ -1807,7 +1807,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Scroll Detection',
 		tags: ['scroll']
 	},
@@ -1817,7 +1817,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Login Form',
 		tags: ['form']
 	},
@@ -1827,7 +1827,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Template Responsive',
 		tags: ['template']
 	},
@@ -1837,7 +1837,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Password Generator',
 		tags: []
 	},
@@ -1847,7 +1847,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Menu Responsive Hamburguer',
 		tags: ['menu']
 	},
@@ -1857,7 +1857,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Form Foundation Zurb',
 		tags: ['form']
 	},
@@ -1867,7 +1867,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Scroll Click Dynamic',
 		tags: ['scroll']
 	},
@@ -1877,7 +1877,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Preloader responsive',
 		tags: []
 	},
@@ -1887,7 +1887,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Slider Responsive',
 		tags: ['slider']
 	},
@@ -1897,7 +1897,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Card Modal',
 		tags: ['card', 'modal']
 	},
@@ -1907,7 +1907,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Navegation Tabs Responsive',
 		tags: []
 	},
@@ -1917,7 +1917,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Water Fill On Scroll',
 		tags: ['scroll']
 	},
@@ -1927,7 +1927,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 10,
 		title: 'Calculator',
 		tags: []
 	},
@@ -1937,7 +1937,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 100,
 		title: 'Footer Mobile',
 		tags: []
 	},
@@ -1947,7 +1947,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Form Contact Responsive',
 		tags: ['form']
 	},
@@ -1957,7 +1957,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 100,
 		title: 'Modals Responsive',
 		tags: ['modal']
 	},
@@ -1967,7 +1967,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 2000,
 		title: 'Portfolio',
 		tags: []
 	},
@@ -1977,7 +1977,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Image Reveal On Scroll',
 		tags: ['scroll']
 	},
@@ -1987,7 +1987,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 1500,
 		title: 'Change Opacity On Scroll',
 		tags: ['scroll']
 	},
@@ -1997,7 +1997,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Parallax',
 		tags: ['parallax']
 	},
@@ -2007,7 +2007,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Cursor Focus',
 		tags: []
 	},
@@ -2017,7 +2017,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: '3d Mousemove Parallax',
 		tags: ['parallax']
 	},
@@ -2027,7 +2027,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Flying Rocket',
 		tags: []
 	},
@@ -2037,7 +2037,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Video Sphere',
 		tags: []
 	},
@@ -2047,7 +2047,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Slider',
 		tags: ['slider']
 	},
@@ -2057,7 +2057,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Slider responsive',
 		tags: ['slider']
 	},
@@ -2067,7 +2067,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Modal animated',
 		tags: ['modal']
 	},
@@ -2077,7 +2077,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Soft Drink',
 		tags: []
 	},
@@ -2087,7 +2087,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect Starry Night',
 		tags: []
 	},
@@ -2097,7 +2097,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Masonry Grid Layout Responsive',
 		tags: ['template', 'grid']
 	},
@@ -2107,7 +2107,7 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Analog Clock',
 		tags: []
 	},
@@ -2117,10 +2117,10 @@ const projectJavascript = [
 		date: '01-01-2022',
 		technology: 'Javascript',
 		isFavorite: false,
-		view: 500,
+		views: 500,
 		title: 'Effect flip background',
 		tags: []
-	},
+	}
 ];
 
 /* Elements HTML */
@@ -2269,7 +2269,6 @@ const createButtonsDOM = (btn) => {
 
 	return btnTag;
 }
-
 const addCardsIntoDOM = () => {
 	LANGUAGES.forEach(language => {
 		// Create containers for each language and its title
@@ -2278,7 +2277,7 @@ const addCardsIntoDOM = () => {
 		const titleProject = document.createElement('h2');
 
 		// Save every name of the variables projectName
-		const getNameVariableProject = `project${language.id.charAt(0).toUpperCase()}${language.id.slice(1)}`;
+		const getNameVariableProject = `projects${language.id.charAt(0).toUpperCase()}${language.id.slice(1)}`;
 		
 		// Add attributes for the containers
 		sectionCard.classList.add('language');
