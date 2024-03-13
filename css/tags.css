@@ -5,27 +5,44 @@
 
 .btn-tag {
 	background-color: #000000;
-	box-shadow: 0 0 0 1px #ffffff,
-							0 0 2px 0 inset #ffffff;
+	box-shadow: 0 0 0 2px #ffffff,
+							0 0 6px 0 inset #ffffff;
 	border-radius: 4px;
 	color: #ffffff;
 	font: bold 15px 'Poppins', sans-serif;
 	padding: 0.5rem 0;
-	transition: background-color 0.3s ease-in-out,
-							box-shadow 0.3s ease-in-out,
-							color 0.3s ease-in-out;
+	text-shadow: 0 0 4px #000000;
+	transition: box-shadow 0.3s ease-in-out;
 	width: 100%;
 }
 
 .btn-tag.btn-highlight {
 	background-color: #ffffff;
+	box-shadow: 0 0 0 2px #ffffff,
+							0 0 6px 0 inset #000000;
 	color: #000000;
+	text-shadow: 0 0 4px #ffffff;
 }
 
-.btn-tag:hover,
+.btn-tag:hover {
+	box-shadow: 0 0 0 2px #4abf06,
+							0 0 6px 0 inset;
+}
+
+.btn-tag.active,
 .btn-tag:active {
-	background-color: #303030;
-	box-shadow: 0 0 1px 1px #ffffff,
-							0 0 2px 0 inset #000000;
-	color: #ffffff;
+	box-shadow: 0 0 0 2px #4abf06,
+							0 0 10px 0 inset #4abf06;
+}
+
+.btn-tag.active,
+.btn-tag:active {
+	box-shadow: 0 0 0 2px #4abf06,
+							0 0 10px 0 inset #4abf06;
+}
+
+.btn-highlight:active,
+.btn-highlight.active {
+	box-shadow: 0 0 0 3px #88f549,
+							0 0 6px inset #000000;
 }
