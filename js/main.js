@@ -2136,11 +2136,6 @@ const LANGUAGES = [
 		className: 'ctn-cards'
 	},
 	{
-		id: 'css',
-		title: 'Css',
-		className: 'ctn-cards'
-	},
-	{
 		id: 'ionic',
 		title: 'Ionic',
 		className: 'ctn-cards'
