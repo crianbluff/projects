@@ -1,6 +1,19 @@
 const URL_CODEPEN_PEN = 'https://codepen.io/crianbluff/full';
 const URL_CODEPEN_PREVIEW_IMG = 'https://shots.codepen.io/username/pen';
 
+const ID_NAMES = {
+	ctnTagButtons: 'ctn-tag-buttons',
+	ctnProjects: 'ctn-projects',
+	projects: 'projects',
+	projectsFilterByTags: 'projects-filter-by-tags'
+};
+
+const CLASS_NAMES = {
+	ctnCards: 'ctn-cards',
+	ctnCard: 'ctn-card',
+	card: 'card'
+}
+
 /* Projects */
 const projectsCss = [
 	{
@@ -1391,7 +1404,7 @@ const projectsIonic = [
 		link: '',
 		imgUrl: '',
 		date: '01-01-2022',
-		technology: 'Angular',
+		technology: 'Ionic',
 		isFavorite: false,
 		views: 500,
 		title: '',
@@ -1403,7 +1416,7 @@ const projectsFirebase = [
 		link: '',
 		imgUrl: '',
 		date: '01-01-2022',
-		technology: 'Angular',
+		technology: 'Firebase',
 		isFavorite: false,
 		views: 500,
 		title: '',
@@ -1702,12 +1715,12 @@ const projectsJavascript = [
 		tags: ['slider']
 	},
 	{
-		link: 'PMzgKj',
 		imgUrl: 'PMzgKj-512.webp?version=1564065094',
 		date: '01-01-2022',
-		technology: 'Javascript',
 		isFavorite: false,
+		technology: 'Javascript',
 		views: 5000,
+		link: 'PMzgKj',
 		title: 'Effect Brick Falling',
 		tags: []
 	},
@@ -2127,28 +2140,23 @@ const projectsJavascript = [
 const LANGUAGES = [
 	{
 		id: 'css',
-		title: 'Css',
-		className: 'ctn-cards'
+		title: 'Css'
 	},
 	{
 		id: 'angular',
-		title: 'Angular',
-		className: 'ctn-cards'
+		title: 'Angular'
 	},
 	{
 		id: 'ionic',
-		title: 'Ionic',
-		className: 'ctn-cards'
+		title: 'Ionic'
 	},
 	{
 		id: 'javascript',
-		title: 'Javascript',
-		className: 'ctn-cards'
+		title: 'Javascript'
 	},
 	{
 		id: 'firebase',
-		title: 'Firebase',
-		className: 'ctn-cards'
+		title: 'Firebase'
 	}
 ];
 const SORTING_BUTTONS = [
@@ -2247,8 +2255,8 @@ const TAG_BUTTONS = [
 ];
 
 /* Containers for tag buttons and projects */
-const tagsContainer = document.getElementById('ctn-tag-buttons');
-const mainContainer = document.getElementById('main-container');
+const tagsContainer = document.getElementById(ID_NAMES.ctnTagButtons);
+const projectsContainer = document.getElementById(ID_NAMES.ctnProjects);
 
 /* Functions */
 const createButtonsDOM = (btn) => {
@@ -2262,96 +2270,94 @@ const createButtonsDOM = (btn) => {
 	// Add elements in DOM
 	tagsContainer.prepend(btnTag);
 
-	// Roggle class active for button when it is clicked
+	// Toggle class active for button when it is clicked
 	btnTag.addEventListener('click', () => {
 		btnTag.classList.toggle('active');
 	});
 
 	return btnTag;
 }
-const addCardsIntoDOM = () => {
-	LANGUAGES.forEach(language => {
-		// Create containers for each language and its title
+const createProjects = () => {
+	LANGUAGES.map(lang => {
+		// create containers for each lang and its title
 		const sectionCard = document.createElement('section');
 		const ctnCard = document.createElement('div');
 		const titleProject = document.createElement('h2');
-
-		// Save every name of the variables projectName
-		const getNameVariableProject = `projects${language.id.charAt(0).toUpperCase()}${language.id.slice(1)}`;
 		
-		// Add attributes for the containers
-		sectionCard.classList.add('language');
-		ctnCard.classList.add(language['className']);
-		ctnCard.id = language['id'];
-		titleProject.textContent = language['title'];
+		// add attributes for the containers
+		sectionCard.classList.add(ID_NAMES.projects);
+		ctnCard.classList.add(CLASS_NAMES.ctnCards);
+		titleProject.textContent = lang['title'];
 
-		// Insert in DOM all the projects
+		// insert in DOM all the projects
 		sectionCard.append(titleProject, ctnCard);
-		mainContainer.prepend(sectionCard);
 		
-		/* Create tags for card */
-		eval(getNameVariableProject).forEach(projectObject => {
-			const containerTags = document.createElement('div');
-			containerTags.classList.add('ctn-tags');
-	
-			// Add tags per card
-			projectObject.tags?.forEach(tag => {
-				const tagSpan = document.createElement('span');
-				tagSpan.textContent = tag;
-				containerTags.appendChild(tagSpan);
-			});
-			
-			/* Create cards with all the information and add it to the respective box */
-			addProjects(projectObject, containerTags);
-		});
+		// save every name of the variables projects
+		const getNameVariableProject = `${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`;
+		projectsContainer.appendChild(sectionCard);
+		addTagsForProjects(eval(getNameVariableProject), sectionCard);
 	});
 }
-const addProjects = (projectObject, containerTags) => {
-	// Create card elements
+const addTagsForProjects = (project, sectionProjectElement) => {
+	project.map(project => {
+		// create container tags
+		const containerTags = document.createElement('div');
+		containerTags.classList.add('ctn-tags');
+
+		// add tags per card
+		project.tags?.map(tag => {
+			const tagSpan = document.createElement('span');
+			tagSpan.textContent = tag;
+			containerTags.appendChild(tagSpan);
+		});
+
+		addProjectsToDOM(project, containerTags, sectionProjectElement);
+	});
+}
+const addProjectsToDOM = (project, containerTags, sectionProjectElement) => {
+	// create card elements
 	const containerCard = document.createElement('div');
 	const card = document.createElement('div');
 	const containerImgCard = document.createElement('div');
 	const linkCard = document.createElement('a');
 	const titleCard = document.createElement('h3');
 	const imgCard = document.createElement('img');
-	
-	// Add classes
-	containerCard.classList.add('ctn-card');
-	card.classList.add('card');
+
+	// add attributes and content
+	linkCard.href = `${URL_CODEPEN_PEN}/${project['link']}`;
+	linkCard.target = '_blank';
+	titleCard.textContent = project['title'];
+	imgCard.src = `${URL_CODEPEN_PREVIEW_IMG}/${project['imgUrl']}`;
+	imgCard.alt = project['title'];
+	imgCard.title = project['title'];
+	imgCard.setAttribute('loading', 'lazy');
+
+	// add classes
+	containerCard.classList.add(CLASS_NAMES.ctnCard);
+	card.classList.add(CLASS_NAMES.card);
 	containerImgCard.classList.add('ctn-img');
 	
-	// Add attributes and content
-	linkCard.href = `${URL_CODEPEN_PEN}/${projectObject['link']}`;
-	linkCard.target = '_blank';
-	titleCard.textContent = projectObject['title'];
-	imgCard.src = `${URL_CODEPEN_PREVIEW_IMG}/${projectObject['imgUrl']}`;
-	imgCard.alt = projectObject['title'];
-	imgCard.title = projectObject['title'];
-	imgCard.setAttribute('loading', 'lazy');
-	
-	// Add elements into DOM
+	// add elements into DOM
 	containerImgCard.appendChild(imgCard);
 	linkCard.append(titleCard, containerImgCard);
 	card.append(linkCard, containerTags);
 	containerCard.appendChild(card);
 
-	// Add container with all the content inside the id got it from the projectObject.language
-	const nameProjectObjectLowercase = `${projectObject['technology'].charAt(0).toLowerCase()}${projectObject['technology'].slice(1)}`;
-	document.getElementById(nameProjectObjectLowercase).prepend(containerCard);
+	// add container with all the content inside the id got it from the 
+	sectionProjectElement.querySelector(`.${CLASS_NAMES.ctnCards}`).appendChild(containerCard);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	
 	// Add sorting buttons into DOM
-	SORTING_BUTTONS.forEach(tagBtn => {
+	SORTING_BUTTONS.map(tagBtn => {
 		const btnSorting = createButtonsDOM(tagBtn);
 	});
 	
 	// Add tag buttons into DOM
-	TAG_BUTTONS.forEach(tagBtn => {
+	TAG_BUTTONS.map(tagBtn => {
 		const btnTag = createButtonsDOM(tagBtn);
 	});
 	
 	// Add cards into DOM
-	addCardsIntoDOM();
+	createProjects();
 });

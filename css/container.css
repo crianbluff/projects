@@ -1,0 +1,40 @@
+/* Main container */
+.tags-container,
+.main-container {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.ctn-projects.hidden,
+.ctn-projects-filtered-by-tags.hidden {
+	display: none;
+}
+
+/* Technologies */
+.ctn-tag-buttons,
+.ctn-cards {
+	background-color: #202020;
+	display: grid;
+	gap: 2rem 4rem;
+	padding: 2rem 0;
+	place-content: center;
+	place-items: center;
+}
+
+.ctn-cards {
+	grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
+}
+
+.tags-container h2,
+.projects h2 {
+	background-color: #000000;
+	font-family: 'Shadows Into Light', sans-serif;
+	color: #ffffff;
+	margin: 2.5rem auto 0;
+	text-align: center;
+	text-shadow: 0 0 5px #000000;
+}
+
+.projects h2 {
+	width: 100%;
+}
