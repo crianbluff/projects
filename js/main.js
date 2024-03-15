@@ -1,13 +1,16 @@
 const URL_CODEPEN_PEN = 'https://codepen.io/crianbluff/full';
 const URL_CODEPEN_PREVIEW_IMG = 'https://shots.codepen.io/username/pen';
 
+/* Classes & ids */
 const ID_NAMES = {
 	ctnTagButtons: 'ctn-tag-buttons',
+	ctnSelectedTags: 'ctn-selected-tags',
+	selectedTags: 'selected-tags',
 	ctnProjects: 'ctn-projects',
 	projects: 'projects',
-	projectsFilterByTags: 'projects-filter-by-tags'
+	ctnProjectsFilteredByTags: 'ctn-projects-filtered-by-tags',
+	projectsFilterByTags: 'projects-filter-by-tags',
 };
-
 const CLASS_NAMES = {
 	ctnCards: 'ctn-cards',
 	ctnCard: 'ctn-card',
@@ -2251,33 +2254,53 @@ const TAG_BUTTONS = [
 		className: 'btn-tag',
 		id: 'games',
 		text: 'Games'
-	}
+	},
+	{
+		className: 'btn-tag',
+		id: 'border',
+		text: 'Border'
+	},
+	{
+		className: 'btn-tag',
+		id: 'modal',
+		text: 'Modal'
+	},
 ];
 
-/* Containers for tag buttons and projects */
-const tagsContainer = document.getElementById(ID_NAMES.ctnTagButtons);
-const projectsContainer = document.getElementById(ID_NAMES.ctnProjects);
+// Tags filter
+let tagsForFilter = [];
+let projectsFilterByTags = [];
 
-/* Functions */
+/* Containers for tag buttons and projects */
+const tagsContainerElement = document.getElementById(ID_NAMES.ctnTagButtons);
+const ctnSelectedTagsElement = document.getElementById(ID_NAMES.ctnSelectedTags);
+const projectsContainerElement = document.getElementById(ID_NAMES.ctnProjects);
+const projectsFilterByTagsContainerElement = document.getElementById(ID_NAMES.ctnProjectsFilteredByTags);
+const selectedTagsElement = document.getElementById(ID_NAMES.selectedTags);
+
+/* Add tag & filter buttons to the DOM */
 const createButtonsDOM = (btn) => {
 	const btnTag = document.createElement('button');
-
+	
 	// Add attributes
 	btnTag.textContent = btn['text'];
 	btnTag.id = btn['id'];
 	btnTag.className += btn['className'];
 	
 	// Add elements in DOM
-	tagsContainer.prepend(btnTag);
-
+	tagsContainerElement.prepend(btnTag);
+	
 	// Toggle class active for button when it is clicked
 	btnTag.addEventListener('click', () => {
 		btnTag.classList.toggle('active');
+		toggleTags(btn['id']);
 	});
-
+	
 	return btnTag;
 }
-const createProjects = () => {
+
+/* Functions to add projects to the DOM */
+const createProjects = ({isBuildingFromBtn} = false) => {
 	LANGUAGES.map(lang => {
 		// create containers for each lang and its title
 		const sectionCard = document.createElement('section');
@@ -2285,17 +2308,31 @@ const createProjects = () => {
 		const titleProject = document.createElement('h2');
 		
 		// add attributes for the containers
+		sectionCard.id = !isBuildingFromBtn ? `${ID_NAMES.projects}-${lang['id']}` : `${ID_NAMES.projectsFilterByTags}-${lang['id']}`;
 		sectionCard.classList.add(ID_NAMES.projects);
 		ctnCard.classList.add(CLASS_NAMES.ctnCards);
-		titleProject.textContent = lang['title'];
+		titleProject.textContent = !isBuildingFromBtn ? lang['title'] : 'Projects Filtered By Tags';
 
-		// insert in DOM all the projects
+		// insert all the projects in DOM
 		sectionCard.append(titleProject, ctnCard);
-		
-		// save every name of the variables projects
-		const getNameVariableProject = `${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`;
-		projectsContainer.appendChild(sectionCard);
-		addTagsForProjects(eval(getNameVariableProject), sectionCard);
+
+		// if there is a param send it as a param for addTagsForProjects function
+		if (!isBuildingFromBtn) {
+			// save every name of the variables projec
+			const getNameVariableProject = `${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`;
+			
+			projectsContainerElement.appendChild(sectionCard);
+			addTagsForProjects(eval(getNameVariableProject), sectionCard);
+		} else {
+				// delete all the cards which were before
+				projectsFilterByTagsContainerElement.innerHTML = '';
+
+				// add the section card into another container
+				projectsFilterByTagsContainerElement.appendChild(sectionCard);
+
+				// add tags for each card
+				addTagsForProjects(projectsFilterByTags, sectionCard);
+			}
 	});
 }
 const addTagsForProjects = (project, sectionProjectElement) => {
@@ -2345,6 +2382,55 @@ const addProjectsToDOM = (project, containerTags, sectionProjectElement) => {
 
 	// add container with all the content inside the id got it from the 
 	sectionProjectElement.querySelector(`.${CLASS_NAMES.ctnCards}`).appendChild(containerCard);
+}
+
+/* Functions for filtering by tags */
+const toggleTags = (selectedTags) => {
+	// if there is a repeated element it will be removed from the array, if not it will be added
+	tagsForFilter = tagsForFilter.includes(selectedTags) ? tagsForFilter.filter(el => el !== selectedTags) : [...tagsForFilter, selectedTags];
+	console.log(tagsForFilter);
+
+	// add tags to the tags container in projects that were filtered
+	addCtnSelectedTagsToDOM(tagsForFilter);
+	
+	// if there is at least one or more tags selected
+	if (tagsForFilter.length) {
+		// storage the projects which have the tags
+		filteredByTagsSelected();
+		console.log(projectsFilterByTags);
+
+		ctnSelectedTagsElement.setAttribute('aria-hidden', 'false');
+		projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'false');
+		projectsContainerElement.setAttribute('aria-hidden', 'true');
+
+		createProjects({isBuildingFromBtn: true});
+	} else {
+			// if there are no tags selected
+			ctnSelectedTagsElement.setAttribute('aria-hidden', 'true');
+			projectsContainerElement.setAttribute('aria-hidden', 'false');
+			projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'true');
+		}
+}
+const filteredByTagsSelected = () => {
+	projectsFilterByTags = [];
+
+	LANGUAGES.map(lang => {
+		// save every name of the variables projectName
+		let getNameVariableProject = `${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`;
+		
+		// filter every project variable and depending on the tagsForFilter values
+		let filterElementsByTags = eval(getNameVariableProject).filter(projectObject => tagsForFilter.every(tag => projectObject.tags.includes(tag)));
+		filterElementsByTags.map(el => projectsFilterByTags.push(el));
+	});
+}
+const addCtnSelectedTagsToDOM = (selectedTags) => {
+	selectedTagsElement.innerHTML = '';
+
+	selectedTags.map(tagSelected => {
+		const selectedTagsSpan = document.createElement('span');
+		selectedTagsSpan.textContent = tagSelected;
+		selectedTagsElement.prepend(selectedTagsSpan);
+	});
 }
 
 document.addEventListener('DOMContentLoaded', () => {
