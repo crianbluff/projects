@@ -1,3 +1,24 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #4abf06;
+  --secondary-color-highlight: #88f549;
+  --bg-menu: #000000;
+  --bg-btns-tags-primary: #000000;
+  --bg-btns-tags-secondary: #ffffff;
+  --bg-headers: #000000;
+  --bg-containers: linear-gradient(
+		45deg,
+		#141414,
+		#2a2a2a
+	);
+  --bg-cards: linear-gradient(
+		180deg,
+	#0a0a0a,
+	#4f4f4f
+	);
+  --bg-card-contrast: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
