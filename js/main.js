@@ -9,13 +9,14 @@ const ID_NAMES = {
 	ctnProjects: 'ctn-projects',
 	projects: 'projects',
 	ctnProjectsFilteredByTags: 'ctn-projects-filtered-by-tags',
+	NotFoundProjectsFilteredByTags: 'not-found-projects-filtered-by-tags',
 	projectsFilterByTags: 'projects-filter-by-tags',
 };
 const CLASS_NAMES = {
 	ctnCards: 'ctn-cards',
 	ctnCard: 'ctn-card',
 	card: 'card'
-}
+};
 
 /* Projects */
 const projectsCss = [
@@ -2276,6 +2277,8 @@ const tagsContainerElement = document.getElementById(ID_NAMES.ctnTagButtons);
 const ctnSelectedTagsElement = document.getElementById(ID_NAMES.ctnSelectedTags);
 const projectsContainerElement = document.getElementById(ID_NAMES.ctnProjects);
 const projectsFilterByTagsContainerElement = document.getElementById(ID_NAMES.ctnProjectsFilteredByTags);
+const notFoundProjectsFilteredByTagsElement = document.getElementById(ID_NAMES.NotFoundProjectsFilteredByTags);
+
 const selectedTagsElement = document.getElementById(ID_NAMES.selectedTags);
 
 /* Add tag & filter buttons to the DOM */
@@ -2388,25 +2391,32 @@ const addProjectsToDOM = (project, containerTags, sectionProjectElement) => {
 const toggleTags = (selectedTags) => {
 	// if there is a repeated element it will be removed from the array, if not it will be added
 	tagsForFilter = tagsForFilter.includes(selectedTags) ? tagsForFilter.filter(el => el !== selectedTags) : [...tagsForFilter, selectedTags];
-	console.log(tagsForFilter);
-
-	// add tags to the tags container in projects that were filtered
-	addCtnSelectedTagsToDOM(tagsForFilter);
 	
 	// if there is at least one or more tags selected
 	if (tagsForFilter.length) {
 		// storage the projects which have the tags
 		filteredByTagsSelected();
-		console.log(projectsFilterByTags);
+		// add tags to the tags container in projects that were filtered
+		addCtnSelectedTagsToDOM(tagsForFilter);
+		console.log(tagsForFilter);
 
 		ctnSelectedTagsElement.setAttribute('aria-hidden', 'false');
 		projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'false');
 		projectsContainerElement.setAttribute('aria-hidden', 'true');
 
+		// if there are no projects that contained the selected tags
+		if (!projectsFilterByTags.length) {
+			projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'true');
+			notFoundProjectsFilteredByTagsElement.setAttribute('aria-hidden', 'false');
+		} else {
+			notFoundProjectsFilteredByTagsElement.setAttribute('aria-hidden', 'true');
+		}
+
 		createProjects({isBuildingFromBtn: true});
 	} else {
 			// if there are no tags selected
 			ctnSelectedTagsElement.setAttribute('aria-hidden', 'true');
+			notFoundProjectsFilteredByTagsElement.setAttribute('aria-hidden', 'true');
 			projectsContainerElement.setAttribute('aria-hidden', 'false');
 			projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'true');
 		}
@@ -2425,7 +2435,6 @@ const filteredByTagsSelected = () => {
 }
 const addCtnSelectedTagsToDOM = (selectedTags) => {
 	selectedTagsElement.innerHTML = '';
-
 	selectedTags.map(tagSelected => {
 		const selectedTagsSpan = document.createElement('span');
 		selectedTagsSpan.textContent = tagSelected;

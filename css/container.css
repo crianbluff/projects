@@ -3,11 +3,12 @@
 .ctn-selected-tags,
 .main-container {
 	margin: 3.5rem auto 0;
-	width: 70%;
+	width: 75%;
 }
 
 .ctn-projects,
 .ctn-selected-tags,
+.not-found-projects-filtered-by-tags,
 .ctn-projects-filtered-by-tags {
 	opacity: 1;
 	transform-origin: left;
@@ -25,8 +26,10 @@
 
 .ctn-projects[aria-hidden="true"],
 .ctn-selected-tags[aria-hidden="true"],
+.not-found-projects-filtered-by-tags[aria-hidden="true"],
 .ctn-projects-filtered-by-tags[aria-hidden="true"] {
 	height: 0;
+	margin: 0 auto;
 	opacity: 0;
 	transform: perspective(500px) rotateX(90deg);
 	transition: height 0.5s 0.5s ease-in-out,
@@ -41,7 +44,8 @@
 .selected-tags,
 .ctn-cards {
 	align-items: center;
-	background-color: #202020;
+	background-image: var(--bg-containers);
+	box-shadow: 0 0 25px 0px inset #000000;
 	display: grid;
 	gap: 1.5rem 3rem;
 	padding: 2rem 4rem;
@@ -49,16 +53,22 @@
 }
 
 .ctn-cards {
-	grid-template-columns: repeat(auto-fill, minmax(10rem, 19rem));
+	grid-template-columns: repeat(auto-fill, minmax(10rem, 21rem));
 }
 
 .tags-container h2,
 .ctn-selected-tags h2,
+.not-found-projects-filtered-by-tags h2,
 .projects h2 {
-	background-color: #000000;
-	font: 700 2rem 'Shadows Into Light', sans-serif;
+	background-color: var(--bg-headers);
+	box-shadow: 0 0 25px 0px inset #203f0e;
+	font: 700 2.25rem 'Shadows Into Light', sans-serif;
 	color: #ffffff;
 	text-align: center;
-	text-shadow: 0 0 5px #000000;
+	text-shadow: 0 0 7px var(--secondary-color);
 	width: 100%;
+}
+
+.projects {
+	margin-bottom: 3.5rem;
 }
