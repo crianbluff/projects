@@ -15,7 +15,7 @@ const ID_NAMES = {
 const CLASS_NAMES = {
 	ctnCards: 'ctn-cards',
 	ctnCard: 'ctn-card',
-	card: 'card'
+	card: 'card',
 };
 
 /* Projects */
@@ -2181,8 +2181,13 @@ const SORTING_BUTTONS = [
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'views',
-		text: '👁️ Views',
+		id: 'more-views',
+		text: '👁️🔼 Views',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'less-views',
+		text: '👁️🔽 Views',
 	},
 	{
 		className: 'btn-tag btn-highlight',
@@ -2278,7 +2283,6 @@ const ctnSelectedTagsElement = document.getElementById(ID_NAMES.ctnSelectedTags)
 const projectsContainerElement = document.getElementById(ID_NAMES.ctnProjects);
 const projectsFilterByTagsContainerElement = document.getElementById(ID_NAMES.ctnProjectsFilteredByTags);
 const notFoundProjectsFilteredByTagsElement = document.getElementById(ID_NAMES.NotFoundProjectsFilteredByTags);
-
 const selectedTagsElement = document.getElementById(ID_NAMES.selectedTags);
 
 /* Add tag & filter buttons to the DOM */
@@ -2354,16 +2358,24 @@ const addTagsForProjects = (project, sectionProjectElement) => {
 		addProjectsToDOM(project, containerTags, sectionProjectElement);
 	});
 }
-const addProjectsToDOM = (project, containerTags, sectionProjectElement) => {
+const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	// create card elements
-	const containerCard = document.createElement('div');
+	const ctnCard = document.createElement('div');
 	const card = document.createElement('div');
-	const containerImgCard = document.createElement('div');
+	const ctnImgCard = document.createElement('div');
 	const linkCard = document.createElement('a');
 	const titleCard = document.createElement('h3');
 	const imgCard = document.createElement('img');
+	const ctnViewsCard = document.createElement('div');
+	const numberViewsCard = document.createElement('span');
+	const viewsIconCard = document.createElement('span');
+	const ctnFavIconCard = project['isFavorite'] ? document.createElement('div') : '';
+	const favIconCard = project['isFavorite'] ? document.createElement('span') : '';
 
 	// add attributes and content
+	project['isFavorite'] ? favIconCard.textContent = '⭐' : '';
+	numberViewsCard.textContent = `${project['views']}`;
+	viewsIconCard.textContent = '👁️';
 	linkCard.href = `${URL_CODEPEN_PEN}/${project['link']}`;
 	linkCard.target = '_blank';
 	titleCard.textContent = project['title'];
@@ -2371,20 +2383,25 @@ const addProjectsToDOM = (project, containerTags, sectionProjectElement) => {
 	imgCard.alt = project['title'];
 	imgCard.title = project['title'];
 	imgCard.setAttribute('loading', 'lazy');
-
+	
 	// add classes
-	containerCard.classList.add(CLASS_NAMES.ctnCard);
+	ctnCard.classList.add(CLASS_NAMES.ctnCard);
 	card.classList.add(CLASS_NAMES.card);
-	containerImgCard.classList.add('ctn-img');
+	project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
+	ctnViewsCard.classList.add('views');
+	ctnImgCard.classList.add('ctn-img');
 	
 	// add elements into DOM
-	containerImgCard.appendChild(imgCard);
-	linkCard.append(titleCard, containerImgCard);
-	card.append(linkCard, containerTags);
-	containerCard.appendChild(card);
+	project['isFavorite'] ? ctnFavIconCard.appendChild(favIconCard) : '';
+	ctnViewsCard.append(numberViewsCard, viewsIconCard);
+	ctnImgCard.appendChild(imgCard);
+	linkCard.append(titleCard, ctnImgCard);
+	// if it is favorite to add the star icon to the DOM on the card
+	project['isFavorite'] ? card.append(ctnFavIconCard, ctnViewsCard, linkCard, ctnTags) : card.append(ctnViewsCard, linkCard, ctnTags);
+	ctnCard.appendChild(card);
 
 	// add container with all the content inside the id got it from the 
-	sectionProjectElement.querySelector(`.${CLASS_NAMES.ctnCards}`).appendChild(containerCard);
+	sectionProjectElement.querySelector(`.${CLASS_NAMES.ctnCards}`).appendChild(ctnCard);
 }
 
 /* Functions for filtering by tags */
@@ -2447,7 +2464,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	SORTING_BUTTONS.map(tagBtn => {
 		const btnSorting = createButtonsDOM(tagBtn);
 	});
-	
+
 	// Add tag buttons into DOM
 	TAG_BUTTONS.map(tagBtn => {
 		const btnTag = createButtonsDOM(tagBtn);

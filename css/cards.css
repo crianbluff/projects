@@ -7,6 +7,43 @@
 	margin-top: 2rem;
 	max-width: 100%;
 	padding: 1rem;
+	position: relative;
+}
+
+/* Favs & Views */
+.card .fav,
+.card .views {
+	padding: 0.25rem 0.5rem;
+	position: absolute;
+	text-shadow: 0 0 5px #000000;
+	top: 0;
+}
+
+.card .fav {
+	left: 0;
+}
+
+.card .views {
+	color: var(--secondary-color);
+	right: 0;
+}
+
+.card .views span:first-child {
+	color: #ffffff;
+	font: 700 1rem 'Poppins', sans-serif;
+	margin-right: 3px;
+}
+
+/* View icon */
+.card .views span:last-child {
+	color: var(--secondary-color);
+	font-size: 1rem;
+}
+
+/* Fav icon */
+.card .fav span:first-child {
+	color: #ffff00;
+	font-size: 1.25rem;
 }
 
 .card a {
@@ -14,8 +51,8 @@
 	padding: 1rem;
 }
 
-.card a h3:before,
-.card a h3:after {
+.card h3:before,
+.card h3:after {
 	background-color: var(--bg-card-contrast);
 	content: '';
 	display: block;
@@ -28,11 +65,11 @@
 	width: 0;
 }
 
-.card a h3:before {
+.card h3:before {
 	left: 0;
 }
 
-.card a h3 {
+.card h3 {
 	color: #ffffff;
 	font: 700 1.25rem 'Poppins', sans-serif;
 	margin-bottom: 1rem;
@@ -70,7 +107,7 @@
 							 -10px 10px #0c0000;
 }
 
-.card a h3:after {
+.card h3:after {
 	right: 0;
 }
 
@@ -84,7 +121,7 @@
 	width: 100%;
 }
 
-.card a .ctn-img:before {
+.card .ctn-img:before {
 	background-color: rgba(0, 0, 0, 0.5);
 	content: '';
 	display: block;
@@ -101,7 +138,7 @@
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.card a .ctn-img {
+.card .ctn-img {
 	border-radius: 1rem;
 	overflow: hidden;
 	position: relative;
@@ -133,7 +170,7 @@
 	width: 100%;
 }
 
-.ctn-tags {
+.card .ctn-tags {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
@@ -142,7 +179,7 @@
 	width: 100%;
 }
 
-.ctn-tags span,
+.card .ctn-tags span,
 .ctn-selected-tags span {
 	box-shadow: 0 0 0 1px var(--bg-btns-tags-secondary),
 							0 0 3px 0 inset var(--bg-btns-tags-primary);
@@ -156,7 +193,7 @@
 	text-align: center;
 }
 
-.ctn-tags span:nth-child(even),
+.card .ctn-tags span:nth-child(even),
 .ctn-selected-tags span:nth-child(even) {
 	background-color: var(--bg-btns-tags-primary);
 	color: var(--bg-btns-tags-secondary);
