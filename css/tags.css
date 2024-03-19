@@ -1,7 +1,11 @@
 /* Tags */
 .ctn-tag-buttons,
-.selected-tags {
-	grid-template-columns: repeat(auto-fill, minmax(5rem, 9rem));
+.selected-filters {
+	grid-template-columns: repeat(auto-fill, minmax(5rem, 8rem));
+}
+
+.ctn-sort-btns {
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .btn-tag {
@@ -30,20 +34,39 @@
 							0 0 6px 0 inset;
 }
 
-.btn-tag.active,
-.btn-tag:active {
+.btn-tag.active {
 	box-shadow: 0 0 0 2px var(--secondary-color),
 							0 0 10px 0 inset var(--secondary-color);
 }
 
-.btn-tag.active,
-.btn-tag:active {
+.btn-tag.active {
 	box-shadow: 0 0 0 2px var(--secondary-color),
 							0 0 10px 0 inset var(--secondary-color);
 }
 
-.btn-highlight:active,
 .btn-highlight.active {
 	box-shadow: 0 0 0 3px var(--secondary-color-highlight),
 							0 0 6px inset var(--bg-btns-tags-primary);
+}
+
+@media (max-width: 1920px) {
+	.ctn-sort-btns {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 1400px) {
+	.ctn-sort-btns {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.ctn-filter-btns {
+		grid-template-columns: 1fr;
+	}
+
+	.ctn-sort-btns {
+		grid-template-columns: 1fr 1fr;
+	}
 }

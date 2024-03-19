@@ -22,20 +22,38 @@
       </h1>
     </header>
     
-    <div class="tags-container">
+    <!-- Filter Buttons -->
+    <section class="ctn-filter-btns">
+      <!-- Tags Buttons -->
+      <div class="tags">
+        <div class="tags-container">
+          <h2>
+            Tags
+          </h2>
+    
+          <div id="ctn-tag-buttons" class="ctn-tag-buttons"></div>
+        </div>
+      </div>
+
+      <!-- Sort Buttons -->
+      <div class="sort">
+        <div class="sort-container">
+          <h2>
+            Sort
+          </h2>
+    
+          <div id="ctn-sort-btns" class="ctn-sort-btns"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters Selected -->
+    <div id="ctn-selected-filters" class="ctn-selected-filters" aria-hidden="true">
       <h2>
-        Tags
+        Filters Selected  
       </h2>
 
-      <div id="ctn-tag-buttons" class="ctn-tag-buttons"></div>
-    </div>
-
-    <div id="ctn-selected-tags" class="ctn-selected-tags" aria-hidden="true">
-      <h2>
-        Selected Tags
-      </h2>
-
-      <div id="selected-tags" class="selected-tags"></div>
+      <div id="selected-filters" class="selected-filters"></div>
     </div>
 
     <main id="main-container" class="main-container">

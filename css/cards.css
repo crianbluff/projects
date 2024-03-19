@@ -1,11 +1,41 @@
+/* Cards Scroll */
+.card::-webkit-scrollbar {
+	background-color: #1c1c1c;
+	width: 9px;
+}
+
+.card::-webkit-scrollbar-thumb {
+	background-image: linear-gradient(
+											rgba(0, 0, 0, 0),
+											#ffffff
+										);
+	border-radius: 6px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+	background-image: linear-gradient(
+											rgba(0, 0, 0, 0),
+											var(--secondary-color)
+										);
+}
+
+.card::-webkit-scrollbar-thumb:active {
+	background-image: linear-gradient(
+											rgba(0, 0, 0, 0),
+											var(--secondary-color-highlight)
+										);
+}
+
 /* Cards */
 .card {
 	background-image: var(--bg-cards);
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
+	height: 20rem;
 	margin-top: 2rem;
 	max-width: 100%;
+	overflow-y: auto;
 	padding: 1rem;
 	position: relative;
 }
@@ -180,7 +210,7 @@
 }
 
 .card .ctn-tags span,
-.ctn-selected-tags span {
+.selected-filters span {
 	box-shadow: 0 0 0 1px var(--bg-btns-tags-secondary),
 							0 0 3px 0 inset var(--bg-btns-tags-primary);
 	border-radius: 16px;
@@ -194,7 +224,7 @@
 }
 
 .card .ctn-tags span:nth-child(even),
-.ctn-selected-tags span:nth-child(even) {
+.selected-filters span:nth-child(even) {
 	background-color: var(--bg-btns-tags-primary);
 	color: var(--bg-btns-tags-secondary);
 }
