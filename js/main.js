@@ -1001,48 +1001,70 @@ const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
 }
 /* Functions to sort */
 const filterByDate = ({ascending}) => {
-	projectsFilteredBySelectedFilter = [];
+	if ( filterBtnsForFilter.length ) {
+		let filteredProjects = projectsFilteredBySelectedFilter;
+		projectsFilteredBySelectedFilter = []
+		const projecstOrderByDate = filteredProjects.sort((a, b) => ascending ? new Date(a['date']) - new Date(b['date']) : new Date(b['date']) - new Date(a['date']));
+		projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
+	} else {
+			LANGUAGES.map(lang => {
+				// save every name of the variables projectName
+				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+				
+				const projecstOrderByDate = getNameVariableProject.sort((a, b) => ascending ? new Date(a['date']) - new Date(b['date']) : new Date(b['date']) - new Date(a['date']));
+				projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
+			});
+		}
 
-	LANGUAGES.map(lang => {
-		// save every name of the variables projectName
-		let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-		
-		const projecstOrderByFav = getNameVariableProject.sort((a, b) => ascending ? new Date(a['date']) - new Date(b['date']) : new Date(b['date']) - new Date(a['date']));
-		projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
-	});
 }
 const filterByFavs = () => {
-	projectsFilteredBySelectedFilter = [];
-
-	LANGUAGES.map(lang => {
-		// save every name of the variables projectName
-		let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-		
-		const projecstOrderByFav = getNameVariableProject.filter(projectObject => projectObject['isFavorite'] === true);
+	if ( filterBtnsForFilter.length ) {
+		let filteredProjects = projectsFilteredBySelectedFilter;
+		projectsFilteredBySelectedFilter = []
+		const projecstOrderByFav = filteredProjects.filter(projectObject => projectObject['isFavorite'] === true);
 		projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
-	});
+	} else {
+			LANGUAGES.map(lang => {
+				// save every name of the variables projectName
+				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+				
+				const projecstOrderByFav = getNameVariableProject.filter(projectObject => projectObject['isFavorite'] === true);
+				projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
+			});
+	}
+
 }
 const filterViews = ({ascending} = true) => {
-	projectsFilteredBySelectedFilter = [];
-
-	LANGUAGES.map(lang => {
-		// save every name of the variables projectName
-		let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-		
-		const projecstOrderByViews = getNameVariableProject.sort((a, b) => ascending ? a['views'] - b['views'] : b['views'] - a['views']);
+	if ( filterBtnsForFilter.length ) {
+		let filteredProjects = projectsFilteredBySelectedFilter;
+		projectsFilteredBySelectedFilter = []
+		const projecstOrderByViews = filteredProjects.sort((a, b) => ascending ? a['views'] - b['views'] : b['views'] - a['views']);
 		projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
-	});
+	} else {
+			LANGUAGES.map(lang => {
+				// save every name of the variables projectName
+				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+				
+				const projecstOrderByViews = getNameVariableProject.sort((a, b) => ascending ? a['views'] - b['views'] : b['views'] - a['views']);
+				projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
+			});
+		}
 }
 const filterAlphabetic = ({ascending} = true) => {
-	projectsFilteredBySelectedFilter = [];
-
-	LANGUAGES.map(lang => {
-		// save every name of the variables projectName
-		let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-		
-		const projecstOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a['title'].localeCompare(b['title']) : b['title'].localeCompare(a['title']));
+	if ( filterBtnsForFilter.length ) {
+		let filteredProjects = projectsFilteredBySelectedFilter;
+		projectsFilteredBySelectedFilter = []
+		const projecstOrderByAlphabet = filteredProjects.sort((a, b) => ascending ? a['title'].localeCompare(b['title']) : b['title'].localeCompare(a['title']));
 		projecstOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
-	});
+	} else {
+			LANGUAGES.map(lang => {
+				// save every name of the variables projectName
+				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+				
+				const projecstOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a['title'].localeCompare(b['title']) : b['title'].localeCompare(a['title']));
+				projecstOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
+			});
+		}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
