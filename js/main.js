@@ -901,6 +901,7 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	// create card elements
 	const ctnCard = document.createElement('div');
 	const card = document.createElement('div');
+	const cardGlassEffect = document.createElement('span');
 	const ctnImgCard = document.createElement('div');
 	const linkCard = document.createElement('a');
 	const titleCard = document.createElement('h3');
@@ -926,11 +927,13 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	// add classes
 	ctnCard.classList.add(CLASS_NAMES.ctnCard);
 	card.classList.add(CLASS_NAMES.card);
+	cardGlassEffect.classList.add('glass-effect');
 	project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
 	ctnViewsCard.classList.add('views');
 	ctnImgCard.classList.add('ctn-img');
 	
 	// add elements into DOM
+	card.appendChild(cardGlassEffect);
 	project['isFavorite'] ? ctnFavIconCard.appendChild(favIconCard) : '';
 	ctnViewsCard.append(numberViewsCard, viewsIconCard);
 	ctnImgCard.appendChild(imgCard);
@@ -947,7 +950,7 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 const toggleFilterBtns = (selectedTagsBtns, {isFilteringByTags} = true) => {
 	// if there is a repeated element it will be removed from the array, if not it will be added
 	filterBtnsForFilter = filterBtnsForFilter.includes(selectedTagsBtns) ? filterBtnsForFilter.filter(el => el !== selectedTagsBtns) : [...filterBtnsForFilter, selectedTagsBtns];
-
+	
 	// if there is at least one or more tags selected
 	if (filterBtnsForFilter.length) {
 		// storage the projects which have the tags
@@ -982,7 +985,7 @@ const filteredByTagsSelected = () => {
 	LANGUAGES.map(lang => {
 		// save every name of the variables projectName
 		let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-
+		
 		// filter every project variable and depending on the projectsFilteredBySelectedFilter values
 		let filterElementsByTags = getNameVariableProject.filter(projectObject => filterBtnsForFilter.every(tag => projectObject.tags.includes(tag)))
 		filterElementsByTags.map(project => projectsFilteredBySelectedFilter.push(project));

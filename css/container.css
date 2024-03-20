@@ -60,16 +60,23 @@
 .selected-filters,
 .ctn-cards {
 	align-items: center;
-	background-image: var(--bg-containers);
-	box-shadow: 0 0 25px 0px inset #000000;
+	background-color: #051111;
+	box-shadow: 0 0 50px 0 inset #000000;
 	display: grid;
-	gap: 2rem;
 	padding: 2rem;
 	place-content: center;
 }
 
+.ctn-tag-buttons,
+.ctn-sort-btns,
+.selected-filters {
+	gap: 2rem;
+}
+
 .ctn-cards {
-	grid-template-columns: repeat(auto-fill, minmax(10rem, 22.5rem));
+	grid-template-columns: repeat(auto-fill, minmax(10rem, 25rem));
+	gap: 2rem 6rem;
+
 }
 
 .tags-container h2,
@@ -78,7 +85,7 @@
 .not-found-projects-filtered-by-tags h2,
 .projects h2 {
 	background-color: var(--bg-headers);
-	box-shadow: 0 0 25px 0px inset #203f0e;
+	box-shadow: 0 0 25px 0px inset #214b4d;
 	font: 700 2.25rem 'Shadows Into Light', sans-serif;
 	color: #ffffff;
 	text-align: center;

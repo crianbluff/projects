@@ -1,43 +1,76 @@
-/* Cards Scroll */
-.card::-webkit-scrollbar {
-	background-color: #1c1c1c;
-	width: 9px;
-}
-
-.card::-webkit-scrollbar-thumb {
-	background-image: linear-gradient(
-											rgba(0, 0, 0, 0),
-											#ffffff
-										);
-	border-radius: 6px;
-}
-
-.card::-webkit-scrollbar-thumb:hover {
-	background-image: linear-gradient(
-											rgba(0, 0, 0, 0),
-											var(--secondary-color)
-										);
-}
-
-.card::-webkit-scrollbar-thumb:active {
-	background-image: linear-gradient(
-											rgba(0, 0, 0, 0),
-											var(--secondary-color-highlight)
-										);
-}
-
 /* Cards */
+.ctn-card .card:before,
+.ctn-card .card:after {
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.ctn-card:nth-child(3n + 1) .card:before,
+.ctn-card:nth-child(3n + 1) .card:after {
+	background-image: linear-gradient(
+											315deg,
+											#2a8c00,
+											#000000
+										);
+}
+
+.ctn-card:nth-child(3n + 2) .card:before,
+.ctn-card:nth-child(3n + 2) .card:after {
+	background-image: linear-gradient(
+											315deg,
+											#107979,
+											#000000
+										);
+}
+
+.ctn-card:nth-child(3n + 3) .card:before,
+.ctn-card:nth-child(3n + 3) .card:after {
+	background-image: linear-gradient(
+											315deg,
+											#2b7c58,
+											#000000
+										);
+	
+}
+
 .card {
-	background-image: var(--bg-cards);
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
-	height: 20rem;
+	height: 25rem;
 	margin-top: 2rem;
 	max-width: 100%;
-	overflow-y: auto;
 	padding: 1rem;
 	position: relative;
+}
+
+.card:after {
+	filter: blur(30px);
+}
+
+.card .glass-effect:before {
+	background-color: rgba(255, 255, 255, 0.1);
+	content: '';
+	height: 100%;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+
+.card .glass-effect {
+	background-color: rgba(0, 0, 0, 0.6);
+	bottom: 6px;
+	left: 6px;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	z-index: 1;
 }
 
 /* Favs & Views */
@@ -46,16 +79,17 @@
 	padding: 0.25rem 0.5rem;
 	position: absolute;
 	text-shadow: 0 0 5px #000000;
-	top: 0;
+	top: 0.5rem;
+	z-index: 2;
 }
 
 .card .fav {
-	left: 0;
+	left: 0.5rem;
 }
 
 .card .views {
 	color: var(--secondary-color);
-	right: 0;
+	right: 0.5rem;
 }
 
 .card .views span:first-child {
@@ -78,7 +112,8 @@
 
 .card a {
 	display: block;
-	padding: 1rem;
+	padding: 2.5rem 1rem;
+	z-index: 2;
 }
 
 .card h3:before,
@@ -188,6 +223,38 @@
 	width: 100%;
 }
 
+/* Tag cards scrollbar */
+.card .ctn-tags::-webkit-scrollbar {
+	background-color: #051111;
+	height: 12px;
+}
+
+.card .ctn-tags::-webkit-scrollbar-thumb {
+	background-image: linear-gradient(
+											90deg,
+											#000000 50%,
+											#cdcdcd
+										);
+	border-radius: 3px;
+}
+
+.card .ctn-tags::-webkit-scrollbar-thumb:hover {
+	background-image: linear-gradient(
+											90deg,
+											#000000 50%,
+											var(--secondary-color)
+										);
+	cursor: pointer;
+}
+										
+.card .ctn-tags::-webkit-scrollbar-thumb:active {
+	background-image: linear-gradient(
+											90deg,
+											#000000 50%,
+											#00ff00
+										);
+}
+
 /* Tag cards */
 .card .ctn-tags:before {
 	background-color: var(--bg-card-contrast);
@@ -203,10 +270,13 @@
 .card .ctn-tags {
 	align-items: center;
 	display: flex;
-	flex-wrap: wrap;
+	height: 4rem;
 	margin: auto;
+	overflow-x: auto;
 	position: relative;
+	padding: 0 0.5rem;
 	width: 100%;
+	z-index: 2;
 }
 
 .card .ctn-tags span,
