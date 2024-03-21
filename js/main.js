@@ -69,7 +69,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Effect Hover In Card',
-		tags: ['hover', 'card', '3d', 'responsive', 'clip-path', 'geometry', 'polygon']
+		tags: ['hover', 'card', '3d', 'responsive', 'clip-path', 'geometry']
 	},
 	{
 		link: 'rXeVMy',
@@ -399,7 +399,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Hover With clip-path',
-		tags: ['hover', 'polygon', 'clip-path']
+		tags: ['hover', 'clip-path']
 	},
 	{
 		link: 'zmyyjV',
@@ -409,7 +409,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Template Test',
-		tags: ['template', 'layout', 'responsive', 'hamburger', 'menu', 'border', 'hover']
+		tags: ['template', 'responsive', 'hamburger', 'menu', 'border', 'hover']
 	},
 	{
 		link: 'Jmwwdq',
@@ -419,7 +419,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Template Test',
-		tags: ['template', 'layout', 'responsive', 'hamburger', 'menu', 'border', 'hover', 'footer', 'button', '3d', 'gradient']
+		tags: ['template', 'responsive', 'hamburger', 'menu', 'border', 'hover', 'footer', 'button', '3d', 'gradient']
 	},
 	{
 		link: 'dqQZxQ',
@@ -469,7 +469,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Reloj Css',
-		tags: ['animation', 'gradient', 'responsive']
+		tags: ['animation', 'gradient', 'clock', 'responsive']
 	},
 	{
 		link: 'zJLgqb',
@@ -479,7 +479,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Reverse Layout Animation',
-		tags: ['animation', 'template', 'layout', 'grid', 'animationend', 'footer', 'responsive']
+		tags: ['animation', 'template', 'grid', 'animationend', 'footer', 'responsive']
 	},
 	{
 		link: 'NLBZLp',
@@ -599,7 +599,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Layout Responsive Flexbox',
-		tags: ['template', 'layout', 'footer', 'menu', 'responsive']
+		tags: ['template', 'footer', 'menu', 'responsive']
 	},
 	{
 		link: 'QBmvYj',
@@ -609,7 +609,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Layout Responsive Flexbox Grid',
-		tags: ['template', 'layout', 'footer', 'menu', 'border', 'responsive']
+		tags: ['template', 'footer', 'menu', 'border', 'responsive']
 	},
 	{
 		link: 'pZLPxy',
@@ -639,7 +639,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Cafam Domicilios',
-		tags: ['template', 'layout', 'responsive']
+		tags: ['template', 'responsive']
 	},
 	{
 		link: 'jpZrgp',
@@ -769,7 +769,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Layout responsive',
-		tags: ['template', 'layout', 'responsive']
+		tags: ['template', 'responsive']
 	},
 	{
 		link: 'XWWpjaR',
@@ -959,7 +959,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Effect split text',
-		tags: ['hover', 'clip-path', 'geometry', 'polygon', 'responsive']
+		tags: ['hover', 'clip-path', 'geometry', 'responsive']
 	},
 	{
 		link: 'zgovXj',
@@ -1259,7 +1259,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Effect Parallax Scrolling clip-mask',
-		tags: ['scroll', 'parallax', 'background-clip', 'background-clip', 'text-fill-color', 'responsive']
+		tags: ['scroll', 'parallax', 'background-clip', 'text-fill-color', 'responsive']
 	},
 	{
 		link: 'gObzOJV',
@@ -1319,7 +1319,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Effect Diagonal',
-		tags: ['clip-path', 'polygon', 'geometry', 'hover', 'responsive']
+		tags: ['clip-path', 'geometry', 'hover', 'responsive']
 	}
 ];
 const projectsAngular = [
@@ -1377,7 +1377,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 500,
 		title: 'Template Responsive',
-		tags: ['template', 'layout', 'responsive', 'hamburger', 'menu']
+		tags: ['template', 'responsive', 'hamburger', 'menu']
 	},
 	{
 		link: 'rrrVbV',
@@ -1387,7 +1387,7 @@ const projectsJavascript = [
 		isFavorite: true,
 		views: 500,
 		title: 'Password Generator',
-		tags: ['form', 'responsive', 'border', 'password', 'clipboard', 'button']
+		tags: ['form', 'responsive', 'border', 'clipboard', 'button']
 	},
 	{
 		link: 'MBGyRe',
@@ -1597,7 +1597,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 500,
 		title: 'Slider',
-		tags: ['slider', 'lightbox']
+		tags: ['slider']
 	},
 	{
 		link: 'KrPLQM',
@@ -1697,7 +1697,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 15000,
 		title: 'Lightbox Responsive',
-		tags: ['lightbox', 'responsive', 'cards', 'image', 'modal', 'grid']
+		tags: ['responsive', 'cards', 'image', 'modal', 'grid']
 	},
 	{
 		link: 'LebbxJ',
@@ -1807,7 +1807,7 @@ const projectsJavascript = [
 		isFavorite: true,
 		views: 500,
 		title: 'Form Card Credit',
-		tags: ['card', 'form', 'validation', 'clip-path', 'polygon', 'responsive']
+		tags: ['card', 'form', 'validation', 'clip-path', 'responsive']
 	},
 	{
 		link: 'MNjjrz',
@@ -1937,7 +1937,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 10,
 		title: 'Youtube',
-		tags: ['template', 'layout', 'grid', 'menu', 'responsive']
+		tags: ['template', 'grid', 'menu', 'responsive']
 	},
 	{
 		link: 'PowePzx',
@@ -1967,7 +1967,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 10,
 		title: 'Template Bootstrap',
-		tags: ['template', 'layout', 'slider', 'animation', 'bootstrap', 'library', 'responsive']
+		tags: ['template', 'slider', 'animation', 'bootstrap', 'library', 'responsive']
 	},
 	{
 		link: 'aPMEYq',
@@ -2077,7 +2077,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 350,
 		title: 'Masonry Layout Js',
-		tags: ['template', 'layout', 'masonry', 'grid', 'responsive']
+		tags: ['template', 'masonry', 'grid', 'responsive']
 	},
 	{
 		link: 'VGyvzy',
@@ -2117,7 +2117,7 @@ const projectsJavascript = [
 		isFavorite: false,
 		views: 500,
 		title: 'Masonry Grid Layout Responsive',
-		tags: ['template', 'columns', 'layout', 'responsive', 'cards']
+		tags: ['template', 'columns', 'responsive', 'cards']
 	},
 	{
 		link: 'oNNBBdZ',
@@ -2224,28 +2224,18 @@ const TAG_BUTTONS = [
 	},
 	{
 		className: 'btn-tag',
-		id: 'lightbox',
-		text: 'Lightbox'
-	},
-	{
-		className: 'btn-tag',
 		id: 'box-reflect',
-		text: 'Box-reflect'
+		text: 'Box Reflect'
 	},
 	{
 		className: 'btn-tag',
 		id: 'drop-down',
-		text: 'Drop-down'
+		text: 'Drop Down'
 	},
 	{
 		className: 'btn-tag',
 		id: 'button',
 		text: 'Button'
-	},
-	{
-		className: 'btn-tag',
-		id: 'password',
-		text: 'Password'
 	},
 	{
 		className: 'btn-tag',
@@ -2255,7 +2245,7 @@ const TAG_BUTTONS = [
 	{
 		className: 'btn-tag',
 		id: 'radial-gradient',
-		text: 'Radial-gradient'
+		text: 'Radial Gradient'
 	},
 	{
 		className: 'btn-tag',
@@ -2270,7 +2260,7 @@ const TAG_BUTTONS = [
 	{
 		className: 'btn-tag',
 		id: 'dark-theme',
-		text: 'Dark-theme'
+		text: 'Dark Theme'
 	},
 	{
 		className: 'btn-tag',
@@ -2344,11 +2334,6 @@ const TAG_BUTTONS = [
 	},
 	{
 		className: 'btn-tag',
-		id: 'layout',
-		text: 'Layout'
-	},
-	{
-		className: 'btn-tag',
 		id: 'gradient',
 		text: 'Gradient'
 	},
@@ -2375,12 +2360,7 @@ const TAG_BUTTONS = [
 	{
 		className: 'btn-tag',
 		id: 'clip-path',
-		text: 'Clip-path'
-	},
-	{
-		className: 'btn-tag',
-		id: 'polygon',
-		text: 'Polygon'
+		text: 'Clip Path'
 	},
 	{
 		className: 'btn-tag',
@@ -2390,12 +2370,12 @@ const TAG_BUTTONS = [
 	{
 		className: 'btn-tag',
 		id: 'text-fill-color',
-		text: 'Text-fill-color'
+		text: 'Text Fill Color'
 	},
 	{
 		className: 'btn-tag',
 		id: 'mix-blend-mode',
-		text: 'Mix-blend-mode'
+		text: 'Mix Blend Mode'
 	},
 	{
 		className: 'btn-tag',
