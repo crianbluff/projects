@@ -7,7 +7,6 @@
 
 .main-container {
 	margin: 3.5rem auto 2.5rem;
-	width: 75%;
 }
 
 .ctn-filter-btns,
@@ -17,7 +16,7 @@
 
 .ctn-filter-btns {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 80% 20%;
 	gap: 1rem;
 }
 
@@ -63,20 +62,19 @@
 	background-color: #051111;
 	box-shadow: 0 0 50px 0 inset #000000;
 	display: grid;
-	padding: 2rem;
+	padding: 2rem 1.5rem;
 	place-content: center;
 }
 
 .ctn-tag-buttons,
 .ctn-sort-btns,
 .selected-filters {
-	gap: 2rem;
+	gap: 1.5rem;
 }
 
 .ctn-cards {
 	grid-template-columns: repeat(auto-fill, minmax(10rem, 25rem));
 	gap: 2rem 6rem;
-
 }
 
 .tags-container h2,
