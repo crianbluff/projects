@@ -10,12 +10,20 @@
 - [✔] Filter feature for favorite
 - [✔] Filter feature for # of more views
 - [✔] Filter feature for tags
-- [✖] Import fonts locally
-- [✖] Add favorite in every element to the json
+- [✔] Add tags in every element to the json
+- [✔] Check which project is using hover to add in json
+- [✔] Check which project does not have tags and add them to it
 - [✖] Add date in every element to the json
 - [✖] Add views in every element to the json
-- [✖] Check which project is using hover to add in json
-- [✖] Check which project does not have tags and add them to it
+- [✖] Add likes in every element to the json
+- [✖] Import fonts locally
 - [✖] Pagination logic for cards made just with JS
-- [✖] Add language.json depending if is spanish or english
 - [✖] Add dark mode by default depending on the user preference, same with the animations
+- [✖] Add language.json depending if is spanish or english
+
+
+Que los filtros diferencien lenguaje
+Filtrar si se seleccionar por ej cards y views que solo se vean las cards por orden de views
+Si vuelven a clickear en el boton deseleccionarlo
+Cambiar el estilos de las tarjetas con 3 colores de fondo
+Check where I can use spread operator for example [...document.querySelectorAll('.btn')]; 

@@ -849,7 +849,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Effect water wave',
-		tags: ['animation', 'water', 'wave']
+		tags: ['animation', 'water']
 	},
 	{
 		link: 'VwZypBx',
@@ -879,7 +879,7 @@ const projectsCss = [
 		isFavorite: false,
 		views: 500,
 		title: 'Indian flag animation',
-		tags: ['animation', 'flag', 'responsive']
+		tags: ['animation', 'responsive']
 	},
 	{
 		link: 'GRKyrZN',
@@ -1387,7 +1387,7 @@ const projectsJavascript = [
 		isFavorite: true,
 		views: 500,
 		title: 'Password Generator',
-		tags: ['form', 'responsive', 'border', 'passoword', 'clipboard', 'button']
+		tags: ['form', 'responsive', 'border', 'password', 'clipboard', 'button']
 	},
 	{
 		link: 'MBGyRe',
@@ -2269,13 +2269,8 @@ const TAG_BUTTONS = [
 	},
 	{
 		className: 'btn-tag',
-		id: 'dark-mode',
-		text: 'Dark-mode'
-	},
-	{
-		className: 'btn-tag',
-		id: 'sound',
-		text: 'Sound'
+		id: 'dark-theme',
+		text: 'Dark-theme'
 	},
 	{
 		className: 'btn-tag',
@@ -2306,11 +2301,6 @@ const TAG_BUTTONS = [
 		className: 'btn-tag',
 		id: 'data',
 		text: 'Data'
-	},
-	{
-		className: 'btn-tag',
-		id: 'wave',
-		text: 'Wave'
 	},
 	{
 		className: 'btn-tag',
@@ -2361,11 +2351,6 @@ const TAG_BUTTONS = [
 		className: 'btn-tag',
 		id: 'gradient',
 		text: 'Gradient'
-	},
-	{
-		className: 'btn-tag',
-		id: 'flag',
-		text: 'Flag'
 	},
 	{
 		className: 'btn-tag',
