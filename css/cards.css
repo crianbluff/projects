@@ -73,41 +73,39 @@
 	z-index: 1;
 }
 
-/* Favs & Views */
-.card .fav,
-.card .views {
-	padding: 0.25rem 0.5rem;
-	position: absolute;
-	text-shadow: 0 0 5px #000000;
-	top: 0.5rem;
+/* Icons Container */
+.card .ctn-icons-card {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
 	z-index: 2;
 }
 
 .card .fav {
-	left: 0.5rem;
-}
-
-.card .views {
-	color: var(--secondary-color);
-	right: 0.5rem;
-}
-
-.card .views span:first-child {
-	color: #ffffff;
-  font: 700 1rem 'Poppins', sans-serif;
-	margin-right: 3px;
-}
-
-/* View icon */
-.card .views span:last-child {
-	color: var(--secondary-color);
-	font-size: 1rem;
-}
-
-/* Fav icon */
-.card .fav span:first-child {
 	color: #ffff00;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
+}
+
+.card .icons-card-right {
+	display: flex;
+	font: 700 1rem 'Poppins', sans-serif;
+	text-shadow: 0 0 1px #ffffff,
+							 0 0 6px #000000;
+}
+
+.card .views,
+.card .likes {
+	color: #ffffff;
+}
+
+.card .likes {
+	margin-left: 10px;
+}
+
+.card .views span:first-child,
+.card .likes span:first-child	{
+	margin-right: 3px;
 }
 
 .card a {

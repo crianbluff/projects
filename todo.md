@@ -2,7 +2,7 @@
 
 - [✔] Fix title in containers
 - [✔] Make reusable classes for containers
-- [✖] When there is nothing show a text saying theare no project with those tags
+- [✔] When there is nothing show a text saying theare no project with those tags
 - [✔] Filter feature for oldest
 - [✔] Filter feature for latest
 - [✔] Filter feature for a-z
@@ -13,17 +13,16 @@
 - [✔] Add tags in every element to the json
 - [✔] Check which project is using hover to add in json
 - [✔] Check which project does not have tags and add them to it
-- [✖] Add date in every element to the json
-- [✖] Add views in every element to the json
-- [✖] Add likes in every element to the json
-- [✖] Import fonts locally
-- [✖] Pagination logic for cards made just with JS
+- [✔] Import fonts locally
+- [✔] Add views in every element to the json
+- [✔] Add likes in every element to the json
+- [✔] Add date in every element to the json
+- [✔] Add a button to sort the tags button
+- [✔] Highlight tag buttons which do not match with the category selected
 - [✖] Add dark mode by default depending on the user preference, same with the animations
-- [✖] Add language.json depending if is spanish or english
-
+- [✖] Pagination logic for cards made just with JS
+- [✖] Add language.json depending if is Spanish or English
+- [✖] Remove the tag from the tag selected when I clicked there
 
 Que los filtros diferencien lenguaje
 Filtrar si se seleccionar por ej cards y views que solo se vean las cards por orden de views
-Si vuelven a clickear en el boton deseleccionarlo
-Cambiar el estilos de las tarjetas con 3 colores de fondo
-Check where I can use spread operator for example [...document.querySelectorAll('.btn')]; 
