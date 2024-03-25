@@ -8,6 +8,31 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.ctn-categories-tag {
+	background-color: #000000;
+	box-shadow: 0 0 5px inset #cdcdcd;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	place-items: center;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+.ctn-categories-tag .category-tag {
+	background-color: #ffffff;
+	border-radius: 1rem;
+	color: #000000;
+	font: bold 14px 'Poppins', sans-serif;
+	padding: 0.25rem 0;
+	transition: 0.3s ease-in-out;
+	text-shadow: 0 0 4px #ffffff;
+	width: 100%;
+}
+
+.ctn-categories-tag .category-tag.active	{
+	background-color: var(--secondary-color);
+}
+
 /* Tag Buttons */
 .btn-tag {
 	background-color: var(--bg-btns-tags-primary);
@@ -19,11 +44,13 @@
 	padding: 0.5rem 0;
 	text-shadow: 0 0 4px var(--bg-btns-tags-primary);
 	transition: background-color 0.3s ease-in-out,
-							box-shadow 0.3s ease-in-out;
+							box-shadow 0.3s ease-in-out,
+							tex-shadow 0.3s ease-in-out;
 	width: 100%;
 }
 
-.btn-tag.btn-highlight {
+.btn-tag.btn-highlight,
+.btn-tag.disabled {
 	background-color: var(--bg-btns-tags-secondary);
 	box-shadow: 0 0 0 2px var(--bg-btns-tags-secondary),
 							0 0 6px 0 inset var(--bg-btns-tags-primary);
@@ -38,9 +65,17 @@
 							0 0 6px 0 inset;
 }
 
-.btn-tag.active {
-	box-shadow: 0 0 0 2px var(--secondary-color),
-							0 0 10px 0 inset var(--secondary-color);
+.category-tag:hover,
+.category-tag:focus,
+.category-tag:active,
+.btn-tag.disabled:hover,
+.btn-tag.disabled:focus,
+.btn-tag.disabled:active,
+.btn-tag.btn-highlight:hover,
+.btn-tag.btn-highlight:focus,
+.btn-tag.btn-highlight:active {
+	background-color: #cdcdcd;
+	text-shadow: 0 0 0 #000000;
 }
 
 .btn-tag.active {
@@ -48,7 +83,15 @@
 							0 0 10px 0 inset var(--secondary-color);
 }
 
-.btn-tag.btn-highlight {
+.btn-tag.active,
+.btn-tag.disabled.active,
+.btn-tag.btn-highlight.active {
+	box-shadow: 0 0 0 2px var(--secondary-color),
+							0 0 10px 0 inset var(--secondary-color);
+}
+
+.btn-tag.btn-highlight,
+.btn-tag.disabled {
 	background-color: var(--bg-btns-tags-secondary);
 	box-shadow: 0 0 0 2px var(--bg-btns-tags-secondary),
 							0 0 6px 0 inset var(--bg-btns-tags-primary);

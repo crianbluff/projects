@@ -3,6 +3,14 @@ const URL_CODEPEN_PREVIEW_IMG = 'https://shots.codepen.io/username/pen';
 
 /* Classes & ids */
 const ID_NAMES = {
+	ctnCategoriesTag: 'ctn-categories-tag',
+	btnTagAlphabet: 'btn-tag-alphabet',
+	btnTagColor: 'btn-tag-color',
+	btnTagFigure: 'btn-tag-figure',
+	btnTagMultimedia: 'btn-tag-multimedia',
+	btnTagJs: 'btn-tag-js',
+	btnTagElement: 'btn-tag-element',
+	btnTagSpecial: 'btn-tag-special',
 	ctnTagButtons: 'ctn-tag-buttons',
 	ctnSelectedFilters: 'ctn-selected-filters',
 	selectedFilters: 'selected-filters',
@@ -2164,6 +2172,328 @@ const LANGUAGES = [
 		title: 'Firebase'
 	}
 ];
+const TAG_CATEGORIES_BUTTONS = [
+	{
+		className: 'category-tag',
+		id: 'btn-tag-color',
+		text: 'Color'
+	},
+	{
+		className: 'category-tag',
+		id: 'btn-tag-figure',
+		text: 'Figure'
+	},
+	{
+		className: 'category-tag',
+		id: 'btn-tag-multimedia',
+		text: 'Multimedia'
+	},
+	{
+		className: 'category-tag',
+		id: 'btn-tag-js',
+		text: 'js'
+	},
+	{
+		className: 'category-tag',
+		id: 'btn-tag-element',
+		text: 'Element'
+	},
+	{
+		className: 'category-tag',
+		id: 'btn-tag-special',
+		text: 'Special'
+	}
+];
+const TAG_BUTTONS = [
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'border',
+		text: 'Border'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'box-reflect',
+		text: 'Box Reflect'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'dark-theme',
+		text: 'Dark Theme'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'gradient',
+		text: 'Gradient'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'mix-blend-mode',
+		text: 'Mix Blend Mode'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'neon',
+		text: 'Neon'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'radial-gradient',
+		text: 'Radial Gradient'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'shadow',
+		text: 'Shadow'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-color',
+		id: 'text-fill-color',
+		text: 'Text Fill Color'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: '3d',
+		text: '3d'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'blur',
+		text: 'Blur'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'clip-path',
+		text: 'Clip Path'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'clock',
+		text: 'Clock'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'cube',
+		text: 'Cube'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'geometry',
+		text: 'Geometry'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'glass',
+		text: 'Glass'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'isometric',
+		text: 'Isometric'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'svg',
+		text: 'Svg'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-figure',
+		id: 'water',
+		text: 'Water'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-multimedia',
+		id: 'image',
+		text: 'Image'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-multimedia',
+		id: 'sound',
+		text: 'Sound'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-multimedia',
+		id: 'video',
+		text: 'Video'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'clipboard',
+		text: 'Clipboard'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'data',
+		text: 'Data'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'hover',
+		text: 'Hover'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'library',
+		text: 'Library'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'mouse',
+		text: 'Mouse'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'scroll',
+		text: 'Scroll'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'drop-down',
+		text: 'Drop Down'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'footer',
+		text: 'Footer'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'form',
+		text: 'Form'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'grid',
+		text: 'Grid'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'hamburger',
+		text: 'Hamburger'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'list',
+		text: 'List'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'menu',
+		text: 'Menu'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'mobile',
+		text: 'Mobile'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'modal',
+		text: 'Modal'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'table',
+		text: 'Table'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'template',
+		text: 'Template'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-element',
+		id: 'tooltip',
+		text: 'Tooltip'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'animation',
+		text: 'Animation'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'button',
+		text: 'Button'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'card',
+		text: 'Card'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'games',
+		text: 'Games'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'parallax',
+		text: 'Parallax'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'preloader',
+		text: 'Preloader'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'responsive',
+		text: 'Responsive'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-special',
+		id: 'slider',
+		text: 'Slider'
+	}
+];
 const SORTING_BUTTONS = [
 	{
 		className: 'btn-tag btn-highlight',
@@ -2201,259 +2531,13 @@ const SORTING_BUTTONS = [
 		text: '🔼 Z-A',
 	}
 ];
-const TAG_BUTTONS = [
-	{
-		className: 'btn-tag',
-		id: 'sound',
-		text: 'Sound'
-	},
-	{
-		className: 'btn-tag',
-		id: 'image',
-		text: 'Image'
-	},
-	{
-		className: 'btn-tag',
-		id: 'hamburger',
-		text: 'Hamburger'
-	},
-	{
-		className: 'btn-tag',
-		id: 'clock',
-		text: 'Clock'
-	},
-	{
-		className: 'btn-tag',
-		id: 'box-reflect',
-		text: 'Box Reflect'
-	},
-	{
-		className: 'btn-tag',
-		id: 'drop-down',
-		text: 'Drop Down'
-	},
-	{
-		className: 'btn-tag',
-		id: 'button',
-		text: 'Button'
-	},
-	{
-		className: 'btn-tag',
-		id: 'clipboard',
-		text: 'Clipboard'
-	},
-	{
-		className: 'btn-tag',
-		id: 'radial-gradient',
-		text: 'Radial Gradient'
-	},
-	{
-		className: 'btn-tag',
-		id: 'mouse',
-		text: 'Mouse'
-	},
-	{
-		className: 'btn-tag',
-		id: 'footer',
-		text: 'Footer'
-	},
-	{
-		className: 'btn-tag',
-		id: 'dark-theme',
-		text: 'Dark Theme'
-	},
-	{
-		className: 'btn-tag',
-		id: 'mobile',
-		text: 'Mobile'
-	},
-	{
-		className: 'btn-tag',
-		id: 'shadow',
-		text: 'Shadow'
-	},
-	{
-		className: 'btn-tag',
-		id: 'neon',
-		text: 'Neon'
-	},
-	{
-		className: 'btn-tag',
-		id: 'water',
-		text: 'Water'
-	},
-	{
-		className: 'btn-tag',
-		id: 'list',
-		text: 'List'
-	},
-	{
-		className: 'btn-tag',
-		id: 'data',
-		text: 'Data'
-	},
-	{
-		className: 'btn-tag',
-		id: 'preloader',
-		text: 'Preloader'
-	},
-	{
-		className: 'btn-tag',
-		id: 'responsive',
-		text: 'Responsive'
-	},
-	{
-		className: 'btn-tag',
-		id: 'svg',
-		text: 'Svg'
-	},
-	{
-		className: 'btn-tag',
-		id: 'video',
-		text: 'Video'
-	},
-	{
-		className: 'btn-tag',
-		id: 'cube',
-		text: 'Cube'
-	},
-	{
-		className: 'btn-tag',
-		id: 'geometry',
-		text: 'Geometry'
-	},
-	{
-		className: 'btn-tag',
-		id: '3d',
-		text: '3d'
-	},
-	{
-		className: 'btn-tag',
-		id: 'hover',
-		text: 'Hover'
-	},
-	{
-		className: 'btn-tag',
-		id: 'gradient',
-		text: 'Gradient'
-	},
-	{
-		className: 'btn-tag',
-		id: 'image',
-		text: 'Image'
-	},
-	{
-		className: 'btn-tag',
-		id: 'blur',
-		text: 'Blur'
-	},
-	{
-		className: 'btn-tag',
-		id: 'tooltip',
-		text: 'Tooltip'
-	},
-	{
-		className: 'btn-tag',
-		id: 'glass',
-		text: 'Glass'
-	},
-	{
-		className: 'btn-tag',
-		id: 'clip-path',
-		text: 'Clip Path'
-	},
-	{
-		className: 'btn-tag',
-		id: 'isometric',
-		text: 'Isometric'
-	},
-	{
-		className: 'btn-tag',
-		id: 'text-fill-color',
-		text: 'Text Fill Color'
-	},
-	{
-		className: 'btn-tag',
-		id: 'mix-blend-mode',
-		text: 'Mix Blend Mode'
-	},
-	{
-		className: 'btn-tag',
-		id: 'library',
-		text: 'Library'
-	},
-	{
-		className: 'btn-tag',
-		id: 'slider',
-		text: 'Slider'
-	},
-	{
-		className: 'btn-tag',
-		id: 'menu',
-		text: 'Menu'
-	},
-	{
-		className: 'btn-tag',
-		id: 'scroll',
-		text: 'Scroll'
-	},
-	{
-		className: 'btn-tag',
-		id: 'card',
-		text: 'Card'
-	},
-	{
-		className: 'btn-tag',
-		id: 'form',
-		text: 'Form'
-	},
-	{
-		className: 'btn-tag',
-		id: 'animation',
-		text: 'Animation'
-	},
-	{
-		className: 'btn-tag',
-		id: 'template',
-		text: 'Template'
-	},
-	{
-		className: 'btn-tag',
-		id: 'table',
-		text: 'Table'
-	},
-	{
-		className: 'btn-tag',
-		id: 'parallax',
-		text: 'Parallax'
-	},
-	{
-		className: 'btn-tag',
-		id: 'grid',
-		text: 'Grid'
-	},
-	{
-		className: 'btn-tag',
-		id: 'games',
-		text: 'Games'
-	},
-	{
-		className: 'btn-tag',
-		id: 'border',
-		text: 'Border'
-	},
-	{
-		className: 'btn-tag',
-		id: 'modal',
-		text: 'Modal'
-	},
-];
 
 /* Tags & Sort filter */
 let filterBtnsForFilter = [];
 let projectsFilteredBySelectedFilter = [];
 
 /* Containers for tag buttons and projects */
+const categoriesTagContainerElement = document.getElementById(ID_NAMES.ctnCategoriesTag);
 const tagsContainerElement = document.getElementById(ID_NAMES.ctnTagButtons);
 const sortContainerElement = document.getElementById(ID_NAMES.ctnSortButtons);
 const ctnSelectedFiltersElement = document.getElementById(ID_NAMES.ctnSelectedFilters);
@@ -2461,6 +2545,9 @@ const selectedFiltersElement = document.getElementById(ID_NAMES.selectedFilters)
 const projectsContainerElement = document.getElementById(ID_NAMES.ctnProjects);
 const projectsFilterByTagsContainerElement = document.getElementById(ID_NAMES.ctnProjectsFilteredByTags);
 const notFoundProjectsFilteredByTagsElement = document.getElementById(ID_NAMES.NotFoundProjectsFilteredByTags);
+
+/* Buttons */
+const btnTagAlphabet = document.getElementById(ID_NAMES.btnTagAlphabet);
 
 /* Add tag & filter buttons to the DOM */
 const createFilterBtnsDOM = (btn, containerBtns) => {
@@ -2473,9 +2560,6 @@ const createFilterBtnsDOM = (btn, containerBtns) => {
 	
 	// Add elements in DOM
 	containerBtns.appendChild(btnFilter);
-	
-	// Toggle class active for button when it is clicked
-	btnFilter.addEventListener('click', () => btnFilter.classList.toggle('active'));
 	
 	return btnFilter;
 }
@@ -2541,7 +2625,7 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	const linkCard = document.createElement('a');
 	const titleCard = document.createElement('h3');
 	const imgCard = document.createElement('img');
-	const ctnViewsCard = document.createElement('div');
+		const ctnViewsCard = document.createElement('div');
 	const numberViewsCard = document.createElement('span');
 	const viewsIconCard = document.createElement('span');
 	const ctnFavIconCard = project['isFavorite'] ? document.createElement('div') : '';
@@ -2551,7 +2635,7 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	project['isFavorite'] ? favIconCard.textContent = '⭐' : '';
 	numberViewsCard.textContent = `${project['views']}`;
 	viewsIconCard.textContent = '👁️';
-	linkCard.href = `${URL_CODEPEN_PEN}/${project['link']}`;
+		linkCard.href = `${URL_CODEPEN_PEN}/${project['link']}`;
 	linkCard.target = '_blank';
 	titleCard.textContent = project['title'];
 	imgCard.src = `${URL_CODEPEN_PREVIEW_IMG}/${project['imgUrl']}`;
@@ -2563,15 +2647,15 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	ctnCard.classList.add(CLASS_NAMES.ctnCard);
 	card.classList.add(CLASS_NAMES.card);
 	cardGlassEffect.classList.add('glass-effect');
-	project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
+		project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
 	ctnViewsCard.classList.add('views');
-	ctnImgCard.classList.add('ctn-img');
+		ctnImgCard.classList.add('ctn-img');
 	
 	// add elements into DOM
 	card.appendChild(cardGlassEffect);
 	project['isFavorite'] ? ctnFavIconCard.appendChild(favIconCard) : '';
 	ctnViewsCard.append(numberViewsCard, viewsIconCard);
-	ctnImgCard.appendChild(imgCard);
+		ctnImgCard.appendChild(imgCard);
 	linkCard.append(titleCard, ctnImgCard);
 	// if it is favorite to add the star icon to the DOM on the card
 	project['isFavorite'] ? card.append(ctnFavIconCard, ctnViewsCard, linkCard, ctnTags) : card.append(ctnViewsCard, linkCard, ctnTags);
@@ -2635,136 +2719,183 @@ const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
 	});
 }
 /* Functions to sort */
-const filterByDate = ({ascending}) => {
+const filterByDate = ({ascending}, property) => {
 	if ( filterBtnsForFilter.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
-		const projecstOrderByDate = filteredProjects.sort((a, b) => ascending ? new Date(a['date']) - new Date(b['date']) : new Date(b['date']) - new Date(a['date']));
+		const projecstOrderByDate = filteredProjects.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
 		projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
 			LANGUAGES.map(lang => {
 				// save every name of the variables projectName
 				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 				
-				const projecstOrderByDate = getNameVariableProject.sort((a, b) => ascending ? new Date(a['date']) - new Date(b['date']) : new Date(b['date']) - new Date(a['date']));
+				const projecstOrderByDate = getNameVariableProject.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
 				projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
 			});
 		}
 
 }
-const filterByFavs = () => {
+const filterByBoolean = (property) => {
 	if ( filterBtnsForFilter.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
-		const projecstOrderByFav = filteredProjects.filter(projectObject => projectObject['isFavorite'] === true);
+		const projecstOrderByFav = filteredProjects.filter(projectObject => projectObject[property] === true);
 		projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
 			LANGUAGES.map(lang => {
 				// save every name of the variables projectName
 				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 				
-				const projecstOrderByFav = getNameVariableProject.filter(projectObject => projectObject['isFavorite'] === true);
+				const projecstOrderByFav = getNameVariableProject.filter(projectObject => projectObject[property] === true);
 				projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
 			});
 	}
 
 }
-const filterViews = ({ascending} = true) => {
+const filterByNumbers = ({ascending} = true, property) => {
 	if ( filterBtnsForFilter.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
-		const projecstOrderByViews = filteredProjects.sort((a, b) => ascending ? a['views'] - b['views'] : b['views'] - a['views']);
+		const projecstOrderByViews = filteredProjects.sort((a, b) => ascending ? a[property] - b[property] : b[property] - a[property]);
 		projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
 			LANGUAGES.map(lang => {
 				// save every name of the variables projectName
 				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 				
-				const projecstOrderByViews = getNameVariableProject.sort((a, b) => ascending ? a['views'] - b['views'] : b['views'] - a['views']);
+				const projecstOrderByViews = getNameVariableProject.sort((a, b) => ascending ? a[property] - b[property] : b[property] - a[property]);
 				projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
 			});
 		}
 }
-const filterAlphabetic = ({ascending} = true) => {
+const filterByString = ({ascending} = true, property) => {
 	if ( filterBtnsForFilter.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
-		const projecstOrderByAlphabet = filteredProjects.sort((a, b) => ascending ? a['title'].localeCompare(b['title']) : b['title'].localeCompare(a['title']));
-		projecstOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
+		const projectsOrderByAlphabet = filteredProjects.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
+		projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
 			LANGUAGES.map(lang => {
 				// save every name of the variables projectName
 				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 				
-				const projecstOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a['title'].localeCompare(b['title']) : b['title'].localeCompare(a['title']));
-				projecstOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
+				const projectsOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
+				projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
 			});
 		}
 }
+const filterByCategory = (category) => {
+	TAG_BUTTONS.forEach(tagBtn => {
+		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('disabled')
+		: document.getElementById(tagBtn['id']).classList.add('disabled');
+	});
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-	// Add sorting buttons into DOM
-	SORTING_BUTTONS.map(tagBtn => {
+/* Function to add Buttons to DOM */
+const createTagCategoryButtons = () => {
+	TAG_CATEGORIES_BUTTONS.forEach(tagCategory => {
+		const btnTagCategory = createFilterBtnsDOM(tagCategory, categoriesTagContainerElement);
+		btnTagCategory.addEventListener('click', e => {
+			[...btnTagCategory.parentElement.children].forEach(sib => sib.classList.remove('active'));
+			e.target.classList.toggle('active');
+			filterByCategory(e.target.id);
+		});
+	});
+}
+const createTagButtons = (tagButtons) => {
+	tagButtons.forEach(tagBtn => {
+		// get each tag btn
+		const btnTag = createFilterBtnsDOM(tagBtn, tagsContainerElement);
+		
+		// Filter projects by selected tag
+		btnTag.addEventListener('click', e => {
+			e.target.classList.toggle('active');
+			toggleFilterBtns(btnTag['id'], {isFilteringByTags: true});
+		});
+	});
+}
+const createSortButtons = () => {
+	SORTING_BUTTONS.forEach(tagBtn => {
 		// get each sort btn
 		const btnSorting = createFilterBtnsDOM(tagBtn, sortContainerElement);
 
 		document.getElementById(btnSorting['id']).addEventListener('click', e => {
+			e.target.classList.toggle('active');
+
 			switch (e.currentTarget.id) {
 				case 'oldest':
-					filterByDate({ascending: true});
+					filterByDate({ascending: true}, 'date');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('🔙 Oldest');
 				break;
 
 				case 'latest':
-					filterByDate({ascending: false});
+					filterByDate({ascending: false}, 'date');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
 					console.log('🔜 Latest');
 				break;
 
 				case 'favorite':
-					filterByFavs();
+					filterByBoolean('isFavorite');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
 					console.log('⭐ Favorite');
 				break;
 
 				case 'more-views':
-					filterViews({ascending: false});
+					filterByNumbers({ascending: false}, 'views');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
 					console.log('👁️🔼 Views');
 				break;
 
 				case 'less-views':
-					filterViews({ascending: true});
+					filterByNumbers({ascending: true}, 'views');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
 					console.log('👁️🔽 Views');
 				break;
 
 				case 'a-z':
-					filterAlphabetic({ascending: true});
+					filterByString({ascending: true}, 'title');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
 					console.log('🔽 A-Z');
 				break;
 			
 				case 'z-a':
-					filterAlphabetic({ascending: false});
+					filterByString({ascending: false}, 'title');
 					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
 					console.log('🔼 Z-A');	
 				break;
 			}
-
 		});
 	});
+}
+
+const sortTagButtonsByAlphabet = (event) => {
+	tagsContainerElement.innerHTML = '';
+		
+	let isBtnSortTagsClicked = event.target.getAttribute('aria-pressed') === 'true' ? true : false;
+	event.target.setAttribute('aria-pressed', !isBtnSortTagsClicked);
+	[...event.target.parentElement.children].forEach(sib => sib.classList.remove('active'));
+	event.target.classList.toggle('active');
+	event.currentTarget.textContent = isBtnSortTagsClicked ? 'A-Z' : 'Z-A';
+
+	const tagButtonsOrderByAlphabet = TAG_BUTTONS.sort((a, b) => isBtnSortTagsClicked ? b['text'].localeCompare(a['text']) : a['text'].localeCompare(b['text']));
+	createTagButtons(tagButtonsOrderByAlphabet);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	// Add categories tag into DOM
+	createTagCategoryButtons();
 
 	// Add tag buttons into DOM
-	TAG_BUTTONS.map(tagBtn => {
-		// get each tag btn
-		const btnTag = createFilterBtnsDOM(tagBtn, tagsContainerElement);
+	createTagButtons(TAG_BUTTONS);
 
-		// Filter projects by selected tag
-		btnTag.addEventListener('click', () => toggleFilterBtns(btnTag['id'], {isFilteringByTags: true}));
-	});
+	// Add sorting buttons into DOM
+	createSortButtons();
 	
 	// Add cards into DOM
 	createProjects();
+
+	// Sort tag buttons a-z/z-a
+	btnTagAlphabet.addEventListener('click', event => sortTagButtonsByAlphabet(event));
 });

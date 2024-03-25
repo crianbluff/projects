@@ -15,6 +15,10 @@
 		width: 95%;
 	}
 
+	.ctn-categories-tag {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
 	.ctn-filter-btns {
 		grid-template-columns: 1fr;
 	}
@@ -25,6 +29,10 @@
 }
 
 @media (max-width: 768px) {
+	.ctn-categories-tag {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
 	.ctn-sort-btns {
 		grid-template-columns: 1fr 1fr;
 	}
