@@ -1,7 +1,6 @@
 :root {
   --primary-color: #000000;
-  --secondary-color: #4abf06;
-  --secondary-color-highlight: #88f549;
+  --secondary-color: #00faff;
   --bg-menu: #000000;
   --bg-btns-tags-primary: #000000;
   --bg-btns-tags-secondary: #ffffff;
@@ -10,9 +9,9 @@
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 *:focus {
@@ -33,5 +32,6 @@ a {
 }
 
 button {
+  border-style: none;
   cursor: pointer;
 }

@@ -42,7 +42,6 @@
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
-	height: 27rem;
 	margin-top: 2rem;
 	max-width: 100%;
 	padding: 1rem;
@@ -95,7 +94,7 @@
 
 .card .views span:first-child {
 	color: #ffffff;
-	font: 700 1rem 'Poppins', sans-serif;
+  font: 700 1rem 'Poppins', sans-serif;
 	margin-right: 3px;
 }
 
@@ -144,23 +143,6 @@
 	position: relative;
 	text-align: center;
 	text-overflow: ellipsis;
-	text-shadow: -1px 1px #000000,
-							 -2px 2px #000000,
-							 -3px 3px #404040,
-							 -4px 4px #404040,
-							 -5px 5px #404040,
-							 -6px 6px #404040,
-							 -7px 7px #404040,
-							 -8px 8px #404040,
-							 -9px 9px #404040,
-							 -10px 10px #000000;
-	text-wrap: balance;
-	transition: text-shadow 150ms 300ms ease-in-out;
-	user-select: none;
-	width: 100%;
-}
-
-.card a:hover h3 {
 	text-shadow: -1px 1px #0c0000,
 							 -2px 2px #0c0000,
 							 -3px 3px #0c0000,
@@ -171,6 +153,26 @@
 							 -8px 8px #0c0000,
 							 -9px 9px #0c0000,
 							 -10px 10px #0c0000;
+	text-transform: uppercase;
+	text-wrap: balance;
+	transition: text-shadow 150ms 300ms ease-in-out;
+	user-select: none;
+	width: 100%;
+}
+
+.card a:hover h3,
+.card a:focus h3,
+.card a:active h3 {
+	text-shadow: -1px 1px rgba(0, 0, 0, 1),
+							 -2px 2px rgba(0, 0, 0, 1),
+							 -3px 3px rgba(255, 255, 255, 0.1),
+							 -4px 4px rgba(255, 255, 255, 0.1),
+							 -5px 5px rgba(255, 255, 255, 0.1),
+							 -6px 6px rgba(255, 255, 255, 0.2),
+							 -7px 7px rgba(255, 255, 255, 0.2),
+							 -8px 8px rgba(255, 255, 255, 0.3),
+							 -9px 9px rgba(255, 255, 255, 0.3),
+							 -10px 10px rgba(0, 0, 0, 1);
 }
 
 .card h3:after {
@@ -178,7 +180,11 @@
 }
 
 .card a:hover h3:before,
-.card a:hover h3:after {
+.card a:focus h3:before,
+.card a:active h3:before,
+.card a:hover h3:after,
+.card a:focus h3:after,
+.card a:active h3:after {
 	background-color: rgba(255, 255, 255, 0.1);
 	transform: translate3d(0, -1rem, 0);
 	transition: background-color 150ms 300ms ease-in-out,
@@ -200,7 +206,9 @@
 	z-index: 1;
 }
 
-.card a:hover .ctn-img:before {
+.card a:hover .ctn-img:before,
+.card a:focus .ctn-img:before,
+.card a:active .ctn-img:before {
 	background-color: rgba(0, 0, 0, 0);
 }
 
@@ -209,11 +217,13 @@
 	overflow: hidden;
 	position: relative;
 	transition: transform 400ms ease-in-out;
-	transform: scale(0.9);
+	transform: translateY(0) scale(0.8);
 }
 
-.card a:hover .ctn-img {
-	transform: scale(1);
+.card a:hover .ctn-img,
+.card a:focus .ctn-img,
+.card a:active .ctn-img {
+	transform: translateY(5%) scale(0.9);
 }
 
 .card img {
