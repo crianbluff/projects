@@ -8,6 +8,22 @@
   --bg-card-contrast: #ffffff;
 }
 
+/* Fonts */
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/poppins.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Shadows Into Light';
+	src: url('../fonts/shadows-into-ligth.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Whisper';
+	src: url('../fonts/whisper.ttf') format('truetype');
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
