@@ -1,9 +1,24 @@
 .menu-title {
 	background-color: var(--bg-menu);
 	box-shadow: 0 0 1px 2px #cdcdcd;
-	font-family: 'Whisper', sans-serif;
+}
+
+.menu-title a {
+	align-items: center;
 	color: #ffffff;
-	font-size: 1.75rem;
-	text-align: center;
+	display: flex;
+	font: 700 3.75rem 'Whisper', sans-serif;
+	justify-content: center;
+	transition: text-shadow 0.3s ease-in-out;
 	text-shadow: 0 0 7px var(--secondary-color);
+}
+
+.menu-title a:hover,
+.menu-title a:focus,
+.menu-title a:active {
+	text-shadow: 0 0 7px #ffffff;
+}
+
+.menu-title .icon-menu {
+	margin-left: 2rem;
 }
