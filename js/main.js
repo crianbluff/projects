@@ -1,5 +1,6 @@
 const URL_CODEPEN_PEN = 'https://codepen.io/crianbluff/full';
 const URL_CODEPEN_PREVIEW_IMG = 'https://shots.codepen.io/username/pen';
+const URL_FIREBASE_PREVIEW_IMG = 'https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o'
 
 /* Classes & ids */
 const ID_NAMES = {
@@ -41,6 +42,9 @@ const CLASS_NAMES = {
 	ctnViews: 'ctn-views',
 	ctnLikes: 'ctn-likes',
 	ctnCommments: 'comments',
+	ctnGit: 'git',
+	linkGit: 'link-repo',
+	iconGit: 'icon-github',
 	linkCard: 'link-card',
 	ctnImgCard: 'ctn-img',
 	ctnTags: 'ctn-tags'
@@ -49,16 +53,29 @@ const CLASS_NAMES = {
 /* Projects */
 const projectsAngular = [
 	{
-		link: '',
-		imgUrl: '',
-		date: '01-01-2022',
+		link: 'https://crianbluff.github.io/spotify-api',
+		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}/photos%2Fspotify-api.png?alt=media&token=821d3aa0-f9e5-40ce-aaa9-4944acaab856`,
+		gitUrl: 'https://github.com/crianbluff/spotify-api',
+		date: '29-07-2019',
 		technology: 'Angular',
-		isFavorite: false,
+		isFavorite: true,
 		comments: 0,
 		likes: 0,
 		views: 0,
-		title: '',
-		tags: []
+		title: 'Spotify Api',
+		tags: ['cards', 'pagination', 'api', 'search', 'sound']
+	},
+	{
+		link: 'https://crianbluff.github.io/word-cloud',
+		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}/photos%2Fword-cloud1.png?alt=media&token=9f4fab90-60d2-4619-9918-b4a2020b1a77`,
+		gitUrl: 'https://github.com/crianbluff/word-cloud',
+		date: '25-06-2019',
+		technology: 'Angular',
+		isFavorite: true,
+		likes: 0,
+		views: 0,
+		title: 'Word Cloud',
+		tags: ['library']
 	}
 ];
 const projectsJavascript = [
@@ -3143,6 +3160,9 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	const ctnIconsCard = document.createElement('div');
 	const iconsLeftCard = document.createElement('div');
 	const iconsRightCard = document.createElement('div');
+	const ctnGitCard = project['gitUrl'] ? document.createElement('div') : '';
+	const linkGitCard = project['gitUrl'] ? document.createElement('a') : '';
+	const gitIconCard = project['gitUrl'] ? document.createElement('i') : '';
 	const ctnDateCard = project['date'] ? document.createElement('div') : '';
 	const dateIconCard = project['date'] ? document.createElement('span') : '';
 	const dateCard = project['date'] ? document.createElement('span') : '';
@@ -3165,6 +3185,8 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	likesIconCard.textContent = '❤️';
 	commentsCard.textContent = `${project['comments']}`;
 	commentsIconCard.textContent = '💬';
+	linkGitCard.href = project['gitUrl'];
+	linkGitCard.target = '_blank';
 	linkCard.href = project['link'];
 	linkCard.target = '_blank';
 	titleCard.textContent = project['title'];
@@ -3193,6 +3215,9 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	project['views'] ? ctnViewsCard.classList.add(CLASS_NAMES.ctnViews) : '';
 	project['likes'] ? ctnLikesCard.classList.add(CLASS_NAMES.ctnLikes) : '';
 	project['comments'] ? ctnCommentsCard.classList.add(CLASS_NAMES.ctnCommments) : '';
+	project['gitUrl'] ? ctnGitCard.classList.add(CLASS_NAMES.ctnGit) : '';
+	project['gitUrl'] ? linkGitCard.classList.add(CLASS_NAMES.linkGit) : '';
+	project['gitUrl'] ? gitIconCard.classList.add(CLASS_NAMES.iconGit) : '';
 	ctnImgCard.classList.add(CLASS_NAMES.ctnImgCard);
 	
 	// add elements into DOM
@@ -3203,8 +3228,10 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	project['views'] ? ctnViewsCard.append(numberViewsCard, viewsIconCard) : '';
 	project['likes'] ? ctnLikesCard.append(numberLikesCard, likesIconCard): '';
 	project['comments'] ? ctnCommentsCard.append(commentsCard, commentsIconCard) : '';
+	project['gitUrl'] ? linkGitCard.appendChild(gitIconCard) : '';
+	project['gitUrl'] ? ctnGitCard.appendChild(linkGitCard) : '';
 	iconsLeftCard.appendChild(ctnDateCard);
-	iconsRightCard.append(ctnViewsCard, ctnLikesCard, ctnCommentsCard);
+	iconsRightCard.append(ctnViewsCard, ctnLikesCard, ctnCommentsCard, ctnGitCard);
 	ctnIconsCard.append(iconsLeftCard, iconsRightCard);
 	ctnImgCard.appendChild(imgCard);
 	linkCard.append(titleCard, ctnImgCard);

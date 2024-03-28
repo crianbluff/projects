@@ -145,6 +145,18 @@
 							 0 0 6px #000000;
 }
 
+.git .link-repo {
+	color: #ffffff;
+	font-size: 1.25rem;
+	transition: color 0.3s ease-in-out;
+}
+
+.git .link-repo:hover,
+.git .link-repo:focus,
+.git .link-repo:active {
+	color: #00ff00;
+}
+
 .card .link-card {
 	display: block;
 	padding: 1.5rem 0;
