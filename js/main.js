@@ -2441,17 +2441,16 @@ const TAG_CATEGORIES_BUTTONS = [
 	},
 	{
 		className: 'category-tag',
+		id: 'btn-tag-css',
+		text: 'Css'
+	},
+	{
+		className: 'category-tag',
 		id: 'btn-tag-special',
 		text: 'Special'
 	}
 ];
 const TAG_BUTTONS = [
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-color',
-		id: 'border',
-		text: 'Border'
-	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
@@ -2581,6 +2580,36 @@ const TAG_BUTTONS = [
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
+		id: 'search',
+		text: 'Search'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'pagination',
+		text: 'Pagination'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'parallax',
+		text: 'Parallax'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'preloader',
+		text: 'Preloader'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
+		id: 'slider',
+		text: 'Slider'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-js',
 		id: 'clipboard',
 		text: 'Clipboard'
 	},
@@ -2589,12 +2618,6 @@ const TAG_BUTTONS = [
 		category: 'btn-tag-js',
 		id: 'data',
 		text: 'Data'
-	},
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-js',
-		id: 'hover',
-		text: 'Hover'
 	},
 	{
 		className: 'btn-tag',
@@ -2631,12 +2654,6 @@ const TAG_BUTTONS = [
 		category: 'btn-tag-element',
 		id: 'form',
 		text: 'Form'
-	},
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-element',
-		id: 'grid',
-		text: 'Grid'
 	},
 	{
 		className: 'btn-tag',
@@ -2688,21 +2705,45 @@ const TAG_BUTTONS = [
 	},
 	{
 		className: 'btn-tag',
-		category: 'btn-tag-special',
+		category: 'btn-tag-css',
 		id: 'animation',
 		text: 'Animation'
 	},
 	{
 		className: 'btn-tag',
-		category: 'btn-tag-special',
+		category: 'btn-tag-css',
+		id: 'hover',
+		text: 'Hover'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-css',
+		id: 'border',
+		text: 'Border'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-css',
 		id: 'button',
 		text: 'Button'
 	},
 	{
 		className: 'btn-tag',
-		category: 'btn-tag-special',
+		category: 'btn-tag-css',
 		id: 'card',
 		text: 'Card'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-css',
+		id: 'grid',
+		text: 'Grid'
+	},
+	{
+		className: 'btn-tag',
+		category: 'btn-tag-css',
+		id: 'responsive',
+		text: 'Responsive'
 	},
 	{
 		className: 'btn-tag',
@@ -2710,30 +2751,6 @@ const TAG_BUTTONS = [
 		id: 'games',
 		text: 'Games'
 	},
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-special',
-		id: 'parallax',
-		text: 'Parallax'
-	},
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-special',
-		id: 'preloader',
-		text: 'Preloader'
-	},
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-special',
-		id: 'responsive',
-		text: 'Responsive'
-	},
-	{
-		className: 'btn-tag',
-		category: 'btn-tag-special',
-		id: 'slider',
-		text: 'Slider'
-	}
 ];
 const SORTING_BUTTONS = [
 	{
