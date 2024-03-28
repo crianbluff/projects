@@ -14,7 +14,7 @@
 .ctn-card:nth-child(3n + 1) .card:after {
 	background-image: linear-gradient(
 											315deg,
-											#2a8c00,
+											#107979,
 											#000000
 										);
 }
@@ -23,19 +23,27 @@
 .ctn-card:nth-child(3n + 2) .card:after {
 	background-image: linear-gradient(
 											315deg,
-											#107979,
+											#2b7c58,
 											#000000
-										);
+										);	
 }
 
 .ctn-card:nth-child(3n + 3) .card:before,
 .ctn-card:nth-child(3n + 3) .card:after {
 	background-image: linear-gradient(
 											315deg,
-											#2b7c58,
+											#107979,
 											#000000
 										);
-	
+}
+
+.ctn-card .card.favorite:before,
+.ctn-card .card.favorite:after {
+	background-image: linear-gradient(
+											315deg,
+											#7b4e00,
+											#000000
+										);
 }
 
 .card {
@@ -50,6 +58,30 @@
 
 .card:after {
 	filter: blur(30px);
+}
+
+.card .tech,
+.card .fav {
+	font-size: 1.75rem;
+	padding: 0.25rem;
+	position: absolute;
+	top: 0;
+	z-index: 3;
+}
+
+.card .tech {
+	color: #ffffff;
+	text-shadow: 0 0 3px;
+	left: 0;
+	transform: translate(-50%, -50%);
+}
+
+.card .fav {
+	color: #ff8700;
+	right: 0;
+	text-shadow: 0 0 1px #000000,
+							 0 0 4px #ff8700;
+	transform: translate(50%, -50%);
 }
 
 .card .glass-effect:before {
@@ -75,6 +107,7 @@
 
 /* Icons Container */
 .card .ctn-icons-card {
+	background-color: rgba(0, 0, 0, 0.1);
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -82,33 +115,28 @@
 	z-index: 2;
 }
 
-.card .fav {
-	color: #ffff00;
-	font-size: 1.5rem;
-}
-
+.card .icons-card-left,
 .card .icons-card-right {
+	align-items: center;
 	display: flex;
-	font: 700 1rem 'Poppins', sans-serif;
-	text-shadow: 0 0 1px #ffffff,
-							 0 0 6px #000000;
-}
-
-.card .views,
-.card .likes {
 	color: #ffffff;
 }
 
-.card .likes {
-	margin-left: 10px;
+.card .icons-card-right {
+	font: 700 1rem 'Poppins', sans-serif;
+}
+
+.card .icons-card-right div:not(:last-child) {
+	margin-right: 5px;
 }
 
 .card .views span:first-child,
 .card .likes span:first-child	{
-	margin-right: 3px;
+	text-shadow: 0 0 1px #ffffff,
+							 0 0 6px #000000;
 }
 
-.card a {
+.card .link-card {
 	display: block;
 	padding: 1.5rem 0;
 	z-index: 2;

@@ -3112,6 +3112,10 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	// create card elements
 	const ctnCard = document.createElement('div');
 	const card = document.createElement('div');
+	const ctnTechIconCard = document.createElement('div');
+	const techIconCard = document.createElement('i');
+	const ctnFavIconCard = project['isFavorite'] ? document.createElement('div') : '';
+	const favIconCard = project['isFavorite'] ? document.createElement('i') : '';
 	const cardGlassEffect = document.createElement('span');
 	const ctnImgCard = document.createElement('div');
 	const linkCard = document.createElement('a');
@@ -3120,17 +3124,14 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	const ctnIconsCard = document.createElement('div');
 	const iconsLeftCard = document.createElement('div');
 	const iconsRightCard = document.createElement('div');
-	const ctnFavIconCard = project['isFavorite'] ? document.createElement('div') : '';
-	const favIconCard = project['isFavorite'] ? document.createElement('span') : '';
-	const ctnViewsCard = document.createElement('div');
-	const numberViewsCard = document.createElement('span');
-	const viewsIconCard = document.createElement('span');
-	const ctnLikesCard = document.createElement('div');
-	const numberLikesCard = document.createElement('span');
-	const likesIconCard = document.createElement('span');
+	const ctnViewsCard = project['views'] ? document.createElement('div') : '';
+	const numberViewsCard = project['views'] ? document.createElement('span') : '';
+	const viewsIconCard = project['views'] ? document.createElement('span') : '';
+	const ctnLikesCard = project['likes'] ? document.createElement('div') : '';
+	const numberLikesCard = project['likes'] ? document.createElement('span') : '';
+	const likesIconCard = project['likes'] ? document.createElement('span') : '';
 
 	// add attributes and content
-	project['isFavorite'] ? favIconCard.textContent = '⭐' : '';
 	numberViewsCard.textContent = `${project['views']}`;
 	viewsIconCard.textContent = '👁️';
 	numberLikesCard.textContent = `${project['likes']}`;
@@ -3142,31 +3143,38 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	imgCard.alt = project['title'];
 	imgCard.title = project['title'];
 	imgCard.setAttribute('loading', 'lazy');
-	
+
 	// add classes
 	ctnCard.classList.add(CLASS_NAMES.ctnCard);
+	linkCard.classList.add('link-card');
 	card.classList.add(CLASS_NAMES.card);
+	ctnTechIconCard.classList.add('tech');
+	project['technology'] === 'Javascript' || project['technology'] === 'Css' ? techIconCard.classList.add('icon-codepen') : '';
+	project['technology'] === 'Angular' ? techIconCard.classList.add('icon-angular') : '';
+	project['technology'] === 'Firebase' ? techIconCard.classList.add('icon-firebase') : '';
+	project['technology'] === 'Ionic' ? techIconCard.classList.add('icon-ionic') : '';
+	project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
+	project['isFavorite'] ? favIconCard.classList.add('icon-star-full') : '';
+	project['isFavorite'] ? card.classList.add('favorite') : '',
 	cardGlassEffect.classList.add('glass-effect');
 	ctnIconsCard.classList.add('ctn-icons-card');
 	iconsLeftCard.classList.add('icons-card-left');
 	iconsRightCard.classList.add('icons-card-right');
-	project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
-	ctnViewsCard.classList.add('views');
-	ctnLikesCard.classList.add('likes');
+	project['views'] ? ctnViewsCard.classList.add('views') : '';
+	project['likes'] ? ctnLikesCard.classList.add('likes') : '';
 	ctnImgCard.classList.add('ctn-img');
 	
 	// add elements into DOM
-	card.appendChild(cardGlassEffect);
+	ctnTechIconCard.appendChild(techIconCard);
 	project['isFavorite'] ? ctnFavIconCard.appendChild(favIconCard) : '';
-	ctnViewsCard.append(numberViewsCard, viewsIconCard);
-	ctnLikesCard.append(numberLikesCard, likesIconCard);
-	project['isFavorite'] ? iconsLeftCard.appendChild(ctnFavIconCard) : '';
+	card.append(ctnTechIconCard, ctnFavIconCard, cardGlassEffect);
+	project['views'] ? ctnViewsCard.append(numberViewsCard, viewsIconCard) : '';
+	project['likes'] ? ctnLikesCard.append(numberLikesCard, likesIconCard): '';
 	iconsRightCard.append(ctnViewsCard, ctnLikesCard);
 	ctnIconsCard.append(iconsLeftCard, iconsRightCard);
 	ctnImgCard.appendChild(imgCard);
 	linkCard.append(titleCard, ctnImgCard);
-	// if it is favorite to add the star icon to the DOM on the card
-	project['isFavorite'] ? card.append(ctnIconsCard, linkCard, ctnTags) : card.append(ctnIconsCard, linkCard, ctnTags);
+	card.append(ctnIconsCard, linkCard, ctnTags);
 	ctnCard.appendChild(card);
 
 	// add container with all the content inside the id got it from the 
