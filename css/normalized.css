@@ -11,17 +11,17 @@
 /* Fonts */
 @font-face {
 	font-family: 'Poppins';
-	src: url('../fonts/poppins.ttf') format('truetype');
+	src: url('../fonts/letters/poppins.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Shadows Into Light';
-	src: url('../fonts/shadows-into-ligth.ttf') format('truetype');
+	src: url('../fonts/letters/shadows-into-ligth.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Whisper';
-	src: url('../fonts/whisper.ttf') format('truetype');
+	src: url('../fonts/letters/whisper.ttf') format('truetype');
 }
 
 * {
