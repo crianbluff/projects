@@ -52,7 +52,7 @@
 	flex-direction: column;
 	margin-top: 2rem;
 	max-width: 100%;
-	padding: 1rem;
+	padding: 0.5rem 1rem 1rem;
 	position: relative;
 }
 
@@ -122,6 +122,14 @@
 	color: #ffffff;
 }
 
+.card .icons-card-left {
+	font: 700 0.85rem 'Poppins', sans-serif;
+}
+
+.card .icons-card-left span:last-child {
+	margin-left: 5px;
+}
+
 .card .icons-card-right {
 	font: 700 1rem 'Poppins', sans-serif;
 }
@@ -130,6 +138,7 @@
 	margin-right: 5px;
 }
 
+.card .date span:last-child,
 .card .views span:first-child,
 .card .likes span:first-child	{
 	text-shadow: 0 0 1px #ffffff,
@@ -253,6 +262,7 @@
 }
 
 .card img {
+	aspect-ratio: 16 / 9;
 	display: block;
 	height: 100%;
 	object-fit: cover;
@@ -272,7 +282,6 @@
 											#000000 50%,
 											#cdcdcd
 										);
-	border-radius: 3px;
 }
 
 .card .ctn-tags::-webkit-scrollbar-thumb:hover {
@@ -310,7 +319,7 @@
 	overflow-x: auto;
 	position: relative;
 	padding: 1rem 0.5rem;
-	text-wrap: nowrap;
+	white-space: nowrap;
 	width: 100%;
 	z-index: 2;
 }

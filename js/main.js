@@ -25,6 +25,25 @@ const CLASS_NAMES = {
 	ctnCards: 'ctn-cards',
 	ctnCard: 'ctn-card',
 	card: 'card',
+	favoriteCard: 'favorite',
+	ctnTech: 'tech',
+	iconAngular: 'icon-angular',
+	iconCodepen: 'icon-codepen',
+	iconFirebase: 'icon-firebase',
+	iconIonic: 'icon-ionic',
+	ctnFav: 'fav',
+	iconFav: 'icon-star-full',
+	glassEffect: 'glass-effect',
+	ctnIconsCard: 'ctn-icons-card',
+	iconsCardLeft: 'icons-card-left',
+	ctnDate: 'date',
+	iconsCardRight: 'icons-card-right',
+	ctnViews: 'ctn-views',
+	ctnLikes: 'ctn-likes',
+	ctnCommments: 'comments',
+	linkCard: 'link-card',
+	ctnImgCard: 'ctn-img',
+	ctnTags: 'ctn-tags'
 };
 
 /* Projects */
@@ -3124,18 +3143,28 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	const ctnIconsCard = document.createElement('div');
 	const iconsLeftCard = document.createElement('div');
 	const iconsRightCard = document.createElement('div');
+	const ctnDateCard = project['date'] ? document.createElement('div') : '';
+	const dateIconCard = project['date'] ? document.createElement('span') : '';
+	const dateCard = project['date'] ? document.createElement('span') : '';
 	const ctnViewsCard = project['views'] ? document.createElement('div') : '';
 	const numberViewsCard = project['views'] ? document.createElement('span') : '';
 	const viewsIconCard = project['views'] ? document.createElement('span') : '';
 	const ctnLikesCard = project['likes'] ? document.createElement('div') : '';
 	const numberLikesCard = project['likes'] ? document.createElement('span') : '';
 	const likesIconCard = project['likes'] ? document.createElement('span') : '';
+	const ctnCommentsCard = project['comments'] ? document.createElement('div') : '';
+	const commentsCard = project['comments'] ? document.createElement('span') : '';
+	const commentsIconCard = project['comments'] ? document.createElement('span') : '';
 
 	// add attributes and content
+	dateIconCard.textContent = '📅';
+	dateCard.textContent = `${project['date']}`;
 	numberViewsCard.textContent = `${project['views']}`;
 	viewsIconCard.textContent = '👁️';
 	numberLikesCard.textContent = `${project['likes']}`;
 	likesIconCard.textContent = '❤️';
+	commentsCard.textContent = `${project['comments']}`;
+	commentsIconCard.textContent = '💬';
 	linkCard.href = project['link'];
 	linkCard.target = '_blank';
 	titleCard.textContent = project['title'];
@@ -3146,31 +3175,36 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 
 	// add classes
 	ctnCard.classList.add(CLASS_NAMES.ctnCard);
-	linkCard.classList.add('link-card');
+	linkCard.classList.add(CLASS_NAMES.linkCard);
 	card.classList.add(CLASS_NAMES.card);
-	ctnTechIconCard.classList.add('tech');
-	project['technology'] === 'Javascript' || project['technology'] === 'Css' ? techIconCard.classList.add('icon-codepen') : '';
-	project['technology'] === 'Angular' ? techIconCard.classList.add('icon-angular') : '';
-	project['technology'] === 'Firebase' ? techIconCard.classList.add('icon-firebase') : '';
-	project['technology'] === 'Ionic' ? techIconCard.classList.add('icon-ionic') : '';
-	project['isFavorite'] ? ctnFavIconCard.classList.add('fav') : '';
-	project['isFavorite'] ? favIconCard.classList.add('icon-star-full') : '';
-	project['isFavorite'] ? card.classList.add('favorite') : '',
-	cardGlassEffect.classList.add('glass-effect');
-	ctnIconsCard.classList.add('ctn-icons-card');
-	iconsLeftCard.classList.add('icons-card-left');
-	iconsRightCard.classList.add('icons-card-right');
-	project['views'] ? ctnViewsCard.classList.add('views') : '';
-	project['likes'] ? ctnLikesCard.classList.add('likes') : '';
-	ctnImgCard.classList.add('ctn-img');
+	ctnTechIconCard.classList.add(CLASS_NAMES.ctnTech);
+	project['isFavorite'] ? ctnFavIconCard.classList.add(CLASS_NAMES.ctnFav) : '';
+	project['isFavorite'] ? favIconCard.classList.add(CLASS_NAMES.iconFav) : '';
+	project['technology'] === 'Javascript' || project['technology'] === 'Css' ? techIconCard.classList.add(CLASS_NAMES.iconCodepen) : '';
+	project['technology'] === 'Angular' ? techIconCard.classList.add(CLASS_NAMES.iconAngular) : '';
+	project['technology'] === 'Firebase' ? techIconCard.classList.add(CLASS_NAMES.iconFirebase) : '';
+	project['technology'] === 'Ionic' ? techIconCard.classList.add(CLASS_NAMES.iconIonic) : '';
+	project['isFavorite'] ? card.classList.add(CLASS_NAMES.favoriteCard) : '',
+	cardGlassEffect.classList.add(CLASS_NAMES.glassEffect);
+	ctnIconsCard.classList.add(CLASS_NAMES.ctnIconsCard);
+	iconsLeftCard.classList.add(CLASS_NAMES.iconsCardLeft);
+	iconsRightCard.classList.add(CLASS_NAMES.iconsCardRight);
+	project['date'] ? ctnDateCard.classList.add(CLASS_NAMES.ctnDate) : '';
+	project['views'] ? ctnViewsCard.classList.add(CLASS_NAMES.ctnViews) : '';
+	project['likes'] ? ctnLikesCard.classList.add(CLASS_NAMES.ctnLikes) : '';
+	project['comments'] ? ctnCommentsCard.classList.add(CLASS_NAMES.ctnCommments) : '';
+	ctnImgCard.classList.add(CLASS_NAMES.ctnImgCard);
 	
 	// add elements into DOM
 	ctnTechIconCard.appendChild(techIconCard);
 	project['isFavorite'] ? ctnFavIconCard.appendChild(favIconCard) : '';
 	card.append(ctnTechIconCard, ctnFavIconCard, cardGlassEffect);
+	project['date'] ? ctnDateCard.append(dateIconCard, dateCard) : '';
 	project['views'] ? ctnViewsCard.append(numberViewsCard, viewsIconCard) : '';
 	project['likes'] ? ctnLikesCard.append(numberLikesCard, likesIconCard): '';
-	iconsRightCard.append(ctnViewsCard, ctnLikesCard);
+	project['comments'] ? ctnCommentsCard.append(commentsCard, commentsIconCard) : '';
+	iconsLeftCard.appendChild(ctnDateCard);
+	iconsRightCard.append(ctnViewsCard, ctnLikesCard, ctnCommentsCard);
 	ctnIconsCard.append(iconsLeftCard, iconsRightCard);
 	ctnImgCard.appendChild(imgCard);
 	linkCard.append(titleCard, ctnImgCard);
