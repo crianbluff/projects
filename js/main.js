@@ -3258,7 +3258,7 @@ const notFoundProjectsFilteredByTagsElement = document.getElementById(ID_NAMES.N
 /* Buttons */
 const btnTagAlphabet = document.getElementById(ID_NAMES.btnTagAlphabet);
 
-/* Add tag-cateogry, tag, sort & tech buttons to the DOM */
+/* Add tag-category, tag, sort & tech buttons to the DOM */
 const createFilterBtnsDOM = ({id, className, text}, containerBtns) => {
 	const btnFilter = document.createElement('button');
 	
@@ -3271,6 +3271,142 @@ const createFilterBtnsDOM = ({id, className, text}, containerBtns) => {
 	containerBtns.appendChild(btnFilter);
 	
 	return btnFilter;
+}
+
+/* Function to add Buttons to DOM */
+const createTagCategoryButtons = () => {
+	TAG_CATEGORIES_BUTTONS.forEach(tagCategory => {
+		const btnTagCategory = createFilterBtnsDOM(tagCategory, categoriesTagContainerElement);
+		btnTagCategory.addEventListener('click', e => {
+			[...btnTagCategory.parentElement.children].forEach(sib => sib.classList.remove('active'));
+			e.target.classList.toggle('active');
+			filterByCategory(e.target.id);
+		});
+	});
+}
+const createTagButtons = (tagButtons) => {
+	tagButtons.forEach(tagBtn => {
+		// get each tag btn
+		const btnTag = createFilterBtnsDOM(tagBtn, tagsContainerElement);
+		
+		// Filter projects by selected tag
+		btnTag.addEventListener('click', e => {
+			e.target.classList.toggle('active');
+			toggleFilterBtns(tagBtn, {isFilteringByTags: true});
+		});
+	});
+}
+const createSortButtons = () => {
+	SORTING_BUTTONS.forEach(tagBtn => {
+		// get each sorting btn
+		const btnSorting = createFilterBtnsDOM(tagBtn, sortContainerElement);
+
+		document.getElementById(btnSorting['id']).addEventListener('click', e => {
+			e.target.classList.toggle('active');
+			
+			switch (e.currentTarget.id) {
+				case 'btn-sorting-no-fav':
+					sortingFilter('boolean', 'isFavorite', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('❌⭐ Fav');
+				break;
+
+				case 'btn-sorting-fav':
+					sortingFilter('boolean', 'isFavorite', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('⭐ Fav');
+				break;
+
+				case 'btn-sorting-no-github':
+					sortingFilter('boolean', 'hasRepo', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('❌🐱 Github');
+				break;
+
+				case 'btn-sorting-github':
+					sortingFilter('boolean', 'hasRepo', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🐱 Github');
+				break;
+
+				case 'btn-sorting-a-z':
+					sortingFilter('string', 'title', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔽 A-Z');
+				break;
+			
+				case 'btn-sorting-z-a':
+					sortingFilter('string', 'title', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔼 Z-A');	
+				break;
+
+				case 'btn-sorting-oldest':
+					sortingFilter('date', 'createdDate', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔙 Oldest');
+				break;
+
+				case 'btn-sorting-latest':
+					sortingFilter('date', 'createdDate', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔜 Latest');
+				break;
+
+				case 'btn-sorting-less-likes':
+					sortingFilter('number', 'likes', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-❤️ Likes');
+				break;
+
+				case 'btn-sorting-more-likes':
+					sortingFilter('number', 'likes', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+❤️ Likes');
+				break;
+
+				case 'btn-sorting-less-comments':
+					sortingFilter('number', 'comments', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-💬 Comments');
+				break;
+
+				case 'btn-sorting-more-comments':
+					sortingFilter('number', 'comments', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+💬 Comments');
+				break;
+
+				case 'btn-sorting-less-views':
+					sortingFilter('number', 'views', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-👁️ Views');
+				break;
+
+				case 'btn-sorting-more-views':
+					sortingFilter('number', 'views', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+👁️ Views');
+				break;
+			}
+		});
+	});
+}
+const createTechButtons = () => {
+	TECHNOLOGIES.forEach(({id, text}) => {
+		// create techBtn object
+		let objTechBtn = { id: `btn-${id}`, className: 'btn-tag btn-tech', text };
+		// add button to the array
+		TECHNOLOGY_BUTTONS.push(objTechBtn);
+	
+		const btnTech = createFilterBtnsDOM(objTechBtn, techContainerElement);
+
+		btnTech.addEventListener('click', () => {
+			btnTech.classList.toggle('active');
+			filterByTech(objTechBtn);
+			toggleFilterBtns(objTechBtn, {isFilteringByTags: false});
+		});
+	});
 }
 
 /* Functions to add projects to the DOM */
@@ -3422,8 +3558,34 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 	// add container with all the content inside the id got it from the 
 	sectionProjectElement.querySelector(`.${CLASS_NAMES.ctnCards}`).appendChild(ctnCard);
 }
+const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
+	selectedFiltersElement.innerHTML = '';
+	selectedFilters.map(({textFilterBtn}) => {
+		const selectedFiltersSpan = document.createElement('span');
+		selectedFiltersSpan.textContent = textFilterBtn;
+		selectedFiltersElement.appendChild(selectedFiltersSpan);
+	});
+}
 
-/* Functions for filtering by tags */
+/* Functions to filter by buttons */
+const sortTagBtnsByAlphabet = (event) => {
+	tagsContainerElement.innerHTML = '';
+		
+	let isBtnSortTagsClicked = event.target.getAttribute('aria-pressed') === 'true' ? true : false;
+	event.target.setAttribute('aria-pressed', !isBtnSortTagsClicked);
+	[...event.target.parentElement.children].forEach(sib => sib.classList.remove('active'));
+	event.target.classList.toggle('active');
+	event.currentTarget.textContent = isBtnSortTagsClicked ? 'A-Z' : 'Z-A';
+
+	const tagButtonsOrderByAlphabet = TAG_BUTTONS.sort((a, b) => isBtnSortTagsClicked ? b['text'].localeCompare(a['text']) : a['text'].localeCompare(b['text']));
+	createTagButtons(tagButtonsOrderByAlphabet);
+}
+const filterByCategory = (category) => {
+	TAG_BUTTONS.forEach(tagBtn => {
+		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('disabled')
+ 		: document.getElementById(tagBtn['id']).classList.add('disabled');
+	});
+}
 const toggleFilterBtns = ({id, text}, {isFilteringByTags} = true) => {
 	// if there is a repeated element it will be removed from the array, if not it will be added
 	filterBtns = filterBtns.some(btn => btn.idFilterBtn === id)
@@ -3458,6 +3620,8 @@ const toggleFilterBtns = ({id, text}, {isFilteringByTags} = true) => {
 			projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'true');
 		}
 }
+
+/* Functions to sort projects */
 const filteredByTagsSelected = () => {
 	projectsFilteredBySelectedFilter = [];
 
@@ -3474,16 +3638,6 @@ const filteredByTagsSelected = () => {
 		filterElementsByTags.map(project => projectsFilteredBySelectedFilter.push(project));
 	});
 }
-const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
-	selectedFiltersElement.innerHTML = '';
-	selectedFilters.map(({textFilterBtn}) => {
-		const selectedFiltersSpan = document.createElement('span');
-		selectedFiltersSpan.textContent = textFilterBtn;
-		selectedFiltersElement.appendChild(selectedFiltersSpan);
-	});
-}
-
-/* Functions to sort projects */
 const sortingFilter = (type, prop, {asc}) => {
 	if ( filterBtns.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
@@ -3535,162 +3689,6 @@ const filterByTech = ({id, text}) => {
 			filterElementsByTech.map(proj => projectsFilteredBySelectedFilter.push(proj));
 		});
 	}
-}
-
-const filterByCategory = (category) => {
-	TAG_BUTTONS.forEach(tagBtn => {
-		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('disabled')
- 		: document.getElementById(tagBtn['id']).classList.add('disabled');
-	});
-}
-
-/* Function to add Buttons to DOM */
-const createTagCategoryButtons = () => {
-	TAG_CATEGORIES_BUTTONS.forEach(tagCategory => {
-		const btnTagCategory = createFilterBtnsDOM(tagCategory, categoriesTagContainerElement);
-		btnTagCategory.addEventListener('click', e => {
-			[...btnTagCategory.parentElement.children].forEach(sib => sib.classList.remove('active'));
-			e.target.classList.toggle('active');
-			filterByCategory(e.target.id);
-		});
-	});
-}
-const createTagButtons = (tagButtons) => {
-	tagButtons.forEach(tagBtn => {
-		// get each tag btn
-		const btnTag = createFilterBtnsDOM(tagBtn, tagsContainerElement);
-		
-		// Filter projects by selected tag
-		btnTag.addEventListener('click', e => {
-			e.target.classList.toggle('active');
-			toggleFilterBtns(tagBtn, {isFilteringByTags: true});
-		});
-	});
-}
-const createSortButtons = () => {
-	SORTING_BUTTONS.forEach(tagBtn => {
-		// get each sorting btn
-		const btnSorting = createFilterBtnsDOM(tagBtn, sortContainerElement);
-
-		document.getElementById(btnSorting['id']).addEventListener('click', e => {
-			e.target.classList.toggle('active');
-			
-			switch (e.currentTarget.id) {
-				case 'btn-sorting-no-fav':
-					sortingFilter('boolean', 'isFavorite', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('❌⭐ Fav');
-				break;
-
-				case 'btn-sorting-fav':
-					sortingFilter('boolean', 'isFavorite', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('⭐ Fav');
-				break;
-
-				case 'btn-sorting-no-github':
-					sortingFilter('boolean', 'hasRepo', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('❌🐱 Github');
-				break;
-
-				case 'btn-sorting-github':
-					sortingFilter('boolean', 'hasRepo', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🐱 Github');
-				break;
-
-				case 'btn-sorting-a-z':
-					sortingFilter('string', 'title', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🔽 A-Z');
-				break;
-			
-				case 'btn-sorting-z-a':
-					sortingFilter('string', 'title', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🔼 Z-A');	
-				break;
-
-				case 'btn-sorting-oldest':
-					sortingFilter('date', 'createdDate', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🔙 Oldest');
-				break;
-
-				case 'btn-sorting-latest':
-					sortingFilter('date', 'createdDate', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🔜 Latest');
-				break;
-
-				case 'btn-sorting-less-likes':
-					sortingFilter('number', 'likes', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('-❤️ Likes');
-				break;
-
-				case 'btn-sorting-more-likes':
-					sortingFilter('number', 'likes', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('+❤️ Likes');
-				break;
-
-				case 'btn-sorting-less-comments':
-					sortingFilter('number', 'comments', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('-💬 Comments');
-				break;
-
-				case 'btn-sorting-more-comments':
-					sortingFilter('number', 'comments', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('+💬 Comments');
-				break;
-
-				case 'btn-sorting-less-views':
-					sortingFilter('number', 'views', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('-👁️ Views');
-				break;
-
-				case 'btn-sorting-more-views':
-					sortingFilter('number', 'views', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('+👁️ Views');
-				break;
-			}
-		});
-	});
-}
-const createTechButtons = () => {
-	TECHNOLOGIES.forEach(({id, text}) => {
-		// create techBtn object
-		let objTechBtn = { id: `btn-${id}`, className: 'btn-tag btn-tech', text };
-		// add button to the array
-		TECHNOLOGY_BUTTONS.push(objTechBtn);
-	
-		const btnTech = createFilterBtnsDOM(objTechBtn, techContainerElement);
-
-		btnTech.addEventListener('click', () => {
-			btnTech.classList.toggle('active');
-			filterByTech(objTechBtn);
-			toggleFilterBtns(objTechBtn, {isFilteringByTags: false});
-		});
-	});
-}
-
-const sortTagBtnsByAlphabet = (event) => {
-	tagsContainerElement.innerHTML = '';
-		
-	let isBtnSortTagsClicked = event.target.getAttribute('aria-pressed') === 'true' ? true : false;
-	event.target.setAttribute('aria-pressed', !isBtnSortTagsClicked);
-	[...event.target.parentElement.children].forEach(sib => sib.classList.remove('active'));
-	event.target.classList.toggle('active');
-	event.currentTarget.textContent = isBtnSortTagsClicked ? 'A-Z' : 'Z-A';
-
-	const tagButtonsOrderByAlphabet = TAG_BUTTONS.sort((a, b) => isBtnSortTagsClicked ? b['text'].localeCompare(a['text']) : a['text'].localeCompare(b['text']));
-	createTagButtons(tagButtonsOrderByAlphabet);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
