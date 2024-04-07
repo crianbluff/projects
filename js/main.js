@@ -2753,7 +2753,7 @@ const projectsCss = [
 
 /* Elements HTML */
 const TECHNOLOGIES = [
-	{
+{
 		id: 'firebase',
 		text: 'Firebase'
 	},
@@ -2765,7 +2765,7 @@ const TECHNOLOGIES = [
 		id: 'ionic',
 		text: 'Ionic'
 	},
-	{
+		{
 		id: 'jquery',
 		text: 'Jquery'
 	},
@@ -2819,381 +2819,381 @@ const TAG_BUTTONS = [
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'box-reflect',
+		id: 'btn-box-reflect',
 		text: 'Box Reflect'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'dark-theme',
+		id: 'btn-dark-theme',
 		text: 'Dark Theme'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'gradient',
+		id: 'btn-gradient',
 		text: 'Gradient'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'mix-blend-mode',
+		id: 'btn-mix-blend-mode',
 		text: 'Mix Blend Mode'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'neon',
+		id: 'btn-neon',
 		text: 'Neon'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'radial-gradient',
+		id: 'btn-radial-gradient',
 		text: 'Radial Gradient'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'shadow',
+		id: 'btn-shadow',
 		text: 'Shadow'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-color',
-		id: 'text-fill-color',
+		id: 'btn-text-fill-color',
 		text: 'Text Fill Color'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: '3d',
+		id: 'btn-3d',
 		text: '3d'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'blur',
+		id: 'btn-blur',
 		text: 'Blur'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'clip-path',
+		id: 'btn-clip-path',
 		text: 'Clip Path'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'clock',
+		id: 'btn-clock',
 		text: 'Clock'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'cube',
+		id: 'btn-cube',
 		text: 'Cube'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'geometry',
+		id: 'btn-geometry',
 		text: 'Geometry'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'glass',
+		id: 'btn-glass',
 		text: 'Glass'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'isometric',
+		id: 'btn-isometric',
 		text: 'Isometric'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'svg',
+		id: 'btn-svg',
 		text: 'Svg'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-figure',
-		id: 'water',
+		id: 'btn-water',
 		text: 'Water'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-multimedia',
-		id: 'image',
+		id: 'btn-image',
 		text: 'Image'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-multimedia',
-		id: 'sound',
+		id: 'btn-sound',
 		text: 'Sound'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-multimedia',
-		id: 'video',
+		id: 'btn-video',
 		text: 'Video'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'search',
+		id: 'btn-search',
 		text: 'Search'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'pagination',
+		id: 'btn-pagination',
 		text: 'Pagination'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'login',
+		id: 'btn-login',
 		text: 'Login'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'parallax',
+		id: 'btn-parallax',
 		text: 'Parallax'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'preloader',
+		id: 'btn-preloader',
 		text: 'Preloader'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'slider',
+		id: 'btn-slider',
 		text: 'Slider'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'clipboard',
+		id: 'btn-clipboard',
 		text: 'Clipboard'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'api',
+		id: 'btn-api',
 		text: 'Api'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'data',
+		id: 'btn-data',
 		text: 'Data'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'library',
+		id: 'btn-library',
 		text: 'Library'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'angular-material',
+		id: 'btn-angular-material',
 		text: 'Angular Material'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'mouse',
+		id: 'btn-mouse',
 		text: 'Mouse'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'date',
+		id: 'btn-date',
 		text: 'Date'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-js',
-		id: 'scroll',
+		id: 'btn-scroll',
 		text: 'Scroll'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'drop-down',
+		id: 'btn-drop-down',
 		text: 'Drop Down'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'footer',
+		id: 'btn-footer',
 		text: 'Footer'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'form',
+		id: 'btn-form',
 		text: 'Form'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'hamburger',
+		id: 'btn-hamburger',
 		text: 'Hamburger'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'list',
+		id: 'btn-list',
 		text: 'List'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'menu',
+		id: 'btn-menu',
 		text: 'Menu'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'mobile',
+		id: 'btn-mobile',
 		text: 'Mobile'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'modal',
+		id: 'btn-modal',
 		text: 'Modal'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'table',
+		id: 'btn-table',
 		text: 'Table'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'template',
+		id: 'btn-template',
 		text: 'Template'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-element',
-		id: 'tooltip',
+		id: 'btn-tooltip',
 		text: 'Tooltip'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-css',
-		id: 'animation',
+		id: 'btn-animation',
 		text: 'Animation'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-css',
-		id: 'hover',
+		id: 'btn-hover',
 		text: 'Hover'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-css',
-		id: 'border',
+		id: 'btn-border',
 		text: 'Border'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-css',
-		id: 'button',
+		id: 'btn-button',
 		text: 'Button'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-css',
-		id: 'grid',
+		id: 'btn-grid',
 		text: 'Grid'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-css',
-		id: 'responsive',
+		id: 'btn-responsive',
 		text: 'Responsive'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-special',
-		id: 'games',
+		id: 'btn-games',
 		text: 'Games'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-special',
-		id: 'graphs',
+		id: 'btn-graphs',
 		text: 'Graphs'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-special',
-		id: 'studies',
+		id: 'btn-studies',
 		text: 'Studies'
 	},
 	{
 		className: 'btn-tag',
 		category: 'btn-tag-special',
-		id: 'card',
+		id: 'btn-card',
 		text: 'Card'
 	},
 ];
 const SORTING_BUTTONS = [
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'oldest',
+		id: 'btn-sorting-oldest',
 		text: '🔙 Oldest',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'latest',
+		id: 'btn-sorting-latest',
 		text: '🔜 Latest',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'favorite',
+		id: 'btn-sorting-fav',
 		text: '⭐ Favorite',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'likes',
+		id: 'btn-sorting-likes',
 		text: '❤️ Likes',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'more-views',
-		text: '🔼👁️ Views',
+		id: 'btn-sorting-more-views',
+		text: '➕👁️ Views',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'less-views',
-		text: '🔽👁️ Views',
+		id: 'btn-sorting-less-views',
+		text: '➖👁️ Views',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'a-z',
+		id: 'btn-sorting-a-z',
 		text: '🔽 A-Z',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'z-a',
+		id: 'btn-sorting-z-a',
 		text: '🔼 Z-A',
-	}
+	},
 ];
 
 /* Tags & sort filter */
@@ -3379,9 +3379,11 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 }
 
 /* Functions for filtering by tags */
-const toggleFilterBtns = (selectedTagsBtns, {isFilteringByTags} = true) => {
+const toggleFilterBtns = ({id, text}, {isFilteringByTags} = true) => {
 	// if there is a repeated element it will be removed from the array, if not it will be added
-	filterBtns = filterBtns.includes(selectedTagsBtns) ? filterBtns.filter(el => el !== selectedTagsBtns) : [...filterBtns, selectedTagsBtns];
+	filterBtns = filterBtns.some(btn => btn.idFilterBtn === id)
+    ? filterBtns.filter(btn => btn.idFilterBtn !== id)
+    : [...filterBtns, { idFilterBtn: id, textFilterBtn: text }];
 
 	// if there is at least one or more tags selected
 	if (filterBtns.length) {
@@ -3419,15 +3421,19 @@ const filteredByTagsSelected = () => {
 		let getNameVariableProject = eval(`${ID_NAMES.projects}${id.charAt(0).toUpperCase()}${id.slice(1)}`);
 		
 		// filter every project variable and depending on the projectsFilteredBySelectedFilter values
-		let filterElementsByTags = getNameVariableProject.filter(projectObject => filterBtns.every(tag => projectObject.tags.includes(tag)))
+		let filterElementsByTags = getNameVariableProject.filter(projObj => {
+			// substr(4) to remove 4 first letters "btn-" to match with the btn selected filter
+			return filterBtns.every( ({idFilterBtn}) => projObj.tags.includes(idFilterBtn.substr(4)) );
+		});
+		
 		filterElementsByTags.map(project => projectsFilteredBySelectedFilter.push(project));
 	});
 }
 const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
 	selectedFiltersElement.innerHTML = '';
-	selectedFilters.map(filterSelected => {
+	selectedFilters.map(({textFilterBtn}) => {
 		const selectedFiltersSpan = document.createElement('span');
-		selectedFiltersSpan.textContent = filterSelected;
+		selectedFiltersSpan.textContent = textFilterBtn;
 		selectedFiltersElement.appendChild(selectedFiltersSpan);
 	});
 }
@@ -3439,31 +3445,31 @@ const filterByDate = ({ascending}, property) => {
 		const projecstOrderByDate = filteredProjects.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
 		projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
-		TECHNOLOGIES.map(lang => {
-			// save every name of the variables projectName
-			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-			
+			TECHNOLOGIES.map(lang => {
+				// save every name of the variables projectName
+				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+				
 				const projecstOrderByDate = getNameVariableProject.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
 				projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
 			});
-	}
+		}
 
 }
 const filterByBoolean = (property) => {
 	if ( filterBtns.length ) {
-		let filteredProjects = projectsFilteredBySelectedFilter;
+	let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
 		const projecstOrderByFav = filteredProjects.filter(projectObject => projectObject[property] === true);
 		projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
-		TECHNOLOGIES.map(lang => {
-			// save every name of the variables projectName
-			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-			
+			TECHNOLOGIES.map(lang => {
+				// save every name of the variables projectName
+				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+				
 				const projecstOrderByFav = getNameVariableProject.filter(projectObject => projectObject[property] === true);
 				projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
 			});
-	}
+		}
 
 }
 const filterByNumbers = ({ascending} = true, property) => {
@@ -3489,7 +3495,7 @@ const filterByString = ({ascending} = true, property) => {
 		const projectsOrderByAlphabet = filteredProjects.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
 		projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
 } else {
-		LANGUAGES.map(lang => {
+		TECHNOLOGIES.map(lang => {
 			// save every name of the variables projectName
 			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 			
@@ -3501,7 +3507,7 @@ const filterByString = ({ascending} = true, property) => {
 const filterByCategory = (category) => {
 	TAG_BUTTONS.forEach(tagBtn => {
 		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('disabled')
-		: document.getElementById(tagBtn['id']).classList.add('disabled');
+ 		: document.getElementById(tagBtn['id']).classList.add('disabled');
 	});
 }
 
@@ -3524,7 +3530,7 @@ const createTagButtons = (tagButtons) => {
 		// Filter projects by selected tag
 		btnTag.addEventListener('click', e => {
 			e.target.classList.toggle('active');
-			toggleFilterBtns(btnTag['id'], {isFilteringByTags: true});
+			toggleFilterBtns(tagBtn, {isFilteringByTags: true});
 		});
 	});
 }
@@ -3537,52 +3543,53 @@ const createSortButtons = () => {
 			e.target.classList.toggle('active');
 			
 			switch (e.currentTarget.id) {
-				case 'oldest':
-					filterByDate({ascending: true}, 'date');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
+
+				case 'btn-sorting-oldest':
+					filterByDate({ascending: true}, 'createdDate');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔙 Oldest');
 				break;
 
-				case 'latest':
-					filterByDate({ascending: false}, 'date');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
+				case 'btn-sorting-latest':
+					filterByDate({ascending: false}, 'createdDate');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔜 Latest');
 				break;
 
-				case 'favorite':
+				case 'btn-sorting-fav':
 					filterByBoolean('isFavorite');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
-					console.log('⭐ Favorite');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('⭐ Fav');
 				break;
 
-				case 'likes':
+				case 'btn-sorting-likes':
 					filterByNumbers({ascending: false}, 'likes');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
-					console.log('❤️ Likes');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+❤️ Likes');
 				break;
 
-				case 'more-views':
+				case 'btn-sorting-more-views':
 					filterByNumbers({ascending: false}, 'views');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
-					console.log('👁️🔼 Views');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+👁️ Views');
 				break;
 
-				case 'less-views':
+				case 'btn-sorting-less-views':
 					filterByNumbers({ascending: true}, 'views');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
-					console.log('👁️🔽 Views');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-👁️ Views');
 				break;
 
-				case 'a-z':
+				case 'btn-sorting-a-z':
 					filterByString({ascending: true}, 'title');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔽 A-Z');
 				break;
-
-				case 'z-a':
+			
+				case 'btn-sorting-z-a':
 					filterByString({ascending: false}, 'title');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
-					console.log('🔼 Z-A');
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔼 Z-A');	
 				break;
 			}
 		});
