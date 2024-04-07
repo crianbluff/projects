@@ -2752,30 +2752,30 @@ const projectsCss = [
 ];
 
 /* Elements HTML */
-const LANGUAGES = [
+const TECHNOLOGIES = [
 	{
 		id: 'firebase',
-		title: 'Firebase'
+		text: 'Firebase'
 	},
 	{
 		id: 'angular',
-		title: 'Angular'
+		text: 'Angular'
 	},
 	{
 		id: 'ionic',
-		title: 'Ionic'
+		text: 'Ionic'
 	},
 	{
 		id: 'jquery',
-		title: 'Jquery'
+		text: 'Jquery'
 	},
 	{
 		id: 'javascript',
-		title: 'Javascript'
+		text: 'Javascript'
 	},
 	{
 		id: 'css',
-		title: 'Css'
+		text: 'Css'
 	}
 ];
 const TAG_CATEGORIES_BUTTONS = [
@@ -3196,8 +3196,8 @@ const SORTING_BUTTONS = [
 	}
 ];
 
-/* Tags & Sort filter */
-let filterBtnsForFilter = [];
+/* Tags & sort filter */
+let filterBtns = [];
 let projectsFilteredBySelectedFilter = [];
 
 /* Containers for tag buttons and projects */
@@ -3213,16 +3213,16 @@ const notFoundProjectsFilteredByTagsElement = document.getElementById(ID_NAMES.N
 /* Buttons */
 const btnTagAlphabet = document.getElementById(ID_NAMES.btnTagAlphabet);
 
-/* Add tag & filter buttons to the DOM */
-const createFilterBtnsDOM = (btn, containerBtns) => {
+/* Add tag-cateogry, tag, sort & tech buttons to the DOM */
+const createFilterBtnsDOM = ({id, className, text}, containerBtns) => {
 	const btnFilter = document.createElement('button');
 	
-	// Add attributes
-	btnFilter.textContent = btn['text'];
-	btnFilter.id = btn['id'];
-	btnFilter.className += btn['className'];
+	// add attributes
+	btnFilter.id = id;
+	btnFilter.className += className;
+	btnFilter.textContent = text;
 	
-	// Add elements in DOM
+	// add elements in DOM
 	containerBtns.appendChild(btnFilter);
 	
 	return btnFilter;
@@ -3230,17 +3230,17 @@ const createFilterBtnsDOM = (btn, containerBtns) => {
 
 /* Functions to add projects to the DOM */
 const createProjects = ({isBuildingFromBtn} = false) => {
-	LANGUAGES.map(lang => {
+	TECHNOLOGIES.map(({id, text}) => {
 		// create containers for each lang and its title
 		const sectionCard = document.createElement('section');
 		const ctnCard = document.createElement('div');
 		const titleProject = document.createElement('h2');
 		
 		// add attributes for the containers
-		sectionCard.id = !isBuildingFromBtn ? `${ID_NAMES.projects}-${lang['id']}` : `${ID_NAMES.projectsFilterByTags}-${lang['id']}`;
+		sectionCard.id = !isBuildingFromBtn ? `${ID_NAMES.projects}-${id}` : `${ID_NAMES.projectsFilterByTags}-${id}`;
 		sectionCard.classList.add(ID_NAMES.projects);
 		ctnCard.classList.add(CLASS_NAMES.ctnCards);
-		titleProject.textContent = !isBuildingFromBtn ? lang['title'] : 'Projects Filtered By Tags';
+		titleProject.textContent = !isBuildingFromBtn ? text : 'Projects Filtered By Tags';
 
 		// insert all the projects in DOM
 		sectionCard.append(titleProject, ctnCard);
@@ -3248,7 +3248,7 @@ const createProjects = ({isBuildingFromBtn} = false) => {
 		// if there is a param send it as a param for addTagsForProjects function
 		if (!isBuildingFromBtn) {
 			// save every name of the variables projec
-			const getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+			const getNameVariableProject = eval(`${ID_NAMES.projects}${id.charAt(0).toUpperCase()}${id.slice(1)}`);
 			
 			projectsContainerElement.appendChild(sectionCard);
 			addTagsForProjects(eval(getNameVariableProject), sectionCard);
@@ -3381,14 +3381,14 @@ const addProjectsToDOM = (project, ctnTags, sectionProjectElement) => {
 /* Functions for filtering by tags */
 const toggleFilterBtns = (selectedTagsBtns, {isFilteringByTags} = true) => {
 	// if there is a repeated element it will be removed from the array, if not it will be added
-	filterBtnsForFilter = filterBtnsForFilter.includes(selectedTagsBtns) ? filterBtnsForFilter.filter(el => el !== selectedTagsBtns) : [...filterBtnsForFilter, selectedTagsBtns];
+	filterBtns = filterBtns.includes(selectedTagsBtns) ? filterBtns.filter(el => el !== selectedTagsBtns) : [...filterBtns, selectedTagsBtns];
 
 	// if there is at least one or more tags selected
-	if (filterBtnsForFilter.length) {
+	if (filterBtns.length) {
 		// storage the projects which have the tags
 		isFilteringByTags ? filteredByTagsSelected() : '';
 		// add tags to the tags container in projects that were filtered
-		addCtnSelectedTagsBtnsToDOM(filterBtnsForFilter);
+		addCtnSelectedTagsBtnsToDOM(filterBtns);
 		
 		ctnSelectedFiltersElement.setAttribute('aria-hidden', 'false');
 		projectsFilterByTagsContainerElement.setAttribute('aria-hidden', 'false');
@@ -3414,12 +3414,12 @@ const toggleFilterBtns = (selectedTagsBtns, {isFilteringByTags} = true) => {
 const filteredByTagsSelected = () => {
 	projectsFilteredBySelectedFilter = [];
 
-	LANGUAGES.map(lang => {
+	TECHNOLOGIES.map(({id}) => {
 		// save every name of the variables projectName
-		let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+		let getNameVariableProject = eval(`${ID_NAMES.projects}${id.charAt(0).toUpperCase()}${id.slice(1)}`);
 		
 		// filter every project variable and depending on the projectsFilteredBySelectedFilter values
-		let filterElementsByTags = getNameVariableProject.filter(projectObject => filterBtnsForFilter.every(tag => projectObject.tags.includes(tag)))
+		let filterElementsByTags = getNameVariableProject.filter(projectObject => filterBtns.every(tag => projectObject.tags.includes(tag)))
 		filterElementsByTags.map(project => projectsFilteredBySelectedFilter.push(project));
 	});
 }
@@ -3433,30 +3433,30 @@ const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
 }
 /* Functions to sort */
 const filterByDate = ({ascending}, property) => {
-	if ( filterBtnsForFilter.length ) {
+	if ( filterBtns.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
 		const projecstOrderByDate = filteredProjects.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
 		projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
-			LANGUAGES.map(lang => {
-				// save every name of the variables projectName
-				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-				
+		TECHNOLOGIES.map(lang => {
+			// save every name of the variables projectName
+			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+			
 				const projecstOrderByDate = getNameVariableProject.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
 				projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
 			});
-		}
+	}
 
 }
 const filterByBoolean = (property) => {
-	if ( filterBtnsForFilter.length ) {
+	if ( filterBtns.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
 		const projecstOrderByFav = filteredProjects.filter(projectObject => projectObject[property] === true);
 		projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
-		LANGUAGES.map(lang => {
+		TECHNOLOGIES.map(lang => {
 			// save every name of the variables projectName
 			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 			
@@ -3467,13 +3467,13 @@ const filterByBoolean = (property) => {
 
 }
 const filterByNumbers = ({ascending} = true, property) => {
-	if ( filterBtnsForFilter.length ) {
+	if ( filterBtns.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
 		const projecstOrderByViews = filteredProjects.sort((a, b) => ascending ? a[property] - b[property] : b[property] - a[property]);
 		projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
 	} else {
-			LANGUAGES.map(lang => {
+			TECHNOLOGIES.map(lang => {
 				// save every name of the variables projectName
 				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
 				
@@ -3483,18 +3483,18 @@ const filterByNumbers = ({ascending} = true, property) => {
 		}
 }
 const filterByString = ({ascending} = true, property) => {
-	if ( filterBtnsForFilter.length ) {
+	if ( filterBtns.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
 		const projectsOrderByAlphabet = filteredProjects.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
 		projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
-	} else {
-			LANGUAGES.map(lang => {
-				// save every name of the variables projectName
-				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-				
-				const projectsOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
-				projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
+} else {
+		LANGUAGES.map(lang => {
+			// save every name of the variables projectName
+			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
+			
+			const projectsOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
+			projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
 		});
 	}
 }
@@ -3530,12 +3530,12 @@ const createTagButtons = (tagButtons) => {
 }
 const createSortButtons = () => {
 	SORTING_BUTTONS.forEach(tagBtn => {
-		// get each sort btn
+		// get each sorting btn
 		const btnSorting = createFilterBtnsDOM(tagBtn, sortContainerElement);
 
 		document.getElementById(btnSorting['id']).addEventListener('click', e => {
 			e.target.classList.toggle('active');
-
+			
 			switch (e.currentTarget.id) {
 				case 'oldest':
 					filterByDate({ascending: true}, 'date');
@@ -3545,51 +3545,51 @@ const createSortButtons = () => {
 
 				case 'latest':
 					filterByDate({ascending: false}, 'date');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('🔜 Latest');
 				break;
 
 				case 'favorite':
 					filterByBoolean('isFavorite');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('⭐ Favorite');
 				break;
 
 				case 'likes':
 					filterByNumbers({ascending: false}, 'likes');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('❤️ Likes');
 				break;
 
 				case 'more-views':
 					filterByNumbers({ascending: false}, 'views');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('👁️🔼 Views');
 				break;
 
 				case 'less-views':
 					filterByNumbers({ascending: true}, 'views');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('👁️🔽 Views');
 				break;
 
 				case 'a-z':
 					filterByString({ascending: true}, 'title');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
 					console.log('🔽 A-Z');
 				break;
-			
+
 				case 'z-a':
 					filterByString({ascending: false}, 'title');
-					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});	
-					console.log('🔼 Z-A');	
+					toggleFilterBtns(btnSorting['id'], {isFilteringByTags: false});
+					console.log('🔼 Z-A');
 				break;
 			}
 		});
 	});
 }
 
-const sortTagButtonsByAlphabet = (event) => {
+const sortTagBtnsByAlphabet = (event) => {
 	tagsContainerElement.innerHTML = '';
 		
 	let isBtnSortTagsClicked = event.target.getAttribute('aria-pressed') === 'true' ? true : false;
@@ -3616,5 +3616,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	createProjects();
 
 	// Sort tag buttons a-z/z-a
-	btnTagAlphabet.addEventListener('click', event => sortTagButtonsByAlphabet(event));
+	btnTagAlphabet.addEventListener('click', event => sortTagBtnsByAlphabet (event));
 });
