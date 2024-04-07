@@ -60,6 +60,7 @@ const projectsFirebase = [
 		gitUrl: `${URL_GITHUB_REPOS}/my-finances`,
 		createdDate: '2020/01/17',
 		technology: 'Firebase',
+		hasRepo: true,
 		isFavorite: true,
 		comments: 0,
 		likes: 0,
@@ -73,6 +74,7 @@ const projectsFirebase = [
 		gitUrl: `${URL_GITHUB_REPOS}/word-cloud`,
 		createdDate: '2019/06/25',
 		technology: 'Firebase',
+		hasRepo: true,
 		isFavorite: true,
 		likes: 0,
 		views: 0,
@@ -85,6 +87,7 @@ const projectsFirebase = [
 		gitUrl: `${URL_GITHUB_REPOS}/angular-14-fotos-firebase`,
 		createdDate: '2019/06/14',
 		technology: 'Firebase',
+		hasRepo: true,
 		isFavorite: true,
 		comments: 0,
 		likes: 0,
@@ -98,6 +101,7 @@ const projectsFirebase = [
 		gitUrl: `${URL_GITHUB_REPOS}/colegio-instituto-bogota`,
 		createdDate: '2019/11/22',
 		technology: 'Firebase',
+		hasRepo: true,
 		isFavorite: false,
 		comments: 0,
 		likes: 0,
@@ -111,6 +115,7 @@ const projectsFirebase = [
 		gitUrl: `${URL_GITHUB_REPOS}/firebase`,
 		createdDate: '2019/01/21',
 		technology: 'Firebase',
+		hasRepo: true,
 		isFavorite: false,
 		likes: 0,
 		views: 0,
@@ -125,6 +130,7 @@ const projectsAngular = [
 		gitUrl: `${URL_GITHUB_REPOS}/spotify-api`,
 		createdDate: '2019/07/29',
 		technology: 'Angular',
+		hasRepo: true,
 		isFavorite: true,
 		comments: 0,
 		likes: 0,
@@ -138,6 +144,7 @@ const projectsAngular = [
 		gitUrl: `${URL_GITHUB_REPOS}/test-ipcom`,
 		createdDate: '2020/09/12',
 		technology: 'Angular',
+		hasRepo: true,
 		isFavorite: false,
 		comments: 0,
 		likes: 0,
@@ -151,6 +158,7 @@ const projectsAngular = [
 		gitUrl: `${URL_GITHUB_REPOS}/test-zemsania`,
 		createdDate: '2020/09/25',
 		technology: 'Angular',
+		hasRepo: true,
 		isFavorite: false,
 		comments: 0,
 		likes: 0,
@@ -164,6 +172,7 @@ const projectsAngular = [
 		gitUrl: `${URL_GITHUB_REPOS}/angular-12-mapas`,
 		createdDate: '2020/09/25',
 		technology: 'Angular',
+		hasRepo: true,
 		isFavorite: false,
 		comments: 0,
 		likes: 0,
@@ -193,6 +202,7 @@ const projectsJquery = [
 		gitUrl: `${URL_GITHUB_REPOS}/crianbluff`,
 		createdDate: '2017/11/01',
 		technology: 'Jquery',
+		hasRepo: true,
 		isFavorite: true,
 		comments: 0,
 		likes: 0,
@@ -880,6 +890,7 @@ const projectsJavascript = [
 		gitUrl: `${URL_GITHUB_REPOS}/park`,
 		createdDate: '2019/02/14',
 		technology: 'Javascript',
+		hasRepo: true,
 		isFavorite: true,
 		comments: 0,
 		likes: 1,
@@ -3154,15 +3165,10 @@ const TAG_BUTTONS = [
 	},
 ];
 const SORTING_BUTTONS = [
-		{
-		className: 'btn-tag btn-highlight',
-		id: 'btn-sorting-oldest',
-		text: '🔙 Oldest',
-	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'btn-sorting-latest',
-		text: '🔜 Latest',
+		id: 'btn-sorting-no-fav',
+		text: '❌⭐ Favorite',
 	},
 	{
 		className: 'btn-tag btn-highlight',
@@ -3171,18 +3177,13 @@ const SORTING_BUTTONS = [
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'btn-sorting-likes',
-		text: '❤️ Likes',
+		id: 'btn-sorting-no-github',
+		text: '❌🐱 Github',
 	},
 	{
 		className: 'btn-tag btn-highlight',
-		id: 'btn-sorting-more-views',
-		text: '➕👁️ Views',
-	},
-	{
-		className: 'btn-tag btn-highlight',
-		id: 'btn-sorting-less-views',
-		text: '➖👁️ Views',
+		id: 'btn-sorting-github',
+		text: '🐱 Github',
 	},
 	{
 		className: 'btn-tag btn-highlight',
@@ -3194,6 +3195,46 @@ const SORTING_BUTTONS = [
 		id: 'btn-sorting-z-a',
 		text: '🔼 Z-A',
 	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-oldest',
+		text: '🔙 Oldest',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-latest',
+		text: '🔜 Latest',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-less-likes',
+		text: '➖❤️ Likes',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-more-likes',
+		text: '➕❤️ Likes',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-less-comments',
+		text: '➖💬 Comments',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-more-comments',
+		text: '➕💬 Comments',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-less-views',
+		text: '➖👁️ Views',
+	},
+	{
+		className: 'btn-tag btn-highlight',
+		id: 'btn-sorting-more-views',
+		text: '➕👁️ Views',
+	}
 ];
 
 /* Tags & sort filter */
@@ -3513,16 +3554,10 @@ const createSortButtons = () => {
 			e.target.classList.toggle('active');
 			
 			switch (e.currentTarget.id) {
-				case 'btn-sorting-oldest':
-					sortingFilter('date', 'createdDate', {asc: false});
+				case 'btn-sorting-no-fav':
+					sortingFilter('boolean', 'isFavorite', {asc: false});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🔙 Oldest');
-				break;
-
-				case 'btn-sorting-latest':
-					sortingFilter('date', 'createdDate', {asc: true});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('🔜 Latest');
+					console.log('❌⭐ Fav');
 				break;
 
 				case 'btn-sorting-fav':
@@ -3531,22 +3566,16 @@ const createSortButtons = () => {
 					console.log('⭐ Fav');
 				break;
 
-				case 'btn-sorting-likes':
-					sortingFilter('number', 'likes', {asc: true});
+				case 'btn-sorting-no-github':
+					sortingFilter('boolean', 'hasRepo', {asc: false});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('+❤️ Likes');
+					console.log('❌🐱 Github');
 				break;
 
-				case 'btn-sorting-more-views':
-					sortingFilter('number', 'views', {asc: true});
+				case 'btn-sorting-github':
+					sortingFilter('boolean', 'hasRepo', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('+👁️ Views');
-				break;
-
-				case 'btn-sorting-less-views':
-					sortingFilter('number', 'views', {asc: false});
-					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
-					console.log('-👁️ Views');
+					console.log('🐱 Github');
 				break;
 
 				case 'btn-sorting-a-z':
@@ -3559,6 +3588,54 @@ const createSortButtons = () => {
 					sortingFilter('string', 'title', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔼 Z-A');	
+				break;
+
+				case 'btn-sorting-oldest':
+					sortingFilter('date', 'createdDate', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔙 Oldest');
+				break;
+
+				case 'btn-sorting-latest':
+					sortingFilter('date', 'createdDate', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('🔜 Latest');
+				break;
+
+				case 'btn-sorting-less-likes':
+					sortingFilter('number', 'likes', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-❤️ Likes');
+				break;
+
+				case 'btn-sorting-more-likes':
+					sortingFilter('number', 'likes', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+❤️ Likes');
+				break;
+
+				case 'btn-sorting-less-comments':
+					sortingFilter('number', 'comments', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-💬 Comments');
+				break;
+
+				case 'btn-sorting-more-comments':
+					sortingFilter('number', 'comments', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+💬 Comments');
+				break;
+
+				case 'btn-sorting-less-views':
+					sortingFilter('number', 'views', {asc: false});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('-👁️ Views');
+				break;
+
+				case 'btn-sorting-more-views':
+					sortingFilter('number', 'views', {asc: true});
+					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
+					console.log('+👁️ Views');
 				break;
 			}
 		});
