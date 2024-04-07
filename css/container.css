@@ -16,7 +16,13 @@
 
 .ctn-filter-btns {
 	display: grid;
-	grid-template-columns: 80% 20%;
+	grid-template-columns: 60% 40%;
+	gap: 1rem;
+}
+
+.contianer-special-btns {
+	display: grid;
+	grid-template-columns: 60% 40%;
 	gap: 1rem;
 }
 
@@ -56,6 +62,7 @@
 /* Technologies */
 .ctn-tag-buttons,
 .ctn-sort-btns,
+.ctn-tech-btns,
 .selected-filters,
 .ctn-cards {
 	align-items: center;
@@ -68,6 +75,7 @@
 
 .ctn-tag-buttons,
 .ctn-sort-btns,
+.ctn-tech-btns,
 .selected-filters {
 	gap: 1.5rem;
 }
@@ -79,6 +87,7 @@
 
 .tags-container h2,
 .sort-container h2,
+.tech-container h2,
 .ctn-selected-filters h2,
 .not-found-projects-filtered-by-tags h2,
 .projects h2 {

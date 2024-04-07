@@ -1,11 +1,18 @@
 /* Tags */
-.ctn-tag-buttons,
-.selected-filters {
+.ctn-tag-buttons {
 	grid-template-columns: repeat(auto-fill, minmax(5rem, 8rem));
 }
 
+.selected-filters {
+	grid-template-columns: repeat(8, 1fr);
+}
+
 .ctn-sort-btns {
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr 1fr;
+}
+
+.ctn-tech-btns {
+	grid-template-columns: 1fr;
 }
 
 .ctn-categories-tag {
@@ -44,12 +51,11 @@
 	padding: 0.5rem 0;
 	text-shadow: 0 0 4px var(--bg-btns-tags-primary);
 	transition: background-color 0.3s ease-in-out,
-							box-shadow 0.3s ease-in-out,
-							tex-shadow 0.3s ease-in-out;
+							box-shadow 0.3s ease-in-out;
 	width: 100%;
 }
 
-.btn-tag.btn-highlight,
+.btn-highlight,
 .btn-tag.disabled {
 	background-color: var(--bg-btns-tags-secondary);
 	box-shadow: 0 0 0 2px var(--bg-btns-tags-secondary),
@@ -61,8 +67,8 @@
 .btn-tag:hover,
 .btn-tag:focus,
 .btn-tag:active {
-	box-shadow: 0 0 0 2px var(--secondary-color),
-							0 0 6px 0 inset;
+	box-shadow: 0 0 0 3px var(--secondary-color),
+							0 0 10px 0 inset;
 }
 
 .category-tag:hover,
@@ -71,11 +77,11 @@
 .btn-tag.disabled:hover,
 .btn-tag.disabled:focus,
 .btn-tag.disabled:active,
-.btn-tag.btn-highlight:hover,
-.btn-tag.btn-highlight:focus,
-.btn-tag.btn-highlight:active {
-	background-color: #cdcdcd;
-	text-shadow: 0 0 0 #000000;
+.btn-highlight:hover,
+.btn-highlight:focus,
+.btn-highlight:active {
+	box-shadow: 0 0 0 3px var(--secondary-color),
+							0 0 10px 0 #000000;
 }
 
 .btn-tag.active {
@@ -83,18 +89,59 @@
 							0 0 10px 0 inset var(--secondary-color);
 }
 
-.btn-tag.active,
-.btn-tag.disabled.active,
-.btn-tag.btn-highlight.active {
-	box-shadow: 0 0 0 2px var(--secondary-color),
-							0 0 10px 0 inset var(--secondary-color);
+.btn-tag.active {
+	box-shadow: 0 0 0 3px #00ff00,
+							0 0 10px 0 inset #00ff00;
 }
 
-.btn-tag.btn-highlight,
+.btn-tag.disabled.active,
+.btn-highlight.active,
+.btn-tech.active {
+	box-shadow: 0 0 0 3px #00ff00,
+							0 0 10px 0 inset #000000;
+}
+
+.btn-highlight,
 .btn-tag.disabled {
 	background-color: var(--bg-btns-tags-secondary);
 	box-shadow: 0 0 0 2px var(--bg-btns-tags-secondary),
 							0 0 6px 0 inset var(--bg-btns-tags-primary);
 	color: var(--bg-btns-tags-primary);
 	text-shadow: 0 0 4px var(--bg-btns-tags-secondary);
+}
+
+.btn-tech {
+	box-shadow: 0 0 0 2px #ffffff,
+							0 0 6px 0 inset #000000;
+}
+
+.btn-tech:hover,
+.btn-tech:focus,
+.btn-tech:active {
+	box-shadow: 0 0 0 3px #00ff00,
+							0 0 10px 0 inset #000000;
+}
+
+.btn-tech:nth-child(1) {
+	background-color: #8c6a00;
+}
+
+.btn-tech:nth-child(2) {
+	background-color: #640016;
+}
+
+.btn-tech:nth-child(3) {
+	background-color: #164290;
+}
+
+.btn-tech:nth-child(4) {
+	background-color: #02416d;
+}
+
+.btn-tech:nth-child(5) {
+	background-color:#8e7d08;
+}
+
+.btn-tech:nth-child(6) {
+	background-color:#0a296f;
 }

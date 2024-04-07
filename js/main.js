@@ -18,6 +18,7 @@ const ID_NAMES = {
 	ctnSelectedFilters: 'ctn-selected-filters',
 	selectedFilters: 'selected-filters',
 	ctnSortButtons: 'ctn-sort-btns',
+	ctnTechButtons: 'ctn-tech-btns',
 	ctnProjects: 'ctn-projects',
 	projects: 'projects',
 	ctnProjectsFilteredByTags: 'ctn-projects-filtered-by-tags',
@@ -3236,15 +3237,18 @@ const SORTING_BUTTONS = [
 		text: '➕👁️ Views',
 	}
 ];
+const TECHNOLOGY_BUTTONS = [];
 
 /* Tags & sort filter */
 let filterBtns = [];
+let filterBtnsTech = [];
 let projectsFilteredBySelectedFilter = [];
 
 /* Containers for tag buttons and projects */
 const categoriesTagContainerElement = document.getElementById(ID_NAMES.ctnCategoriesTag);
 const tagsContainerElement = document.getElementById(ID_NAMES.ctnTagButtons);
 const sortContainerElement = document.getElementById(ID_NAMES.ctnSortButtons);
+const techContainerElement = document.getElementById(ID_NAMES.ctnTechButtons);
 const ctnSelectedFiltersElement = document.getElementById(ID_NAMES.ctnSelectedFilters);
 const selectedFiltersElement = document.getElementById(ID_NAMES.selectedFilters);
 const projectsContainerElement = document.getElementById(ID_NAMES.ctnProjects);
@@ -3514,6 +3518,24 @@ const filterByType = (arr, type, prop, {asc}) => {
 	}
 	sortedProjects.map(proj => projectsFilteredBySelectedFilter.push(proj));
 }
+const filterByTech = ({id, text}) => {
+	// if there is a repeated element it will be removed from the array, if not it will be added
+	filterBtnsTech = filterBtnsTech.some(btn => btn.idFilterBtn === id)
+    ? filterBtnsTech.filter(btn => btn.idFilterBtn !== id)
+    : [...filterBtnsTech, { idFilterBtn: id, textFilterBtn: text }];
+
+	if (filterBtnsTech.length) {
+		projectsFilteredBySelectedFilter = []
+
+		TECHNOLOGIES.map(({id}) => {
+			let getNameVariableProject = eval(`${ID_NAMES.projects}${id.charAt(0).toUpperCase()}${id.slice(1)}`);
+			let filterElementsByTech = getNameVariableProject.filter(projObj => {
+				return filterBtnsTech.some(({textFilterBtn}) => projObj['technology'] === textFilterBtn);
+			});
+			filterElementsByTech.map(proj => projectsFilteredBySelectedFilter.push(proj));
+		});
+	}
+}
 
 const filterByCategory = (category) => {
 	TAG_BUTTONS.forEach(tagBtn => {
@@ -3641,6 +3663,22 @@ const createSortButtons = () => {
 		});
 	});
 }
+const createTechButtons = () => {
+	TECHNOLOGIES.forEach(({id, text}) => {
+		// create techBtn object
+		let objTechBtn = { id: `btn-${id}`, className: 'btn-tag btn-tech', text };
+		// add button to the array
+		TECHNOLOGY_BUTTONS.push(objTechBtn);
+	
+		const btnTech = createFilterBtnsDOM(objTechBtn, techContainerElement);
+
+		btnTech.addEventListener('click', () => {
+			btnTech.classList.toggle('active');
+			filterByTech(objTechBtn);
+			toggleFilterBtns(objTechBtn, {isFilteringByTags: false});
+		});
+	});
+}
 
 const sortTagBtnsByAlphabet = (event) => {
 	tagsContainerElement.innerHTML = '';
@@ -3664,6 +3702,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Add sorting buttons into DOM
 	createSortButtons();
+
+	// Add tech buttons into DOM
+	createTechButtons();
 	
 	// Add cards into DOM
 	createProjects();
