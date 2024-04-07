@@ -2753,7 +2753,7 @@ const projectsCss = [
 
 /* Elements HTML */
 const TECHNOLOGIES = [
-{
+	{
 		id: 'firebase',
 		text: 'Firebase'
 	},
@@ -2765,7 +2765,7 @@ const TECHNOLOGIES = [
 		id: 'ionic',
 		text: 'Ionic'
 	},
-		{
+	{
 		id: 'jquery',
 		text: 'Jquery'
 	},
@@ -3154,7 +3154,7 @@ const TAG_BUTTONS = [
 	},
 ];
 const SORTING_BUTTONS = [
-	{
+		{
 		className: 'btn-tag btn-highlight',
 		id: 'btn-sorting-oldest',
 		text: '🔙 Oldest',
@@ -3437,73 +3437,43 @@ const addCtnSelectedTagsBtnsToDOM = (selectedFilters) => {
 		selectedFiltersElement.appendChild(selectedFiltersSpan);
 	});
 }
-/* Functions to sort */
-const filterByDate = ({ascending}, property) => {
-	if ( filterBtns.length ) {
-		let filteredProjects = projectsFilteredBySelectedFilter;
-		projectsFilteredBySelectedFilter = []
-		const projecstOrderByDate = filteredProjects.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
-		projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
-	} else {
-			TECHNOLOGIES.map(lang => {
-				// save every name of the variables projectName
-				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-				
-				const projecstOrderByDate = getNameVariableProject.sort((a, b) => ascending ? new Date(a[property]) - new Date(b[property]) : new Date(b[property]) - new Date(a[property]));
-				projecstOrderByDate .map(project => projectsFilteredBySelectedFilter.push(project));
-			});
-		}
 
-}
-const filterByBoolean = (property) => {
-	if ( filterBtns.length ) {
-	let filteredProjects = projectsFilteredBySelectedFilter;
-		projectsFilteredBySelectedFilter = []
-		const projecstOrderByFav = filteredProjects.filter(projectObject => projectObject[property] === true);
-		projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
-	} else {
-			TECHNOLOGIES.map(lang => {
-				// save every name of the variables projectName
-				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-				
-				const projecstOrderByFav = getNameVariableProject.filter(projectObject => projectObject[property] === true);
-				projecstOrderByFav.map(project => projectsFilteredBySelectedFilter.push(project));
-			});
-		}
-
-}
-const filterByNumbers = ({ascending} = true, property) => {
+/* Functions to sort projects */
+const sortingFilter = (type, prop, {asc}) => {
 	if ( filterBtns.length ) {
 		let filteredProjects = projectsFilteredBySelectedFilter;
 		projectsFilteredBySelectedFilter = []
-		const projecstOrderByViews = filteredProjects.sort((a, b) => ascending ? a[property] - b[property] : b[property] - a[property]);
-		projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
+		filterByType(filteredProjects, type, prop, {asc});
 	} else {
-			TECHNOLOGIES.map(lang => {
-				// save every name of the variables projectName
-				let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-				
-				const projecstOrderByViews = getNameVariableProject.sort((a, b) => ascending ? a[property] - b[property] : b[property] - a[property]);
-				projecstOrderByViews.map(project => projectsFilteredBySelectedFilter.push(project));
-			});
-		}
-}
-const filterByString = ({ascending} = true, property) => {
-	if ( filterBtns.length ) {
-		let filteredProjects = projectsFilteredBySelectedFilter;
-		projectsFilteredBySelectedFilter = []
-		const projectsOrderByAlphabet = filteredProjects.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
-		projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
-} else {
-		TECHNOLOGIES.map(lang => {
+		TECHNOLOGIES.map(({id}) => {
 			// save every name of the variables projectName
-			let getNameVariableProject = eval(`${ID_NAMES.projects}${lang.id.charAt(0).toUpperCase()}${lang.id.slice(1)}`);
-			
-			const projectsOrderByAlphabet = getNameVariableProject.sort((a, b) => ascending ? a[property].localeCompare(b[property]) : b[property].localeCompare(a[property]));
-			projectsOrderByAlphabet.map(project => projectsFilteredBySelectedFilter.push(project));
+			let getNameVariableProject = eval(`${ID_NAMES.projects}${id.charAt(0).toUpperCase()}${id.slice(1)}`);
+			filterByType(getNameVariableProject, type, prop, {asc});
 		});
 	}
 }
+const filterByType = (arr, type, prop, {asc}) => {
+	let sortedProjects;
+	switch (type) {
+		case 'date':
+			sortedProjects = arr.sort((a, b) => asc ?  new Date(b[prop]) - new Date(a[prop]) : new Date(a[prop]) - new Date(b[prop]));
+		break;
+
+		case 'boolean':
+			sortedProjects = arr.filter(proj => asc ? proj[prop] === true : proj[prop] !== true);
+		break;
+
+		case 'number':
+			sortedProjects = arr.sort((a, b) => asc ? b[prop] - a[prop] :  a[prop] - b[prop]);
+		break;
+
+		case 'string':
+			sortedProjects = arr.sort((a, b) => asc ? b[prop].localeCompare(a[prop]) : a[prop].localeCompare(b[prop]));
+		break;
+	}
+	sortedProjects.map(proj => projectsFilteredBySelectedFilter.push(proj));
+}
+
 const filterByCategory = (category) => {
 	TAG_BUTTONS.forEach(tagBtn => {
 		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('disabled')
@@ -3543,51 +3513,50 @@ const createSortButtons = () => {
 			e.target.classList.toggle('active');
 			
 			switch (e.currentTarget.id) {
-
 				case 'btn-sorting-oldest':
-					filterByDate({ascending: true}, 'createdDate');
+					sortingFilter('date', 'createdDate', {asc: false});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔙 Oldest');
 				break;
 
 				case 'btn-sorting-latest':
-					filterByDate({ascending: false}, 'createdDate');
+					sortingFilter('date', 'createdDate', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔜 Latest');
 				break;
 
 				case 'btn-sorting-fav':
-					filterByBoolean('isFavorite');
+					sortingFilter('boolean', 'isFavorite', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('⭐ Fav');
 				break;
 
 				case 'btn-sorting-likes':
-					filterByNumbers({ascending: false}, 'likes');
+					sortingFilter('number', 'likes', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('+❤️ Likes');
 				break;
 
 				case 'btn-sorting-more-views':
-					filterByNumbers({ascending: false}, 'views');
+					sortingFilter('number', 'views', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('+👁️ Views');
 				break;
 
 				case 'btn-sorting-less-views':
-					filterByNumbers({ascending: true}, 'views');
+					sortingFilter('number', 'views', {asc: false});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('-👁️ Views');
 				break;
 
 				case 'btn-sorting-a-z':
-					filterByString({ascending: true}, 'title');
+					sortingFilter('string', 'title', {asc: false});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔽 A-Z');
 				break;
 			
 				case 'btn-sorting-z-a':
-					filterByString({ascending: false}, 'title');
+					sortingFilter('string', 'title', {asc: true});
 					toggleFilterBtns(tagBtn, {isFilteringByTags: false});
 					console.log('🔼 Z-A');	
 				break;
