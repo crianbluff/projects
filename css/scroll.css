@@ -1,0 +1,98 @@
+/* Scroll bar container */
+body::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2) inset,
+							0 -1px 0 rgba(255, 255, 255, 0.2) inset;
+	width: 15px;
+}
+
+/* Scroll bar */
+body::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-image: linear-gradient(315deg, #00ffff, #107979);
+	box-shadow: 1px 1px 0 #ffffff inset,
+							0 -1px 0 #ffffff inset;
+}
+
+/* Progress Scroll */
+#scroll-bar:before {
+  background-color: #001919;
+  border-radius: 50%;
+  color: #ffffff;
+  content: attr(data-scroll-progress);
+  font: 700 1.75rem 'Shadows Into Light', sans-serif;
+  height: calc(100% - 5px);
+  left: 50%;
+  line-height: calc(1.75rem + 1.75rem - 2.5px);
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 3px #000000,
+               0 0 7px var(--secondary-color);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 5px);
+}
+
+#scroll-bar {
+  border-radius: 50%;
+  bottom: 1rem;
+  cursor: pointer;
+  height: 3.75rem;
+  position: fixed;
+  right: 2rem;
+  transition: transform 0.3s ease-in-out;
+  width: 3.75rem;
+}
+
+#scroll-bar:hover:before,
+#scroll-bar:focus:before {
+  content: attr(data-scroll-up);
+}
+
+#scroll-bar:active {
+  transform: translateY(-10px);
+}
+
+/* Container scroll bar for tags container on cards */
+.ctn-tags::-webkit-scrollbar {
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 -1px 0 0 #ffffff;
+	height: 14px;
+}
+
+/* Scroll bar tags container on cards */
+.ctn-tags::-webkit-scrollbar-thumb {
+	box-shadow: 1px 0 0 #000000 inset,
+							0 -1px 0 #000000 inset,
+							-1px 0 0 #000000 inset;
+}
+
+.ctn-card:nth-child(3n + 1) .ctn-tags::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(315deg, #000000, #00ffff, #000000);
+}
+
+.ctn-card:nth-child(3n + 2) .ctn-tags::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(315deg, #000000, #00ff8c, #000000);
+}
+
+.ctn-card:nth-child(3n + 3) .ctn-tags::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(315deg, #000000, #1aff00, #000000);
+}
+
+.ctn-tags::-webkit-scrollbar-thumb:hover {
+	cursor: pointer;
+}
+
+/* Scroll tags container on cards when is pressed */
+.ctn-card:nth-child(3n + 1) .ctn-tags::-webkit-scrollbar-thumb:active {
+  background-image: linear-gradient(315deg, #00ffff, #00ffff, #000000);
+}
+
+.ctn-card:nth-child(3n + 2) .ctn-tags::-webkit-scrollbar-thumb:active {
+  background-image: linear-gradient(315deg, #00ff8c, #00ff8c, #000000);
+}
+
+.ctn-card:nth-child(3n + 3) .ctn-tags::-webkit-scrollbar-thumb:active {
+  background-image: linear-gradient(315deg, #1aff00, #1aff00, #000000);
+}

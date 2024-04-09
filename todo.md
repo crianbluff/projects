@@ -23,7 +23,9 @@
 - [✔] Highlight tag buttons which do not match with the category selected
 - [✔] Filter By Technology
 - [✔] Filter For those ones that contain repo
-- [✖] Fix: Filters must distinguish the technlogy
+- [✔] Style: Add scroll bar percentage and when is clicked go to top
+- [✔] Style: Change scroll style for tag buttons on cards
+- [✖] Fix: Filters must distinguish the technology
 - [✖] Fix: If I select any sort filter btn and then any tag it is not working
 - [✖] Fix: Remove the class active even if is already active
 - [✖] Style: Change background tag buttons on cards and add glass animation
