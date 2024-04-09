@@ -1,0 +1,96 @@
+/* Tech buttons */
+.btn-tech:nth-child(1) {
+	background-color: #8c6a00;
+	box-shadow: 0 0 0 2px #ffbf00;
+}
+
+.btn-tech:nth-child(2) {
+	background-color: #640016;
+	box-shadow: 0 0 0 2px #ff0037;
+}
+
+.btn-tech:nth-child(3) {
+	background-color: #164290;
+	box-shadow: 0 0 0 2px #005eff;
+}
+
+.btn-tech:nth-child(4) {
+	background-color: #02416d;
+	box-shadow: 0 0 0 2px #0095ff;
+}
+
+.btn-tech:nth-child(5) {
+	background-color:#8e7d08;
+	box-shadow: 0 0 0 2px #ffdd00;
+}
+
+.btn-tech:nth-child(6) {
+	background-color:#0a296f;
+	box-shadow: 0 0 0 2px #004cff;
+}
+
+/* Tags on filters selected */
+.selected-filters span:nth-child(8n + 1),
+.selected-filters span:nth-child(8n + 8) {
+	background-image: linear-gradient(90deg, #000000, #353535, #000000);
+}
+
+.selected-filters span:nth-child(8n + 2) {
+	background-image: linear-gradient(90deg, #09191f, #105f81, #09191f);
+}
+
+.selected-filters span:nth-child(8n + 3) {
+	background-image: linear-gradient(90deg, #001510, #0b916f, #001510);
+}
+
+.selected-filters span:nth-child(8n + 4) {
+	background-image: linear-gradient(90deg, #000428, #004e92, #000428);
+}
+
+.selected-filters span:nth-child(8n + 5) {
+	background-image: linear-gradient(90deg, #2f0743, #6f1e97, #2f0743);
+}
+
+.selected-filters span:nth-child(8n + 6) {
+	background-image: linear-gradient(90deg, #4f1201, #cc370d, #4f1201);
+}
+
+.selected-filters span:nth-child(8n + 7) {
+	background-image: linear-gradient(90deg, #420101, #c51a1a, #420101);
+}
+
+/* Cards */
+.ctn-card:nth-child(3n + 1) .card:before,
+.ctn-card:nth-child(3n + 1) .card:after {
+	background-image: linear-gradient(315deg, #107979, #000000);
+}
+
+.ctn-card:nth-child(3n + 2) .card:before,
+.ctn-card:nth-child(3n + 2) .card:after {
+	background-image: linear-gradient(315deg, #2b7c58, #000000);	
+}
+
+.ctn-card:nth-child(3n + 3) .card:before,
+.ctn-card:nth-child(3n + 3) .card:after {
+	background-image: linear-gradient(315deg, #205b1a, #000000);
+}
+
+/* Tags on cards */
+.card .ctn-tags span {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+}
+
+.ctn-card:nth-child(3n + 1) .card .ctn-tags span {
+	box-shadow: 0 0 0 1px #00ffff,
+							0 0 3px 0 inset var(--bg-btns-tags-primary);
+}
+
+.ctn-card:nth-child(3n + 2) .card .ctn-tags span {
+	box-shadow: 0 0 0 1px #01ff8c,
+							0 0 3px 0 inset var(--bg-btns-tags-primary);
+}
+
+.ctn-card:nth-child(3n + 3) .card .ctn-tags span {
+	box-shadow: 0 0 0 1px #1aff00,
+							0 0 3px 0 inset var(--bg-btns-tags-primary);
+}
