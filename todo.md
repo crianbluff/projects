@@ -32,8 +32,9 @@
 - [✖] Fix: Filters must distinguish the technology
 - [✖] Fix: If I select any sort filter btn and then any tag it is not working
 - [✖] Fix: Remove the class active even if is already active
+- [✖] Js: Get all the projects fron an api
+- [✖] Js: Plus button to get 20 more projects on slider
 - [✖] Js: Add dark mode by default depending on the user preference, same with the animations
-- [✖] Js: Pagination logic for cards made just with JS
 - [✖] Js: Add language.json depending if is Spanish or English
 - [✖] Js: Remove the tag from the tag selected
 - [✖] Html: Add favicon

@@ -6,6 +6,7 @@
 	}
 }
 
+/* X-large devices (large desktops) */
 @media (max-width: 1920px) {
 	.ctn-filter-btns {
 		grid-template-columns: 65% 45%;
@@ -22,8 +23,15 @@
 	.selected-filters {
 		grid-template-columns: repeat(6, 1fr);
 	}
+
+	.ctn-cards {
+		grid-auto-columns: 27.5rem;
+    grid-gap: 0 5rem;
+    padding: 5rem 5rem;
+	}
 }
 
+/* Large devices (landscape tablets, desktop) */
 @media (max-width: 1400px) {
 	.ctn-filter-btns,
 	.ctn-selected-filters,
@@ -54,8 +62,18 @@
 	.selected-filters {
 		grid-template-columns: repeat(4, 1fr);
 	}
+
+	.ctn-cards {
+		grid-auto-columns: 25rem;
+		padding: 4rem 2rem;
+	}
+
+	.card {
+		padding: 1rem;
+	}
 }
 
+/* Medium devices (landscape phones, tablets) */
 @media (max-width: 768px) {
 	.ctn-categories-tag {
 		grid-template-columns: repeat(2, 1fr);
@@ -74,8 +92,21 @@
 	}
 
 	.ctn-cards {
-		grid-auto-columns: 25rem;
-		grid-gap: 0 5rem;
-		padding: 5rem 2rem;
+		padding: 3.5rem 1.5rem;
+	}
+
+	.card {
+		padding: 0.75rem 1rem;
+	}
+}
+
+/* Small devices (portrait phones) */
+@media (max-width: 576px) {
+	.ctn-cards {
+		grid-auto-columns: 22.5rem;
+	}
+
+	.card {
+		padding: 0.5rem 1rem;
 	}
 }

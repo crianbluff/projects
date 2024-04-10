@@ -84,7 +84,7 @@ const projectsFirebase = [
 	},
 	{
 		link: `${URL_GITHUB_CRIANBLUFF_DOMAIN}/angular-14-fotos-firebase`,
-		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}`,
+		imgUrl: `https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380`,
 		gitUrl: `${URL_GITHUB_REPOS}/angular-14-fotos-firebase`,
 		createdDate: '2019/06/14',
 		technology: 'Firebase',
@@ -98,7 +98,7 @@ const projectsFirebase = [
 	},
 	{
 		link: `${URL_GITHUB_CRIANBLUFF_DOMAIN}/colegio-instituto-bogota`,
-		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}`,
+		imgUrl: `https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380`,
 		gitUrl: `${URL_GITHUB_REPOS}/colegio-instituto-bogota`,
 		createdDate: '2019/11/22',
 		technology: 'Firebase',
@@ -112,7 +112,7 @@ const projectsFirebase = [
 	},
 	{
 		link: `${URL_GITHUB_CRIANBLUFF_DOMAIN}/firebase`,
-		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}`,
+		imgUrl: `https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380`,
 		gitUrl: `${URL_GITHUB_REPOS}/firebase`,
 		createdDate: '2019/01/21',
 		technology: 'Firebase',
@@ -141,7 +141,7 @@ const projectsAngular = [
 	},
 	{
 		link: `${URL_GITHUB_CRIANBLUFF_DOMAIN}/test-ipcom`,
-		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}`,
+		imgUrl: `https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380`,
 		gitUrl: `${URL_GITHUB_REPOS}/test-ipcom`,
 		createdDate: '2020/09/12',
 		technology: 'Angular',
@@ -155,7 +155,7 @@ const projectsAngular = [
 	},
 	{
 		link: `${URL_GITHUB_CRIANBLUFF_DOMAIN}/test-zemsania`,
-		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}`,
+		imgUrl: `https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380`,
 		gitUrl: `${URL_GITHUB_REPOS}/test-zemsania`,
 		createdDate: '2020/09/25',
 		technology: 'Angular',
@@ -169,7 +169,7 @@ const projectsAngular = [
 	},
 	{
 		link: `${URL_GITHUB_CRIANBLUFF_DOMAIN}/angular-12-mapas`,
-		imgUrl: `${URL_FIREBASE_PREVIEW_IMG}`,
+		imgUrl: `https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380`,
 		gitUrl: `${URL_GITHUB_REPOS}/angular-12-mapas`,
 		createdDate: '2020/09/25',
 		technology: 'Angular',
@@ -185,7 +185,7 @@ const projectsAngular = [
 const projectsIonic = [
 	{
 		link: '',
-		imgUrl: '',
+		imgUrl: 'https://img.freepik.com/free-vector/gradient-no-photo-sign-design_23-2149292668.jpg?t=st=1712752389~exp=1712755989~hmac=1ba987270ec279b6aa7cb7e5dda667844bac6a2cb05be55f00b75b1c6cff0b78&w=1380',
 		createdDate: '2022/01/01',
 		technology: 'Ionic',
 		isFavorite: false,

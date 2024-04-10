@@ -43,6 +43,7 @@ body::-webkit-scrollbar-thumb {
   right: 2rem;
   transition: transform 0.3s ease-in-out;
   width: 3.75rem;
+  z-index: 1;
 }
 
 #scroll-bar:hover:before,
@@ -76,7 +77,6 @@ body::-webkit-scrollbar-thumb {
 /* Container scroll bar for tags container on cards */
 .ctn-tags::-webkit-scrollbar {
 	background-color: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 1px 0 #ffffff inset;
 	height: 14px;
 }
 
