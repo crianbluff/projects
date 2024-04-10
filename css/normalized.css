@@ -24,7 +24,9 @@
 	src: url('../fonts/letters/whisper.ttf') format('truetype');
 }
 
-* {
+*:before,
+*,
+*:after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;

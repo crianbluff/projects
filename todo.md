@@ -24,13 +24,15 @@
 - [✔] Filter By Technology
 - [✔] Filter For those ones that contain repo
 - [✔] Style: Add scroll bar percentage and when is clicked go to top
-- [✔] Style: Change scroll style for tag buttons on cards
+- [✔] Style: Change scroll style for tag buttons on cards & for every project container
+- [✔] Style: Change background tag buttons on cards
+- [✔] Style: Add glass animation
+- [✔] Style: Show projects section as a slider
+- [✖] Fix: Add validation to show scroll bar percentage when the scroll position is more than 100vh
 - [✖] Fix: Filters must distinguish the technology
 - [✖] Fix: If I select any sort filter btn and then any tag it is not working
 - [✖] Fix: Remove the class active even if is already active
-- [✖] Style: Change background tag buttons on cards and add glass animation
-- [✖] Style: Change scroll style for tag buttons on cards
-- [✖] Style: Add dark mode by default depending on the user preference, same with the animations
+- [✖] Js: Add dark mode by default depending on the user preference, same with the animations
 - [✖] Js: Pagination logic for cards made just with JS
 - [✖] Js: Add language.json depending if is Spanish or English
 - [✖] Js: Remove the tag from the tag selected

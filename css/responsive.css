@@ -1,3 +1,11 @@
+/* Animations */
+@keyframes glass {
+	20%,
+	100% {
+		transform: translateX(20rem);
+	}
+}
+
 @media (max-width: 1920px) {
 	.ctn-filter-btns {
 		grid-template-columns: 65% 45%;
@@ -63,5 +71,11 @@
 
 	.selected-filters {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.ctn-cards {
+		grid-auto-columns: 25rem;
+		grid-gap: 0 5rem;
+		padding: 5rem 2rem;
 	}
 }

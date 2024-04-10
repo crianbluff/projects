@@ -3582,8 +3582,8 @@ const sortTagBtnsByAlphabet = (event) => {
 }
 const filterByCategory = (category) => {
 	TAG_BUTTONS.forEach(tagBtn => {
-		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('disabled')
- 		: document.getElementById(tagBtn['id']).classList.add('disabled');
+		tagBtn['category'] !== category ? document.getElementById(tagBtn['id']).classList.remove('enabled')
+ 		: document.getElementById(tagBtn['id']).classList.add('enabled');
 	});
 }
 const toggleFilterBtns = ({id, text}, {isFilteringByTags} = true) => {

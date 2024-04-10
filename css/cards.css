@@ -10,11 +10,15 @@
 	z-index: 1;
 }
 
+.ctn-card {
+	height: 100%;
+}
+
 .card {
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
+	height: 100%;
 	max-width: 100%;
 	padding: 0.5rem 1rem 1rem;
 	position: relative;
@@ -26,7 +30,7 @@
 
 .card .tech,
 .card .fav {
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	padding: 0.25rem;
 	position: absolute;
 	top: 0;
@@ -71,7 +75,6 @@
 
 /* Icons Container */
 .card .ctn-icons-card {
-	background-color: rgba(0, 0, 0, 0.1);
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -111,7 +114,7 @@
 
 .git .link-repo {
 	color: #ffffff;
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	transition: color 0.3s ease-in-out;
 }
 
@@ -228,7 +231,7 @@
 	overflow: hidden;
 	position: relative;
 	transition: transform 400ms ease-in-out;
-	transform: translateY(0) scale(0.8);
+	transform: scale(0.9);
 }
 
 .card a:hover .ctn-img,

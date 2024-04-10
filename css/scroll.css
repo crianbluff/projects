@@ -54,10 +54,29 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-10px);
 }
 
+/* Container scroll bar for projects container */
+.ctn-cards::-webkit-scrollbar {
+	height: 15px;
+}
+
+/* Scroll bar for projects container */
+.ctn-cards::-webkit-scrollbar-thumb {
+  box-shadow: 1px 1px 10px #00ffff inset,
+							0 1px 10px #00ffff inset,
+							-1px 0 10px #00ffff inset;
+	
+}
+
+.ctn-cards::-webkit-scrollbar-thumb:active {
+	box-shadow: 1px 1px 5px #1aff00 inset,
+							0 1px 5px #1aff00 inset,
+							-1px 0 5px #1aff00 inset;
+}
+
 /* Container scroll bar for tags container on cards */
 .ctn-tags::-webkit-scrollbar {
 	background-color: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 -1px 0 0 #ffffff;
+	box-shadow: 0 1px 0 #ffffff inset;
 	height: 14px;
 }
 
