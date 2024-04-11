@@ -1,25 +1,22 @@
 /* Tags */
 .ctn-tag-buttons {
-	grid-template-columns: repeat(auto-fill, minmax(5rem, 8rem));
+	grid-template-columns: repeat(auto-fill, minmax(7.75rem, 1fr));
 }
 
 .selected-filters {
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
 }
 
-.ctn-sort-btns {
-	grid-template-columns: 1fr 1fr;
-}
-
+.ctn-sort-btns,
 .ctn-tech-btns {
-	grid-template-columns: 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(8.25rem, 1fr));
 }
 
 .ctn-categories-tag {
 	background-color: #000000;
 	box-shadow: 0 0 5px inset #cdcdcd;
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(7.75rem, 1fr));
 	place-items: center;
 	gap: 1rem;
 	padding: 1rem;

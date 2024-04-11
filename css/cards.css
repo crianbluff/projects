@@ -16,7 +16,7 @@
 	flex-direction: column;
 	height: 100%;
 	max-width: 100%;
-	padding: 0.5rem 1rem 1rem;
+	padding: 0.75rem 1rem 1rem;
 	position: relative;
 }
 
@@ -122,7 +122,7 @@
 
 .card .link-card {
 	display: block;
-	padding: 1.5rem 0;
+	padding: 1.5rem 0 1rem 0;
 	z-index: 2;
 }
 
@@ -268,8 +268,8 @@
 	z-index: 2;
 }
 
-.card .ctn-tags span,
-.selected-filters span {
+.selected-filters span,
+.card .ctn-tags span {
 	box-shadow: 0 0 0 1px var(--bg-btns-tags-secondary),
 							0 0 3px 0 inset var(--bg-btns-tags-primary);
 	border-radius: 1rem;

@@ -1,0 +1,7 @@
+/* Animations */
+@keyframes glass {
+	20%,
+	100% {
+		transform: translateX(20rem);
+	}
+}

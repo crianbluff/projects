@@ -28,11 +28,13 @@
 - [✔] Style: Change background tag buttons on cards
 - [✔] Style: Add glass animation
 - [✔] Style: Show projects section as a slider
+- [✖] Style: Show progress bar and percentage for each project section
+- [✖] Fix: A-z category is not saving the buttons that were activate previously 
 - [✖] Fix: Add validation to show scroll bar percentage when the scroll position is more than 100vh
 - [✖] Fix: Filters must distinguish the technology
 - [✖] Fix: If I select any sort filter btn and then any tag it is not working
 - [✖] Fix: Remove the class active even if is already active
-- [✖] Js: Get all the projects fron an api
+- [✖] Js: Get all the projects from an api
 - [✖] Js: Plus button to get 20 more projects on slider
 - [✖] Js: Add dark mode by default depending on the user preference, same with the animations
 - [✖] Js: Add language.json depending if is Spanish or English

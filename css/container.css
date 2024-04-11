@@ -81,7 +81,7 @@
 }
 
 .ctn-cards {
-	grid-auto-columns: 30rem;
+	grid-auto-columns: minmax(30rem, 35rem);
 	grid-auto-flow: column;
 	grid-gap: 0 8rem;
 	overflow-x: auto;
